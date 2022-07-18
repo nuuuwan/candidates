@@ -18,7 +18,7 @@ export default function CriterionView({
   onChangeCriterionWeight,
   criterionWeights,
 }) {
-  const [criterionValue, setCriterionValue] = useState(
+  const [criterionWeight, setCriterionValue] = useState(
     criterionWeights[iCriterion]
   );
 
@@ -34,14 +34,14 @@ export default function CriterionView({
   };
 
   const onChangeCommitted = function (e) {
-    onChangeCriterionWeight(iCriterion, criterionValue);
+    onChangeCriterionWeight(iCriterion, criterionWeight);
   };
 
   return (
     <Card sx={{ m: 1, p: 1 }}>
       <Typography variant="h6">{t(criterionID)}</Typography>
       <Slider
-        defaultValue={0}
+        defaultValue={criterionWeight}
         min={-100}
         max={100}
         marks={marks}
