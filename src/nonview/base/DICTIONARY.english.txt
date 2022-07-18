@@ -16,6 +16,7 @@ Neutral
 No asset declaration
 Past economic experience
 Quite Desirable
+Quite Undesirable
 Report Bugs
 Slightly Desirable
 Slightly Undesirable
