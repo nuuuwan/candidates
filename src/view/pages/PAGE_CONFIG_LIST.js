@@ -2,9 +2,8 @@ import IDX from "../../nonview/base/IDX";
 
 import CandidatePage from "../../view/pages/CandidatePage";
 import CriteriaPage from "../../view/pages/CriteriaPage";
-import VersionsPage from "../../view/pages/VersionsPage";
 
-const PAGE_LIST = [VersionsPage, CriteriaPage, CandidatePage];
+const PAGE_LIST = [CriteriaPage, CandidatePage];
 
 const PAGE_CONFIG_LIST = PAGE_LIST.map(function (Page) {
   const pageInstance = new Page();

@@ -13,9 +13,9 @@ const ATTR_IDX_IDX = Object({
     "Will work with the IMF",
   ]),
   "@nuuuwan-Constituitional": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
-    "Voted for 20A",
+    "Voted for the 20th Amendment",
     "Will support abolishing the Executive Presidency while in seat",
-    "Will support bringing back 19A",
+    "Will support bringing back the 19th Amendment",
   ]),
 });
 

@@ -12,6 +12,7 @@ import { t } from "../../nonview/base/I18N";
 
 import AlignCenter from "../../view/atoms/AlignCenter";
 import HelpMenu from "./HelpMenu.js";
+import VersionMenu from "./VersionMenu.js";
 
 const STYLE = {
   position: "fixed",
@@ -20,7 +21,7 @@ const STYLE = {
   zIndex: 1,
 };
 
-export default function CustomAppBar({ title, color, Icon, context }) {
+export default function CustomAppBar({ title, color, Icon, context, onChangeVersion }) {
 
   const version = context.version;
   const criterionWeights = JSON.parse(context.criterionWeightsJSON);
@@ -43,6 +44,7 @@ export default function CustomAppBar({ title, color, Icon, context }) {
             {" "}
           </Typography>
           <CandidatesLeaderBoardShort candidateAndScore={candidateAndScore}/>
+          <VersionMenu context={context} onChangeVersion={onChangeVersion}/>
           <HelpMenu />
         </Toolbar>
       </AppBar>

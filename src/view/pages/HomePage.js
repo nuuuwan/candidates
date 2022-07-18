@@ -122,6 +122,7 @@ export default class HomePage extends Component {
           color={innerPageConfig.color}
           Icon={innerPageConfig.Icon}
           context={context}
+          onChangeVersion={this.onChangeVersion.bind(this)}
         />
         <Box sx={STYLE_INNER_PAGE_BOX}>
           <innerPageConfig.Page

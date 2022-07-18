@@ -6,7 +6,9 @@ const AppColors = {
   Version: "#fff",
   Criterion: "#ccc",
   Candidate: "#ccc",
-  Light: "#ccc",
+
+  Light: "#888",
+  VeryLight: "#ccc",
 };
 
 export default AppColors;
