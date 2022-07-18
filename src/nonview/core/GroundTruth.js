@@ -1,4 +1,5 @@
 import DictUtils from "../../nonview/base/DictUtils";
+
 const ATTR_IDX_NUUUWAN = {
   "Voted for 20A": {
     AKD: -100,
