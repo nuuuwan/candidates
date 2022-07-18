@@ -2,7 +2,7 @@ import PeopleIcon from "@mui/icons-material/People";
 
 import AppColors from "../../view/_constants/AppColors";
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
-
+import GroundTruth from "../../nonview/core/GroundTruth";
 export default class CandidatePage extends AbstractInnerPage {
   get page() {
     return "CandidatePage";
@@ -20,6 +20,14 @@ export default class CandidatePage extends AbstractInnerPage {
   }
 
   render() {
-    return "TODO";
+    const { context } = this.props;
+    const version = context.version;
+    const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+
+    const candidateToScore = GroundTruth.getCandidateToScore(
+      version,
+      criterionWeights
+    );
+    return JSON.stringify(candidateToScore);
   }
 }
