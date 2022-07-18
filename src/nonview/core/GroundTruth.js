@@ -8,11 +8,11 @@ import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
   "@h_liyan": ATTR_IDX_HLIYAN,
   "@nuuuwan": ATTR_IDX_NUUUWAN,
-  "@nuuuwan - Economic Factors": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
+  "@nuuuwan-Economic": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Economic Experience at the National Level",
     "Will work with the IMF",
   ]),
-  "@nuuuwan - Constituitional Factors": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
+  "@nuuuwan-Constituitional": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Voted for 20A",
     "Will support abolishing the Executive Presidency while in seat",
     "Will support bringing back 19A",
@@ -23,6 +23,10 @@ const VERSIONS = Object.keys(ATTR_IDX_IDX);
 
 export default class GroundTruth {
   static DEFAULT_VERSION = VERSIONS[0];
+
+  static getVersions() {
+    return VERSIONS;
+  }
 
   static getCriterionToCandidateToWeight(version) {
     return ATTR_IDX_IDX[version];

@@ -270,7 +270,7 @@ export const ATTR_IDX_HLIYAN = {
     SF: -100,
     SP: -100,
   },
-  "Will support bringing back 19the amendment": {
+  "Will support bringing back 19th amendment": {
     AKD: 100,
     DA: -100,
     HdS: 100,

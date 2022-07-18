@@ -97,6 +97,18 @@ export default class HomePage extends Component {
     this.setContext(context);
   }
 
+  onChangeVersion(version) {
+    let context = this.getContext();
+    context.version = version;
+
+    const criterionWeights = GroundTruth.getInitCriterionWeights(
+      context.version
+    );
+    context.criterionWeightsJSON = JSON.stringify(criterionWeights);
+
+    this.setContext(context);
+  }
+
   render() {
     const { context } = this.state;
     const key = JSON.stringify(context);
@@ -114,8 +126,10 @@ export default class HomePage extends Component {
           <innerPageConfig.Page
             context={context}
             onClickOpenPage={this.onClickOpenPage.bind(this)}
-            onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
+
             criterionWeights={criterionWeights}
+            onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
+            onChangeVersion={this.onChangeVersion.bind(this)}
           />
         </Box>
         <HomePageBottomNavigation

@@ -38,11 +38,15 @@ export default function CriterionView({
     onChangeCriterionWeight(iCriterion, criterionWeight);
   };
 
+  const nCriteria = criterionWeights.length;
 
   return (
     <Card sx={{ m: 1, p: 1 }}>
+      <Typography variant="caption">
+        {iCriterion + 1}/{nCriteria}
+      </Typography>
       <Typography variant="body2">
-        {iCriterion + 1 + ". " + t(criterionID)}
+        {t(criterionID)}
       </Typography>
       <Box sx={{m:1}}>
       <Slider
