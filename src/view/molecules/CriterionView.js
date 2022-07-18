@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "@mui/material/Card";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
-
+import Box from '@mui/material/Box';
 import { t } from "../../nonview/base/I18N";
 import WeightView from "../../view/molecules/WeightView"
 
@@ -44,6 +44,7 @@ export default function CriterionView({
       <Typography variant="body2">
         {iCriterion + 1 + ". " + t(criterionID)}
       </Typography>
+      <Box sx={{m:1}}>
       <Slider
         value={criterionWeight}
         min={-100}
@@ -53,6 +54,7 @@ export default function CriterionView({
         onChangeCommitted={onChangeCommitted}
         color="neutral"
       />
+      </Box>
       <WeightView weight={criterionWeight} />
     </Card>
   );
