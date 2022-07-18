@@ -1,8 +1,8 @@
 import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 
 import AppColors from "../../view/_constants/AppColors";
-import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
 import CriteriaView from "../../view/molecules/CriteriaView";
+import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
 
 export default class CriteriaPage extends AbstractInnerPage {
   get page() {
