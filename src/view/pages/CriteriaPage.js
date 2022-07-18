@@ -17,7 +17,7 @@ export default class CriteriaPage extends AbstractInnerPage {
   }
 
   get color() {
-    return AppColors.Secondary;
+    return AppColors.Criterion;
   }
 
   render() {

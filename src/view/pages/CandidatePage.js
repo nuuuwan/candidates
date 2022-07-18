@@ -17,7 +17,7 @@ export default class CandidatePage extends AbstractInnerPage {
   }
 
   get color() {
-    return AppColors.Primary;
+    return AppColors.Candidate;
   }
 
   render() {

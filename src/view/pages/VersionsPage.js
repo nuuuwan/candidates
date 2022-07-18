@@ -17,7 +17,7 @@ export default class VersionsPage extends AbstractInnerPage {
   }
 
   get color() {
-    return AppColors.Success;
+    return AppColors.Version;
   }
 
   render() {

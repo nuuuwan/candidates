@@ -1,10 +1,11 @@
-import SriLankaColors from "../../view/_constants/SriLankaColors";
-
 const AppColors = {
-  Primary: SriLankaColors.Sinhala,
-  Secondary: SriLankaColors.Tamil,
-  Success: SriLankaColors.Muslim,
+  Primary: "#000",
+  Secondary: "#888",
+  Success: "#080",
 
+  Version: "#fff",
+  Criterion: "#ccc",
+  Candidate: "#ccc",
   Light: "#ccc",
 };
 
