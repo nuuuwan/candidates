@@ -1,10 +1,10 @@
 import IDX from "../../nonview/base/IDX";
 
 import IssuesPage from "../../view/pages/IssuesPage";
-import PeoplePage from "../../view/pages/PeoplePage";
+import CandidatePage from "../../view/pages/CandidatePage";
 import VersionsPage from "../../view/pages/VersionsPage";
 
-const PAGE_LIST = [VersionsPage, IssuesPage, PeoplePage];
+const PAGE_LIST = [VersionsPage, IssuesPage, CandidatePage];
 
 const PAGE_CONFIG_LIST = PAGE_LIST.map(function (Page) {
   const pageInstance = new Page();
