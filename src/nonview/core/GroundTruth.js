@@ -296,7 +296,7 @@ const ATTR_IDX_HLIYAN = {
   },
 };
 
-export const ATTR_IDX_IDX = Object({
+const ATTR_IDX_IDX = Object({
   "@nuuuwan": ATTR_IDX_NUUUWAN,
   "@nuuuwan - Economic Factors": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Economic Experience at the National Level",
@@ -310,5 +310,14 @@ export const ATTR_IDX_IDX = Object({
   "@h_liyan": ATTR_IDX_HLIYAN,
 });
 
-export const VERSIONS = Object.keys(ATTR_IDX_IDX);
-export const DEFAULT_VERSION = VERSIONS[0];
+const VERSIONS = Object.keys(ATTR_IDX_IDX);
+
+
+
+export default class GroundTruth {
+  static DEFAULT_VERSION = VERSIONS[0];
+
+  static getCriteria(version) {
+    return Object.keys(ATTR_IDX_IDX[version]);
+  }
+}

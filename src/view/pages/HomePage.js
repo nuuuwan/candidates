@@ -9,7 +9,7 @@ import URLContext from "../../nonview/base/URLContext";
 import CustomAppBar from "../../view/molecules/CustomAppBar";
 import HomePageBottomNavigation from "../../view/molecules/HomePageBottomNavigation";
 
-import { DEFAULT_VERSION } from "../../nonview/core/GroundTruth";
+import GroundTruth from "../../nonview/core/GroundTruth";
 import PAGE_CONFIG_LIST, {
   DEFAULT_PAGE_CONFIG,
 } from "../../view/pages/PAGE_CONFIG_LIST";
@@ -38,7 +38,7 @@ export default class HomePage extends Component {
       context.lang = BASE_LANG;
     }
     if (!context.version) {
-      context.version = DEFAULT_VERSION;
+      context.version = GroundTruth.DEFAULT_VERSION;
     }
     return context;
   }
@@ -96,6 +96,7 @@ export default class HomePage extends Component {
         />
         <Box sx={STYLE_INNER_PAGE_BOX}>
           <innerPageConfig.Page
+            context={context}
             onClickOpenPage={this.onClickOpenPage.bind(this)}
           />
         </Box>
