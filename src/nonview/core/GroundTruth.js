@@ -66,4 +66,12 @@ export default class GroundTruth {
     },
     {});
   }
+
+  static getSortedCandidateAndScore(version, criterionWeights) {
+    return Object.entries(GroundTruth.getCandidateToScore(version, criterionWeights)).sort(
+      function(a, b) {
+        return b[1] - a[1];
+      }
+    )
+  }
 }
