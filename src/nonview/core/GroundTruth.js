@@ -312,8 +312,6 @@ const ATTR_IDX_IDX = Object({
 
 const VERSIONS = Object.keys(ATTR_IDX_IDX);
 
-
-
 export default class GroundTruth {
   static DEFAULT_VERSION = VERSIONS[0];
 
