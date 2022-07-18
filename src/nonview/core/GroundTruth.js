@@ -1,5 +1,8 @@
 import DictUtils from "../../nonview/base/DictUtils";
-import {ATTR_IDX_HLIYAN, ATTR_IDX_NUUUWAN} from "../../nonview/core/GroundTruthRawData"
+import {
+  ATTR_IDX_HLIYAN,
+  ATTR_IDX_NUUUWAN,
+} from "../../nonview/core/GroundTruthRawData";
 
 const ATTR_IDX_IDX = Object({
   "@h_liyan": ATTR_IDX_HLIYAN,
@@ -26,10 +29,8 @@ export default class GroundTruth {
 
   static getInitCriterionWeights(version) {
     const criteria = GroundTruth.getCriteria(version);
-    return criteria.map(
-      function(criterion) {
-        return 0;
-      },
-    );
+    return criteria.map(function (criterion) {
+      return 0;
+    });
   }
 }

@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from "react";
+
 import Card from "@mui/material/Card";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
@@ -13,9 +14,15 @@ const MARKS_RAW = [
   { value: -50, label: "Undesirable" },
 ];
 
-export default function CriterionView({ iCriterion, criterionID, onChangeCriterionWeight, criterionWeights}) {
-
-   const [criterionValue, setCriterionValue] = useState(criterionWeights[iCriterion]);
+export default function CriterionView({
+  iCriterion,
+  criterionID,
+  onChangeCriterionWeight,
+  criterionWeights,
+}) {
+  const [criterionValue, setCriterionValue] = useState(
+    criterionWeights[iCriterion]
+  );
 
   const marks = MARKS_RAW.map(function ({ value, label }) {
     return {
@@ -24,14 +31,13 @@ export default function CriterionView({ iCriterion, criterionID, onChangeCriteri
     };
   });
 
-  const onChange = function(e) {
+  const onChange = function (e) {
     setCriterionValue(parseInt(e.target.value));
+  };
 
-  }
-
-  const onChangeCommitted = function(e) {
+  const onChangeCommitted = function (e) {
     onChangeCriterionWeight(iCriterion, criterionValue);
-  }
+  };
 
   return (
     <Card sx={{ m: 1, p: 1 }}>
