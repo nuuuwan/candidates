@@ -4,6 +4,7 @@ import {
   ATTR_IDX_NUUUWAN,
 } from "../../nonview/core/GroundTruthRawData";
 
+import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
   "@h_liyan": ATTR_IDX_HLIYAN,
   "@nuuuwan": ATTR_IDX_NUUUWAN,
@@ -23,8 +24,12 @@ const VERSIONS = Object.keys(ATTR_IDX_IDX);
 export default class GroundTruth {
   static DEFAULT_VERSION = VERSIONS[0];
 
+  static getCriterionToCandidateToWeight(version) {
+    return ATTR_IDX_IDX[version];
+  }
+
   static getCriteria(version) {
-    return Object.keys(ATTR_IDX_IDX[version]);
+    return Object.keys(GroundTruth.getCriterionToCandidateToWeight(version));
   }
 
   static getInitCriterionWeights(version) {
@@ -32,5 +37,33 @@ export default class GroundTruth {
     return criteria.map(function (criterion) {
       return 0;
     });
+  }
+
+  static getTotalWeight(criterionWeights) {
+    return MathX.sumL1(criterionWeights);
+  }
+
+  static getCandidateToScore(version, criterionWeights) {
+    const totalWeight = GroundTruth.getTotalWeight(criterionWeights);
+    const critToCandToWeight =
+      GroundTruth.getCriterionToCandidateToWeight(version);
+    return Object.entries(critToCandToWeight).reduce(function (
+      candToScore,
+      [crit, candToWeight],
+      iCrit
+    ) {
+      return Object.entries(candToWeight).reduce(function (
+        candToScore,
+        [cand, weight]
+      ) {
+        if (candToScore[cand] === undefined) {
+          candToScore[cand] = 0;
+        }
+        candToScore[cand] += (criterionWeights[iCrit] * weight) / totalWeight;
+        return candToScore;
+      },
+      candToScore);
+    },
+    {});
   }
 }
