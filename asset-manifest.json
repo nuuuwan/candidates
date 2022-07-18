@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/politicians_lk/static/js/main.3e59fb8e.js",
+    "main.js": "/politicians_lk/static/js/main.cfa0c1b2.js",
     "static/js/787.30b08d24.chunk.js": "/politicians_lk/static/js/787.30b08d24.chunk.js",
     "index.html": "/politicians_lk/index.html",
-    "main.3e59fb8e.js.map": "/politicians_lk/static/js/main.3e59fb8e.js.map",
+    "main.cfa0c1b2.js.map": "/politicians_lk/static/js/main.cfa0c1b2.js.map",
     "787.30b08d24.chunk.js.map": "/politicians_lk/static/js/787.30b08d24.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3e59fb8e.js"
+    "static/js/main.cfa0c1b2.js"
   ]
 }
