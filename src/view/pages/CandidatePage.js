@@ -1,9 +1,8 @@
 import PeopleIcon from "@mui/icons-material/People";
-import Stack from '@mui/material/Stack';
 import GroundTruth from "../../nonview/core/GroundTruth";
-import CandidateView from "../../view/molecules/CandidateView"
 import AppColors from "../../view/_constants/AppColors";
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
+import CandidatesLeaderBoard from "../../view/molecules/CandidatesLeaderBoard"
 
 export default class CandidatePage extends AbstractInnerPage {
   get page() {
@@ -31,14 +30,7 @@ export default class CandidatePage extends AbstractInnerPage {
       criterionWeights
     );
     return (
-      <Stack gap={1}>
-        {candidateAndScore.map(
-          function([candidateId, score]) {
-            const key = "candidate-" + candidateId;
-            return <CandidateView key={key} candidateId={candidateId} score={score} />;
-          }
-        )}
-      </Stack>
+      <CandidatesLeaderBoard candidateAndScore={candidateAndScore} />
     )
 
   }
