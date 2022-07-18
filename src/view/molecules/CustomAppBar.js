@@ -4,6 +4,9 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import GroundTruth from "../../nonview/core/GroundTruth"
+import CandidatesLeaderBoardShort from "../../view/molecules/CandidatesLeaderBoardShort"
+
 
 import { t } from "../../nonview/base/I18N";
 
@@ -17,7 +20,15 @@ const STYLE = {
   zIndex: 1,
 };
 
-export default function CustomAppBar({ title, color, Icon }) {
+export default function CustomAppBar({ title, color, Icon, context }) {
+
+  const version = context.version;
+  const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+  const candidateAndScore = GroundTruth.getSortedCandidateAndScore(
+    version,
+    criterionWeights
+  );
+
   return (
     <Box sx={STYLE}>
       <AppBar sx={{ backgroundColor: color }} elevation={10}>
@@ -31,6 +42,7 @@ export default function CustomAppBar({ title, color, Icon }) {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {" "}
           </Typography>
+          <CandidatesLeaderBoardShort candidateAndScore={candidateAndScore}/>
           <HelpMenu />
         </Toolbar>
       </AppBar>

@@ -121,6 +121,7 @@ export default class HomePage extends Component {
           title={innerPageConfig.label}
           color={innerPageConfig.color}
           Icon={innerPageConfig.Icon}
+          context={context}
         />
         <Box sx={STYLE_INNER_PAGE_BOX}>
           <innerPageConfig.Page
