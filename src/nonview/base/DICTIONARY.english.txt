@@ -5,13 +5,16 @@ Code Repository
 Copy App Link
 Crime/war crime/corruption cases
 Criteria
+Desirable
 Ex-military or armed group connections
 Help (User Manual)
 Issue Page
 Known racist group connections
+Neutral
 No asset declaration
 Past economic experience
 Report Bugs
+Undesirable
 Versions
 Voted for 20th amendment
 Will dissolve parliament before 2025
