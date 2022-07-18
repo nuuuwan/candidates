@@ -1,8 +1,10 @@
 import PeopleIcon from "@mui/icons-material/People";
 
+import GroundTruth from "../../nonview/core/GroundTruth";
+
 import AppColors from "../../view/_constants/AppColors";
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
-import GroundTruth from "../../nonview/core/GroundTruth";
+
 export default class CandidatePage extends AbstractInnerPage {
   get page() {
     return "CandidatePage";
