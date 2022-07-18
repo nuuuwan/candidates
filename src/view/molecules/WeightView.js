@@ -11,7 +11,10 @@ export default function WeightView({weight}) {
     <Stack direction="column" sx={{ textAlign: "right" }} color={color}>
       <Typography variant="h6">{Weight.signed(weight)}</Typography>
       <Typography variant="caption">
-        {t(Weight.getQualitativeText(weight))}
+        {t(Weight.getMagnitudeText(weight))}
+      </Typography>
+      <Typography variant="caption">
+        {t(Weight.getDirectionText(weight))}
       </Typography>
     </Stack>
   );

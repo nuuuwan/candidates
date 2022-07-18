@@ -1,30 +1,29 @@
 export default class Weight {
-  static getQualitativeText(weight) {
-    weight = parseInt(weight);
+  static getMagnitudeText(weight) {
     const absWeight = Math.abs(weight);
-    let quantityStr;
+    let magnitudeText;
     if (absWeight > 75) {
-      quantityStr = "Extremely";
+      magnitudeText = "Extremely";
     } else if (absWeight > 50) {
-      quantityStr = "Quite";
+      magnitudeText = "Quite";
     } else if (absWeight > 25) {
-      quantityStr = "Somewhat";
+      magnitudeText = "Somewhat";
     } else if (absWeight > 0) {
-      quantityStr = "Slightly";
+      magnitudeText = "Slightly";
     } else {
-      quantityStr = "Neutral";
+      magnitudeText = "Neutral";
     }
-
-    let directionStr = "";
+    return magnitudeText;
+  }
+  static getDirectionText(weight) {
     if (weight > 0) {
-      directionStr = " Suitable";
-    } else if (weight < 0) {
-      directionStr = " Unsuitable";
-    } else {
-      directionStr = "";
+      return "Suitable";
     }
 
-    return quantityStr + directionStr;
+    if (weight < 0) {
+      return "Unsuitable";
+    }
+    return ""
   }
 
   static signed(weight) {
