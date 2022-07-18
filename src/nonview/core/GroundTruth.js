@@ -48,7 +48,10 @@ export default class GroundTruth {
   }
 
   static getCandidateToScore(version, criterionWeights) {
-    const totalWeight = GroundTruth.getTotalWeight(criterionWeights);
+    let totalWeight = GroundTruth.getTotalWeight(criterionWeights);
+    if (totalWeight === 0) {
+      totalWeight = 1;
+    }
     const critToCandToWeight =
       GroundTruth.getCriterionToCandidateToWeight(version);
     return Object.entries(critToCandToWeight).reduce(function (

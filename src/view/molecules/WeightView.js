@@ -4,7 +4,7 @@ import Weight from "../../nonview/core/Weight"
 import {t} from "../../nonview/base/I18N"
 
 export default function WeightView({weight}) {
-  
+
   const color = Weight.getColor(weight);
 
   return (

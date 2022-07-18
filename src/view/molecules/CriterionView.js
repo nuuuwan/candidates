@@ -8,9 +8,7 @@ import { t } from "../../nonview/base/I18N";
 import WeightView from "../../view/molecules/WeightView"
 
 const MARKS_RAW = [
-  { value: 50, label: "Suitable" },
   { value: 0, label: "Neutral" },
-  { value: -50, label: "Unsuitable" },
 ];
 
 export default function CriterionView({
@@ -48,10 +46,10 @@ export default function CriterionView({
       <Typography variant="body2">
         {t(criterionID)}
       </Typography>
-      <Box sx={{m:1}}>
+      <Box sx={{m:1,marginBottom: 0}}>
       <Slider
         value={criterionWeight}
-        min={-100}
+        min={-101}
         max={100}
         marks={marks}
         onChange={onChange}
