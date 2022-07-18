@@ -2,8 +2,8 @@ Candidates
 Clear Local Cache
 Code Repository
 Copy App Link
+Criteria
 Help (User Manual)
 Issue Page
-Criteria
 Report Bugs
 Versions
