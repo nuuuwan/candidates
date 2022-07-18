@@ -1,7 +1,7 @@
 import IDX from "../../nonview/base/IDX";
 
-import IssuesPage from "../../view/pages/IssuesPage";
 import CandidatePage from "../../view/pages/CandidatePage";
+import IssuesPage from "../../view/pages/IssuesPage";
 import VersionsPage from "../../view/pages/VersionsPage";
 
 const PAGE_LIST = [VersionsPage, IssuesPage, CandidatePage];

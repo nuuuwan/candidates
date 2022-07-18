@@ -91,6 +91,7 @@ export default class HomePage extends Component {
       <Box key={key}>
         <CustomAppBar
           title={innerPageConfig.label}
+          color={innerPageConfig.color}
           Icon={innerPageConfig.Icon}
         />
         <Box sx={STYLE_INNER_PAGE_BOX}>

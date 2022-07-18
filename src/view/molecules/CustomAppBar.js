@@ -6,9 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
 import { t } from "../../nonview/base/I18N";
-import URLContext from "../../nonview/base/URLContext";
 
-import AppColors from "../../view/_constants/AppColors";
 import AlignCenter from "../../view/atoms/AlignCenter";
 import HelpMenu from "./HelpMenu.js";
 
@@ -19,9 +17,7 @@ const STYLE = {
   zIndex: 1,
 };
 
-export default function CustomAppBar({ title, Icon }) {
-  const isIssuerMode = URLContext.getContext().mode === "issuer";
-  const color = isIssuerMode ? AppColors.Issuer : AppColors.Consumer;
+export default function CustomAppBar({ title, color, Icon }) {
   return (
     <Box sx={STYLE}>
       <AppBar sx={{ backgroundColor: color }} elevation={10}>
