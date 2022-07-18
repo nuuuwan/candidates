@@ -3,7 +3,7 @@ import { Component } from "react";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";
-import I18N, { BASE_LANG } from "../../nonview/base/I18N";
+import I18N  from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 import CustomAppBar from "../../view/molecules/CustomAppBar";
@@ -35,7 +35,7 @@ export default class HomePage extends Component {
       context.page = "CriteriaPage";
     }
     if (!context.lang) {
-      context.lang = BASE_LANG;
+      context.lang = I18N.BASE_LANG;
     }
     if (!context.version) {
       context.version = GroundTruth.DEFAULT_VERSION;

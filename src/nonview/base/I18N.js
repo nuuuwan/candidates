@@ -3,7 +3,6 @@ import IDX from "../../nonview/base/IDX";
 
 import SriLankaColors from "../../view/_constants/SriLankaColors";
 
-export const BASE_LANG = "en";
 const CACHE_KEY_LANG = "CACHE_KEY_LANG";
 const REPLACE_WILDCARD = "000";
 
@@ -30,6 +29,8 @@ export const LANG_IDX = IDX.build(
 );
 
 export default class I18N {
+  static BASE_LANG = "en";
+
   static getLang() {
     let browserLang = localStorage.getItem(CACHE_KEY_LANG);
     if (!browserLang) {
@@ -59,7 +60,7 @@ export default class I18N {
     }
 
     const currentLang = I18N.getLang();
-    if (currentLang === BASE_LANG) {
+    if (currentLang === I18N.BASE_LANG) {
       return s;
     }
 
