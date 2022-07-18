@@ -8,11 +8,10 @@ Code Repository
 Copy App Link
 Crime/war crime/corruption cases
 Criteria
-Desirable
 Economic Experience at the National Level
 Ex-military or armed group connections
-Extremely Desirable
-Extremely Undesirable
+Extremely Suitable
+Extremely Unsuitable
 Has Military Affiliations
 Has Para-Military Affiliations
 Help (User Manual)
@@ -33,14 +32,15 @@ Para-Military Affiliations
 Past economic experience
 Previous Affiliation with #Rajapaksa Government
 Previous Affiliations with Rajapaksa Governments
-Quite Desirable
-Quite Undesirable
+Quite Suitable
+Quite Unsuitable
 Report Bugs
-Slightly Desirable
-Slightly Undesirable
-Somewhat Desirable
-Somewhat Undesirable
-Undesirable
+Slightly Suitable
+Slightly Unsuitable
+Somewhat Suitable
+Somewhat Unsuitable
+Suitable
+Unsuitable
 Versions
 Voted for 20A
 Voted for 20A 86 I18N.js:58
