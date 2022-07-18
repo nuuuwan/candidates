@@ -12,18 +12,12 @@ import BugReportIcon from "@mui/icons-material/BugReport";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
-import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SettingsIcon from "@mui/icons-material/Settings";
 
 import I18N, { t, LANG_LIST } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 const MENU_ITEM_LIST = [
-  {
-    name: "Help (User Manual)",
-    url: "https://medium.com/on-technology/the-token-app-1b24a9cceaa1",
-    Icon: MenuBookIcon,
-  },
   {
     name: "Code Repository",
     url: "http://github.com/nuuuwan/politicians_lk",

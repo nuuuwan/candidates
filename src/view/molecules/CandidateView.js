@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
+import {t} from "../../nonview/base/I18N"
 const AVATAR_SIZE = 64;
 export default function CandidateView({candidateId, score}) {
   const candidate = Candidate.fromId(candidateId);
@@ -14,13 +15,13 @@ export default function CandidateView({candidateId, score}) {
        <Avatar src={candidate.imgSrc}  sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}/>
        <Box>
       <Typography variant="caption">
-        {candidate.firstName}
+        {t(candidate.firstName)}
       </Typography>
       <Typography variant="body2">
-        {candidate.lastName}
+        {t(candidate.lastName)}
       </Typography>
       <Typography variant="caption" color="lightgray">
-        {candidate.party}
+        {t(candidate.party)}
       </Typography>
       </Box>
       <Typography sx={{ flexGrow: 1 }}>
