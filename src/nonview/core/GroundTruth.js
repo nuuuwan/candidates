@@ -180,7 +180,7 @@ const ATTR_IDX_NUUUWAN = {
 };
 
 const ATTR_IDX_HLIYAN = {
-  "Vote for 20th amendment": {
+  "Voted for 20th amendment": {
     AKD: -100,
     DA: 100,
     HdS: -100,
@@ -297,6 +297,7 @@ const ATTR_IDX_HLIYAN = {
 };
 
 const ATTR_IDX_IDX = Object({
+  "@h_liyan": ATTR_IDX_HLIYAN,
   "@nuuuwan": ATTR_IDX_NUUUWAN,
   "@nuuuwan - Economic Factors": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Economic Experience at the National Level",
@@ -307,7 +308,6 @@ const ATTR_IDX_IDX = Object({
     "Will support abolishing the Executive Presidency while in seat",
     "Will support bringing back 19A",
   ]),
-  "@h_liyan": ATTR_IDX_HLIYAN,
 });
 
 const VERSIONS = Object.keys(ATTR_IDX_IDX);
