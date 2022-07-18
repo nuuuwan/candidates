@@ -2,10 +2,11 @@ import { useState } from "react";
 
 import Card from "@mui/material/Card";
 import Slider from "@mui/material/Slider";
+import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Weight from "../../nonview/core/Weight"
+
 import { t } from "../../nonview/base/I18N";
-import Stack from '@mui/material/Stack';
+import Weight from "../../nonview/core/Weight";
 
 const MARKS_RAW = [
   { value: 50, label: "Desirable" },
@@ -42,7 +43,9 @@ export default function CriterionView({
 
   return (
     <Card sx={{ m: 1, p: 2 }}>
-      <Typography variant="body2">{(iCriterion + 1) + '. '+ t(criterionID)}</Typography>
+      <Typography variant="body2">
+        {iCriterion + 1 + ". " + t(criterionID)}
+      </Typography>
       <Slider
         value={criterionWeight}
         min={-100}
@@ -52,13 +55,11 @@ export default function CriterionView({
         onChangeCommitted={onChangeCommitted}
         color="neutral"
       />
-      <Stack direction="column" sx={{textAlign: "right"}} color={color}>
-      <Typography variant="h6">
-        {Weight.signed(criterionWeight)}
-      </Typography>
-      <Typography   variant="caption">
-        {t(Weight.getQualitativeText(criterionWeight))}
-      </Typography>
+      <Stack direction="column" sx={{ textAlign: "right" }} color={color}>
+        <Typography variant="h6">{Weight.signed(criterionWeight)}</Typography>
+        <Typography variant="caption">
+          {t(Weight.getQualitativeText(criterionWeight))}
+        </Typography>
       </Stack>
     </Card>
   );

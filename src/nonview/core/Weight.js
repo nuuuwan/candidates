@@ -24,11 +24,6 @@ export default class Weight {
       directionStr = "";
     }
 
-    let signPrefix = "";
-    if (weight > 0) {
-      signPrefix = "+";
-    }
-
     return quantityStr + directionStr;
   }
 
@@ -42,11 +37,11 @@ export default class Weight {
 
   static getColor(weight) {
     if (weight === 0) {
-  return "gray";
-}
-const hue = weight > 0 ? 120 : 0;
-const MIN_A = 0.33;
-const a = ((1 - MIN_A) * Math.abs(weight)) / 100 + MIN_A;
-return `hsla(${hue},100%,40%,${a})`;
+      return "gray";
+    }
+    const hue = weight > 0 ? 120 : 0;
+    const MIN_A = 0.33;
+    const a = ((1 - MIN_A) * Math.abs(weight)) / 100 + MIN_A;
+    return `hsla(${hue},100%,40%,${a})`;
   }
 }
