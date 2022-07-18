@@ -3,11 +3,12 @@ import { Component } from "react";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";
-import I18N, { BASE_LANG } from "../../nonview/base/I18N";
+import I18N  from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 import CustomAppBar from "../../view/molecules/CustomAppBar";
 import HomePageBottomNavigation from "../../view/molecules/HomePageBottomNavigation";
+
 import PAGE_CONFIG_LIST, {
   DEFAULT_PAGE_CONFIG,
 } from "../../view/pages/PAGE_CONFIG_LIST";
@@ -30,18 +31,8 @@ export default class HomePage extends Component {
   getContext() {
     let context = URLContext.getContext();
     if (!context.page) {
-      context.page = "tokenList";
+      context.page = "issuesPage";
     }
-    if (!context.mode) {
-      context.mode = "receiver";
-    }
-    if (!context.lang) {
-      context.lang = BASE_LANG;
-    }
-    if (!context.tokenEncrypted) {
-      context.tokenEncrypted = "";
-    }
-
     return context;
   }
 
@@ -52,10 +43,6 @@ export default class HomePage extends Component {
   setContext(newContext) {
     const oldContext = this.getContext();
     const context = { ...oldContext, ...newContext };
-
-    if (context.page !== "viewToken") {
-      context.tokenEncrypted = "";
-    }
 
     URLContext.setContext(context);
     I18N.setLang(context.lang);
@@ -77,11 +64,9 @@ export default class HomePage extends Component {
 
     for (let config of PAGE_CONFIG_LIST) {
       if (config.page === context.page) {
-        if (!config.showInOnlyIssuerMode || context.mode === "issuer") {
-          context.page = config.page;
-          URLContext.setContext(context);
-          return config;
-        }
+        context.page = config.page;
+        URLContext.setContext(context);
+        return config;
       }
     }
 

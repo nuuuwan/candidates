@@ -1,6 +1,6 @@
 {
-  "name": "token_app",
-  "homepage": "https://nuuuwan.github.io/token_app",
+  "name": "politicians_lk",
+  "homepage": "https://nuuuwan.github.io/politicians_lk",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,8 +20,6 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-leaflet": "^4.0.0",
-    "react-qr-code": "^2.0.7",
-    "react-qr-reader": "^3.0.0-beta-1",
     "react-scripts": "5.0.1",
     "stylelint-config-hudochenkov": "^7.0.1",
     "stylelint-config-standard": "^26.0.0",

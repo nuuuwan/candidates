@@ -30,12 +30,12 @@ const MENU_ITEM_LIST = [
   },
   {
     name: "Code Repository",
-    url: "http://github.com/nuuuwan/token_app",
+    url: "http://github.com/nuuuwan/politicians_lk",
     Icon: GitHubIcon,
   },
   {
     name: "Report Bugs",
-    url: "https://github.com/nuuuwan/token_app/issues",
+    url: "https://github.com/nuuuwan/politicians_lk/issues",
     Icon: BugReportIcon,
   },
 ];
