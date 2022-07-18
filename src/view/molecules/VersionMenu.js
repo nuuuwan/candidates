@@ -7,10 +7,14 @@ import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import CategoryIcon from '@mui/icons-material/Category';
-
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
+import Divider from '@mui/material/Divider';
 import GroundTruth from "../../nonview/core/GroundTruth"
 import AppColors from "../../view/_constants/AppColors"
+import {t} from "../../nonview/base/I18N"
 
+const MESSAGE = "Hi Nuwan, I'd like to submit criteria for the PoliticiansLKApp"
+const URL_MESSAGE = "https://twitter.com/messages/compose?recipient_id=57874373&text=" + MESSAGE.replace(" ", "+")
 
 export default function HelpMenu({onChangeVersion, context}) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -23,6 +27,11 @@ export default function HelpMenu({onChangeVersion, context}) {
   const onClose = function () {
     setAnchorEl(null);
   };
+
+  const onClickSubmitOwn = function() {
+    window.open(URL_MESSAGE, "_blank");
+    onClose();
+  }
 
   const versions = GroundTruth.getVersions();
   const activeVersion = context.version;
@@ -52,7 +61,15 @@ export default function HelpMenu({onChangeVersion, context}) {
             </MenuItem>
           );
         })}
-
+        <Divider />
+        <MenuItem onClick={onClickSubmitOwn}>
+          <ListItemIcon>
+            <AddCircleOutlineIcon />
+          </ListItemIcon>
+          <ListItemText>
+            {t("Submit your own version")}
+          </ListItemText>
+        </MenuItem>
       </Menu>
     </Box>
   );
