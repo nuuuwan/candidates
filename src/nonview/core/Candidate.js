@@ -1,5 +1,7 @@
+import IDX from "../../nonview/base/IDX"
 export default class Candidate {
-  constructor(firstName, lastName, twtrHandle, imgSrc, party) {
+  constructor(id, firstName, lastName, twtrHandle, imgSrc, party) {
+    this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.twtrHandle = twtrHandle;
@@ -9,6 +11,7 @@ export default class Candidate {
 
   static fromDict(d) {
     return new Candidate(
+      d.id,
       d.firstName,
       d.lastName,
       d.twtrHandle,
@@ -16,6 +19,11 @@ export default class Candidate {
       d.party
     );
   }
+
+  static fromId(id) {
+    return CANDIDATE_IDX[id];
+  }
+
 }
 
 const CANDIDATE_D_LIST = [
@@ -106,3 +114,9 @@ const CANDIDATE_D_LIST = [
 export const CANDIDATE_LIST = CANDIDATE_D_LIST.map((d) =>
   Candidate.fromDict(d)
 );
+
+export const CANDIDATE_IDX = IDX.build(
+    CANDIDATE_LIST,
+    x => x.id,
+    x => x,
+)
