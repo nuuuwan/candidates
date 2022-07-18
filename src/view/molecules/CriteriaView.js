@@ -4,7 +4,9 @@ import GroundTruth from "../../nonview/core/GroundTruth";
 
 import CriterionView from "../../view/molecules/CriterionView";
 
-export default function CriteriaView({ version }) {
+export default function CriteriaView({ version, onChangeCriterionWeight,criterionWeights }) {
+
+
   const criteria = GroundTruth.getCriteria(version);
   return (
     <Stack gap={1}>
@@ -15,6 +17,8 @@ export default function CriteriaView({ version }) {
             key={key}
             iCriterion={iCriterion}
             criterionID={criterionID}
+            criterionWeights={criterionWeights}
+            onChangeCriterionWeight={onChangeCriterionWeight}
           />
         );
       })}
