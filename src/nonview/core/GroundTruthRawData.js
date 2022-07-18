@@ -1,5 +1,5 @@
 export const ATTR_IDX_NUUUWAN = {
-  "Voted for 20A": {
+  "Voted for the 20th Amendment": {
     AKD: -100,
     DA: 100,
     HdS: -100,
@@ -10,7 +10,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Member of a @GotabayaR Cabinet": {
+  "Member of a Rajapaksa Cabinet": {
     AKD: -100,
     DA: 100,
     HdS: -100,
@@ -21,7 +21,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Para-Military Affiliations": {
+  "Has Para-Military Affiliations": {
     AKD: 100,
     DA: -100,
     HdS: -100,
@@ -32,7 +32,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Military Affiliations": {
+  "Has Military Affiliations": {
     AKD: -100,
     DA: -100,
     HdS: -100,
@@ -43,7 +43,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: 100,
     SP: -100,
   },
-  "Member of the @PodujanaParty": {
+  "Member of the SLPP": {
     AKD: -100,
     DA: 100,
     HdS: -100,
@@ -54,7 +54,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Will Dissolve @ParliamentLK before 2025": {
+  "Will Dissolve the Parliament before 2025": {
     AKD: 100,
     DA: -100,
     HdS: 100,
@@ -76,7 +76,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Will support bringing back 19A": {
+  "Will support bringing back the 19th Amendment": {
     AKD: 100,
     DA: -100,
     HdS: 100,
@@ -98,7 +98,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Is Party Leader": {
+  "Is a Party Leader": {
     AKD: 100,
     DA: -100,
     HdS: -100,
@@ -120,7 +120,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: 100,
     SP: 100,
   },
-  "Aged <60 years": {
+  "Aged less than 60 years": {
     AKD: 100,
     DA: -100,
     HdS: 100,
@@ -153,7 +153,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: 100,
   },
-  "Previous Affiliation with #Rajapaksa Government": {
+  "Previous Affiliations with Rajapaksa Governments": {
     AKD: -100,
     DA: 100,
     HdS: -100,
@@ -164,7 +164,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  ">70% Attendance in the 9th Parliament": {
+  "Over 70% Attendance in the latest Parliament": {
     AKD: 100,
     DA: -100,
     HdS: 100,

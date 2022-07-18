@@ -1,5 +1,6 @@
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
+
 export default function VersionView({version, activeVersion, onChangeVersion}) {
   const onClick = function() {
     onChangeVersion(version);

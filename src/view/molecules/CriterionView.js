@@ -42,7 +42,7 @@ export default function CriterionView({
 
   return (
     <Card sx={{ m: 1, p: 1 }}>
-      <Typography variant="caption">
+      <Typography variant="caption" color="lightgray">
         {iCriterion + 1}/{nCriteria}
       </Typography>
       <Typography variant="body2">
