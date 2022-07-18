@@ -32,7 +32,7 @@ export default class HomePage extends Component {
   getContext() {
     let context = URLContext.getContext();
     if (!context.page) {
-      context.page = "issuesPage";
+      context.page = "CriteriaPage";
     }
     if (!context.lang) {
       context.lang = BASE_LANG;

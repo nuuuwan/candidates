@@ -3,16 +3,16 @@ import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 import AppColors from "../../view/_constants/AppColors";
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
 
-export default class IssuesPage extends AbstractInnerPage {
+export default class CriteriaPage extends AbstractInnerPage {
   get page() {
-    return "IssuesPage";
+    return "CriteriaPage";
   }
   get Icon() {
     return PlaylistAddCheckIcon;
   }
 
   get label() {
-    return "Issues";
+    return "Criteria";
   }
 
   get color() {

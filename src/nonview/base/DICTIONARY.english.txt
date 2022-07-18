@@ -4,6 +4,6 @@ Code Repository
 Copy App Link
 Help (User Manual)
 Issue Page
-Issues
+Criteria
 Report Bugs
 Versions
