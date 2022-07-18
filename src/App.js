@@ -14,6 +14,12 @@ const THEME = createTheme({
     secondary: {
       main: AppColors.Secondary,
     },
+    success: {
+      main: AppColors.Success,
+    },
+    neutral: {
+      main: AppColors.Light,
+    },
   },
   typography: {
     fontFamily: ["Duru Sans", "Dosis", "Darker Grotesque", "sans-serif"].join(
