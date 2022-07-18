@@ -8,9 +8,9 @@ import { t } from "../../nonview/base/I18N";
 import WeightView from "../../view/molecules/WeightView"
 
 const MARKS_RAW = [
-  { value: 50, label: "Desirable" },
+  { value: 50, label: "Suitable" },
   { value: 0, label: "Neutral" },
-  { value: -50, label: "Undesirable" },
+  { value: -50, label: "Unsuitable" },
 ];
 
 export default function CriterionView({

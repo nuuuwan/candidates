@@ -17,9 +17,9 @@ export default class Weight {
 
     let directionStr = "";
     if (weight > 0) {
-      directionStr = " Desirable";
+      directionStr = " Suitable";
     } else if (weight < 0) {
-      directionStr = " Undesirable";
+      directionStr = " Unsuitable";
     } else {
       directionStr = "";
     }
