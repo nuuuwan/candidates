@@ -1,3 +1,5 @@
+>70% Attendance in the 9th Parliament
+Aged <60 years
 Cabinet member between 2019 and now
 Candidates
 Clear Local Cache
@@ -6,15 +8,23 @@ Copy App Link
 Crime/war crime/corruption cases
 Criteria
 Desirable
+Economic Experience at the National Level
 Ex-military or armed group connections
 Extremely Desirable
 Extremely Undesirable
 Help (User Manual)
+History of working with a ideologically wide group of MPs
+Is Party Leader
 Issue Page
 Known racist group connections
+Member of a @GotabayaR Cabinet
+Member of the @PodujanaParty
+Military Affiliations
 Neutral
 No asset declaration
+Para-Military Affiliations
 Past economic experience
+Previous Affiliation with #Rajapaksa Government
 Quite Desirable
 Quite Undesirable
 Report Bugs
@@ -24,7 +34,14 @@ Somewhat Desirable
 Somewhat Undesirable
 Undesirable
 Versions
+Voted for 20A
+Voted for 20A 86 I18N.js:58
 Voted for 20th amendment
+Will Dissolve @ParliamentLK before 2025
 Will dissolve parliament before 2025
 Will support abolishing presidency while in the seat
+Will support abolishing the Executive Presidency while in seat
+Will support bringing back 19A
 Will support bringing back 19the amendment
+Will work with the IMF
+Won a Electoral District Seat in the 2020 General Election
