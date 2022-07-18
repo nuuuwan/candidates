@@ -1,8 +1,9 @@
 import SriLankaColors from "../../view/_constants/SriLankaColors";
 
 const AppColors = {
-  Primary: "#000",
-  Secondary: "#888",
+  Primary: SriLankaColors.Sinhala,
+  Secondary: SriLankaColors.Tamil,
+  Success: SriLankaColors.Muslim,
 
   Light: "#ccc",
 };

@@ -1,10 +1,10 @@
 import IDX from "../../nonview/base/IDX";
 
 import IssuesPage from "../../view/pages/IssuesPage";
+import PeoplePage from "../../view/pages/PeoplePage";
+import VersionsPage from "../../view/pages/VersionsPage";
 
-const PAGE_LIST = [
-  IssuesPage,
-];
+const PAGE_LIST = [VersionsPage, IssuesPage, PeoplePage];
 
 const PAGE_CONFIG_LIST = PAGE_LIST.map(function (Page) {
   const pageInstance = new Page();
@@ -26,4 +26,4 @@ export const PAGE_CONFIG_IDX = IDX.build(
   (x) => x
 );
 
-export const DEFAULT_PAGE_CONFIG = PAGE_CONFIG_IDX["tokenList"];
+export const DEFAULT_PAGE_CONFIG = PAGE_CONFIG_IDX["IssuesPage"];

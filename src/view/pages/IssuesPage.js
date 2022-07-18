@@ -1,16 +1,16 @@
-import KeyIcon from "@mui/icons-material/Key";
+import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
 
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
 
 export default class IssuesPage extends AbstractInnerPage {
   get page() {
-    return "issuesPage";
+    return "IssuesPage";
   }
   get Icon() {
-    return KeyIcon;
+    return PlaylistAddCheckIcon;
   }
 
   render() {
-    return 'TODO'
+    return "TODO";
   }
 }
