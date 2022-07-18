@@ -56,7 +56,7 @@ export default class GroundTruth {
         candToScore,
         [cand, weight]
       ) {
-        if (candToScore[cand] === undefined) {
+        if (!candToScore[cand]) {
           candToScore[cand] = 0;
         }
         candToScore[cand] += (criterionWeights[iCrit] * weight) / totalWeight;
