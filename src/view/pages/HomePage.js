@@ -9,6 +9,7 @@ import URLContext from "../../nonview/base/URLContext";
 import CustomAppBar from "../../view/molecules/CustomAppBar";
 import HomePageBottomNavigation from "../../view/molecules/HomePageBottomNavigation";
 
+import { DEFAULT_VERSION } from "../../nonview/core/GroundTruth";
 import PAGE_CONFIG_LIST, {
   DEFAULT_PAGE_CONFIG,
 } from "../../view/pages/PAGE_CONFIG_LIST";
@@ -35,6 +36,9 @@ export default class HomePage extends Component {
     }
     if (!context.lang) {
       context.lang = BASE_LANG;
+    }
+    if (!context.version) {
+      context.version = DEFAULT_VERSION;
     }
     return context;
   }
