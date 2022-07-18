@@ -10,6 +10,7 @@ Crime/war crime/corruption cases
 Criteria
 Economic Experience at the National Level
 Ex-military or armed group connections
+Extremely
 Extremely Suitable
 Extremely Unsuitable
 Has Military Affiliations
@@ -32,11 +33,14 @@ Para-Military Affiliations
 Past economic experience
 Previous Affiliation with #Rajapaksa Government
 Previous Affiliations with Rajapaksa Governments
+Quite
 Quite Suitable
 Quite Unsuitable
 Report Bugs
+Slightly
 Slightly Suitable
 Slightly Unsuitable
+Somewhat
 Somewhat Suitable
 Somewhat Unsuitable
 Suitable
