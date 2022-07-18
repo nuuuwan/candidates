@@ -2,11 +2,10 @@ import { useState } from "react";
 
 import Card from "@mui/material/Card";
 import Slider from "@mui/material/Slider";
-import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 import { t } from "../../nonview/base/I18N";
-import Weight from "../../nonview/core/Weight";
+import WeightView from "../../view/molecules/WeightView"
 
 const MARKS_RAW = [
   { value: 50, label: "Desirable" },
@@ -39,10 +38,9 @@ export default function CriterionView({
     onChangeCriterionWeight(iCriterion, criterionWeight);
   };
 
-  const color = Weight.getColor(criterionWeight);
 
   return (
-    <Card sx={{ m: 1, p: 2 }}>
+    <Card sx={{ m: 1, p: 1 }}>
       <Typography variant="body2">
         {iCriterion + 1 + ". " + t(criterionID)}
       </Typography>
@@ -55,12 +53,7 @@ export default function CriterionView({
         onChangeCommitted={onChangeCommitted}
         color="neutral"
       />
-      <Stack direction="column" sx={{ textAlign: "right" }} color={color}>
-        <Typography variant="h6">{Weight.signed(criterionWeight)}</Typography>
-        <Typography variant="caption">
-          {t(Weight.getQualitativeText(criterionWeight))}
-        </Typography>
-      </Stack>
+      <WeightView weight={criterionWeight} />
     </Card>
   );
 }
