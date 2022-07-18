@@ -37,6 +37,9 @@ export default class Weight {
 
   static getColor(weight) {
     const hue = (weight + 100) * 120 / 200;
-    return `hsla(${hue},100%,30%,1)`;
+    const absWeight = Math.abs(weight);
+    const sat = absWeight;
+    const light = 50 * (100 - absWeight)/100 + 30;
+    return `hsla(${hue},${sat}%,${light}%,1)`;
   }
 }
