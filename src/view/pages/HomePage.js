@@ -101,7 +101,6 @@ export default class HomePage extends Component {
     const { context } = this.state;
     const key = JSON.stringify(context);
     const innerPageConfig = this.getInnerPageConfig();
-
     const criterionWeights = JSON.parse(context.criterionWeightsJSON);
 
     return (
