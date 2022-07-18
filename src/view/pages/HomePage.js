@@ -3,7 +3,7 @@ import { Component } from "react";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";
-import I18N from "../../nonview/base/I18N";
+import I18N, {BASE_LANG} from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 import CustomAppBar from "../../view/molecules/CustomAppBar";
@@ -32,6 +32,9 @@ export default class HomePage extends Component {
     let context = URLContext.getContext();
     if (!context.page) {
       context.page = "issuesPage";
+    }
+    if (!context.lang) {
+      context.lang = BASE_LANG;
     }
     return context;
   }

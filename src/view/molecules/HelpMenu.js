@@ -7,7 +7,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 import BugReportIcon from "@mui/icons-material/BugReport";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
@@ -15,12 +14,10 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SettingsIcon from "@mui/icons-material/Settings";
-import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+
 
 import I18N, { t, LANG_LIST } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
-
-import AppColors from "../../view/_constants/AppColors";
 
 const MENU_ITEM_LIST = [
   {
@@ -61,23 +58,6 @@ export default function HelpMenu() {
     window.location.reload(true);
   };
 
-  const onClickIssuerMode = function () {
-    let context = URLContext.getContext();
-    context.mode = "issuer";
-    URLContext.setContext(context);
-    window.location.reload(true);
-  };
-
-  const onClickConsumerMode = function () {
-    let context = URLContext.getContext();
-    context.mode = "receiver";
-    context.page = "tokenList";
-    URLContext.setContext(context);
-    window.location.reload(true);
-  };
-
-  const isIssuerMode = URLContext.getContext().mode === "issuer";
-
   return (
     <Box>
       <Box>
@@ -110,26 +90,7 @@ export default function HelpMenu() {
             </MenuItem>
           );
         })}
-        <Divider />
-        {isIssuerMode ? (
-          <MenuItem onClick={onClickConsumerMode}>
-            <ListItemIcon>
-              <SupervisorAccountIcon sx={{ color: AppColors.Consumer }} />
-            </ListItemIcon>
-            <ListItemText sx={{ color: AppColors.Consumer }}>
-              {t("Consumer Mode")}
-            </ListItemText>
-          </MenuItem>
-        ) : (
-          <MenuItem onClick={onClickIssuerMode}>
-            <ListItemIcon>
-              <AdminPanelSettingsIcon sx={{ color: AppColors.Issuer }} />
-            </ListItemIcon>
-            <ListItemText sx={{ color: AppColors.Issuer }}>
-              {t("Issuer Mode")}
-            </ListItemText>
-          </MenuItem>
-        )}
+
         <Divider />
         {MENU_ITEM_LIST.map(function (menuItem, i) {
           const key = "app-bar-menu-item-" + i;
