@@ -27,7 +27,7 @@ export default function CriterionView({
   const marks = MARKS_RAW.map(function ({ value, label }) {
     return {
       value,
-      label: <Typography sx={{ fontSize: "50%" }}>{t(label)}</Typography>,
+      label: <Typography sx={{ fontSize: "67%" }}>{t(label)}</Typography>,
     };
   });
 
