@@ -3,8 +3,6 @@ import { useState } from "react";
 import Card from "@mui/material/Card";
 import Slider from "@mui/material/Slider";
 import Typography from "@mui/material/Typography";
-import ThumbDownIcon from "@mui/icons-material/ThumbDown";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 
 import { t } from "../../nonview/base/I18N";
 
