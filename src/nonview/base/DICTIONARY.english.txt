@@ -7,13 +7,20 @@ Crime/war crime/corruption cases
 Criteria
 Desirable
 Ex-military or armed group connections
+Extremely Desirable
+Extremely Undesirable
 Help (User Manual)
 Issue Page
 Known racist group connections
 Neutral
 No asset declaration
 Past economic experience
+Quite Desirable
 Report Bugs
+Slightly Desirable
+Slightly Undesirable
+Somewhat Desirable
+Somewhat Undesirable
 Undesirable
 Versions
 Voted for 20th amendment
