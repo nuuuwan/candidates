@@ -8,7 +8,7 @@ export default function WeightView({weight}) {
   const color = Weight.getColor(weight);
 
   return (
-    <Stack direction="column" sx={{ textAlign: "right" }} color={color}>
+    <Stack direction="column" sx={{ textAlign: "right", width: 100 }} color={color}>
       <Typography variant="h6">{Weight.signed(weight)}</Typography>
       <Typography variant="caption">
         {t(Weight.getMagnitudeText(weight))}
