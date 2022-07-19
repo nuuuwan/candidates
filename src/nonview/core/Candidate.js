@@ -56,7 +56,7 @@ const CANDIDATE_D_LIST = [
   },
   {
     id: "MAS",
-    firstName: "MA",
+    firstName: "Mathiaparanan Abraham",
     lastName: "Sumanthiran",
     twtrHandle: "MASumanthiran",
     imgSrc:
