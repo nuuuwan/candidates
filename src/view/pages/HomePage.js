@@ -103,6 +103,7 @@ export default class HomePage extends Component {
     context.criterionWeights = GroundTruth.getInitCriterionWeights(
       context.version
     );
+    context.page = "CriteriaPage";
     this.setContext(context);
   }
 
