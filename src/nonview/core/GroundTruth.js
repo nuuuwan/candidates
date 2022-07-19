@@ -6,7 +6,6 @@ import {
 
 import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
-  "@h_liyan": ATTR_IDX_HLIYAN,
   "@nuuuwan": ATTR_IDX_NUUUWAN,
   "@nuuuwan-Economic": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Economic Experience at the National Level",
@@ -17,6 +16,7 @@ const ATTR_IDX_IDX = Object({
     "Will support abolishing the Executive Presidency while in seat",
     "Will support bringing back the 19th Amendment",
   ]),
+  "@h_liyan": ATTR_IDX_HLIYAN,  
 });
 
 const VERSIONS = Object.keys(ATTR_IDX_IDX);
