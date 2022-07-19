@@ -21,7 +21,7 @@ const STYLE = {
   zIndex: 1,
 };
 
-export default function CustomAppBar({ title, color, Icon, context, onChangeVersion }) {
+export default function CustomAppBar({ title, color, Icon, context, onChangeVersion, onClickOpenPage }) {
 
   const version = context.version;
   const criterionWeights = context.criterionWeights;
@@ -43,7 +43,7 @@ export default function CustomAppBar({ title, color, Icon, context, onChangeVers
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {" "}
           </Typography>
-          <CandidatesLeaderBoardShort candidateScoreAndRank={candidateScoreAndRank}/>
+          <CandidatesLeaderBoardShort candidateScoreAndRank={candidateScoreAndRank} onClickOpenPage={onClickOpenPage}/>
           <VersionMenu context={context} onChangeVersion={onChangeVersion}/>
           <HelpMenu />
         </Toolbar>

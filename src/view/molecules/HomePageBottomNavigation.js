@@ -20,6 +20,7 @@ export default function HomePageBottomNavigation({ onClickOpenPage, refHomePage 
       elevation={3}
     >
       <BottomNavigation>
+        <ScreenshotView refHomePage={refHomePage}/>
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
           const key = "button-" + config.page;
           const isActive = config.page === activePage;
@@ -34,7 +35,6 @@ export default function HomePageBottomNavigation({ onClickOpenPage, refHomePage 
             </Tooltip>
           );
         })}
-        <ScreenshotView refHomePage={refHomePage}/>
       </BottomNavigation>
     </Paper>
   );
