@@ -17,7 +17,7 @@ export default function CandidateView({candidateId, score}) {
       <Typography variant="caption">
         {t(candidate.firstName)}
       </Typography>
-      <Typography variant="body2">
+      <Typography variant="subtitle1">
         {t(candidate.lastName)}
       </Typography>
       <Typography variant="caption" color="lightgray">
