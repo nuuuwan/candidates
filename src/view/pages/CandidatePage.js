@@ -21,7 +21,7 @@ export default class CandidatePage extends AbstractInnerPage {
   }
 
   render() {
-    const { context } = this.props;
+    const { context, refHomePage } = this.props;
     const {version, criterionWeights} = context;
 
     const candidateAndScore = GroundTruth.getSortedCandidateAndScore(
@@ -29,7 +29,7 @@ export default class CandidatePage extends AbstractInnerPage {
       criterionWeights
     );
     return (
-      <CandidatesLeaderBoard candidateAndScore={candidateAndScore} />
+      <CandidatesLeaderBoard refHomePage={refHomePage} candidateAndScore={candidateAndScore} />
     )
 
   }

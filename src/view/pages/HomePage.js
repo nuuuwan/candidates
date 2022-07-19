@@ -124,11 +124,11 @@ export default class HomePage extends Component {
           context={context}
           onChangeVersion={this.onChangeVersion.bind(this)}
         />
-        <Box sx={STYLE_INNER_PAGE_BOX} ref={refHomePage}>
+        <Box sx={STYLE_INNER_PAGE_BOX}>
           <innerPageConfig.Page
+            refHomePage={refHomePage}
             context={context}
             onClickOpenPage={this.onClickOpenPage.bind(this)}
-
             criterionWeights={criterionWeights}
             onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
             onChangeVersion={this.onChangeVersion.bind(this)}

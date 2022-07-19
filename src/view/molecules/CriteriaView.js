@@ -8,10 +8,11 @@ export default function CriteriaView({
   version,
   onChangeCriterionWeight,
   criterionWeights,
+  refHomePage,
 }) {
   const criteria = GroundTruth.getCriteria(version);
   return (
-    <Stack gap={1}>
+    <Stack gap={1} ref={refHomePage}>
       {criteria.map(function (criterionID, iCriterion) {
         const key = "criterion-" + version + "-" + criterionID;
         return (

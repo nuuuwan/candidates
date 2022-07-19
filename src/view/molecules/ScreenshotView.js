@@ -9,7 +9,7 @@ import download from 'downloadjs';
 
 export default function ScreenshotView({refHomePage}) {
   const takeScreenshot = async (node) => {
-    const dataURI = await toPng(node);
+    const dataURI = await toPng(node, {backgroundColor: '#fefefe'});
     download(dataURI, 'politicians.png');
   };
 
