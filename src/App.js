@@ -30,10 +30,7 @@ const THEME = createTheme({
 });
 
 const STYLE = {
-  width: 400,
-  maxWidth: "90%",
-  margin: "auto",
-  marginTop: 3,
+  margin: 1,
   marginBottom: 10,
 };
 

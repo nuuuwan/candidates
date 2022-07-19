@@ -46,7 +46,7 @@ export default function CriterionView({
           onChange={onChange}
           onChangeCommitted={onChangeCommitted}
           color="neutral"
-          sx={{width: 170, color}}
+          sx={{width: window.innerWidth * 0.5, color}}
         />
         </Box>
         </Box>
