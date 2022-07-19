@@ -4,12 +4,12 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
 import Tooltip from "@mui/material/Tooltip";
-
 import { t } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 import AppColors from "../../view/_constants/AppColors";
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
+import ScreenshotView from "../../view/molecules/ScreenshotView"
 
 export default function HomePageBottomNavigation({ onClickOpenPage }) {
   const context = URLContext.getContext();
@@ -34,6 +34,7 @@ export default function HomePageBottomNavigation({ onClickOpenPage }) {
             </Tooltip>
           );
         })}
+        <ScreenshotView />
       </BottomNavigation>
     </Paper>
   );
