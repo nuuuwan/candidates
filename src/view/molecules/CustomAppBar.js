@@ -24,7 +24,7 @@ const STYLE = {
 export default function CustomAppBar({ title, color, Icon, context, onChangeVersion }) {
 
   const version = context.version;
-  const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+  const criterionWeights = context.criterionWeights;
   const candidateAndScore = GroundTruth.getSortedCandidateAndScore(
     version,
     criterionWeights

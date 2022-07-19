@@ -41,11 +41,10 @@ export default class HomePage extends Component {
       context.version = GroundTruth.DEFAULT_VERSION;
     }
 
-    if (!context.criterionWeightsJSON) {
-      const criterionWeights = GroundTruth.getInitCriterionWeights(
+    if (!context.criterionWeights) {
+      context.criterionWeights = GroundTruth.getInitCriterionWeights(
         context.version
       );
-      context.criterionWeightsJSON = JSON.stringify(criterionWeights);
     }
     return context;
   }
@@ -91,9 +90,9 @@ export default class HomePage extends Component {
 
   onChangeCriterionWeight(iCriterion, criterionWeight) {
     let context = this.getContext();
-    let criterionWeights = JSON.parse(context.criterionWeightsJSON);
+    let criterionWeights = context.criterionWeights;
     criterionWeights[iCriterion] = criterionWeight;
-    context.criterionWeightsJSON = JSON.stringify(criterionWeights);
+    context.criterionWeights = criterionWeights;
     this.setContext(context);
   }
 
@@ -101,11 +100,9 @@ export default class HomePage extends Component {
     let context = this.getContext();
     context.version = version;
 
-    const criterionWeights = GroundTruth.getInitCriterionWeights(
+    context.criterionWeights = GroundTruth.getInitCriterionWeights(
       context.version
     );
-    context.criterionWeightsJSON = JSON.stringify(criterionWeights);
-
     this.setContext(context);
   }
 
@@ -113,7 +110,7 @@ export default class HomePage extends Component {
     const { context } = this.state;
     const key = JSON.stringify(context);
     const innerPageConfig = this.getInnerPageConfig();
-    const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+    const criterionWeights = context.criterionWeights;
 
     return (
       <Box key={key}>
