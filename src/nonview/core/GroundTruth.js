@@ -74,11 +74,24 @@ export default class GroundTruth {
     {});
   }
 
-  static getSortedCandidateAndScore(version, criterionWeights) {
+  static getSortedCandidateScoreAndRank(version, criterionWeights) {
+    let prevScore = undefined;
+    let prevRank = undefined;
     return Object.entries(GroundTruth.getCandidateToScore(version, criterionWeights)).sort(
       function(a, b) {
         return b[1] - a[1];
       }
-    )
+    ).map(
+      function([candidate, score], iCandidate) {
+        let rank = iCandidate
+        if (prevScore !== undefined && prevScore === score) {
+          rank = prevRank;
+        }
+        prevRank = rank;
+        prevScore = score;
+        return [candidate, score, rank];
+      },
+      [],
+    );
   }
 }

@@ -27,7 +27,7 @@ export default class Weight {
   }
 
   static signed(weight) {
-    weight = parseInt(weight + 0.5);
+    weight = parseInt(Math.round(weight , 0));
     let signPrefix = "";
     if (weight > 0) {
       signPrefix = "+";

@@ -25,7 +25,7 @@ export default function CustomAppBar({ title, color, Icon, context, onChangeVers
 
   const version = context.version;
   const criterionWeights = context.criterionWeights;
-  const candidateAndScore = GroundTruth.getSortedCandidateAndScore(
+  const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
     version,
     criterionWeights
   );
@@ -43,7 +43,7 @@ export default function CustomAppBar({ title, color, Icon, context, onChangeVers
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {" "}
           </Typography>
-          <CandidatesLeaderBoardShort candidateAndScore={candidateAndScore}/>
+          <CandidatesLeaderBoardShort candidateScoreAndRank={candidateScoreAndRank}/>
           <VersionMenu context={context} onChangeVersion={onChangeVersion}/>
           <HelpMenu />
         </Toolbar>
