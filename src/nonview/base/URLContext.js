@@ -1,31 +1,12 @@
-const DELIM_CONTEXT_ITEM = "&";
-const DELIM_KV = ":";
 export default class URLContext {
-  static getURL() {
-    return window.location.href;
-  }
-  static setURL(url) {
-    window.history.pushState("", "", url);
-  }
+
 
   static contextToStr(context) {
-    return Object.entries(context)
-      .map(function (kv) {
-        return kv.join(DELIM_KV);
-      })
-      .join(DELIM_CONTEXT_ITEM);
+    return encodeURIComponent(btoa(JSON.stringify(context)));
   }
 
   static strToContext(contextStr) {
-    return contextStr
-      .split(DELIM_CONTEXT_ITEM)
-      .map(function (kvStr) {
-        return kvStr.split(DELIM_KV);
-      })
-      .reduce(function (context, [k, v]) {
-        context[k] = v;
-        return context;
-      }, {});
+    return JSON.parse(atob(decodeURIComponent(contextStr)));
   }
 
   static contextToURL(context) {
@@ -43,6 +24,14 @@ export default class URLContext {
     return URLContext.strToContext(contextStr);
   }
 
+  static getURL() {
+    return window.location.href;
+  }
+  static setURL(url) {
+    window.history.pushState("", "", url);
+  }
+
+
   static setContext(context) {
     const url = URLContext.contextToURL(context);
     URLContext.setURL(url);
@@ -52,4 +41,7 @@ export default class URLContext {
     const url = URLContext.getURL();
     return URLContext.urlToContext(url);
   }
+
+
+
 }
