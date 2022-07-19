@@ -11,7 +11,7 @@ import AppColors from "../../view/_constants/AppColors";
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 import ScreenshotView from "../../view/molecules/ScreenshotView"
 
-export default function HomePageBottomNavigation({ onClickOpenPage }) {
+export default function HomePageBottomNavigation({ onClickOpenPage, refHomePage }) {
   const context = URLContext.getContext();
   const activePage = context.page;
   return (
@@ -34,7 +34,7 @@ export default function HomePageBottomNavigation({ onClickOpenPage }) {
             </Tooltip>
           );
         })}
-        <ScreenshotView />
+        <ScreenshotView refHomePage={refHomePage}/>
       </BottomNavigation>
     </Paper>
   );

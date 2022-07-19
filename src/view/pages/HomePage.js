@@ -1,4 +1,5 @@
 import { Component } from "react";
+import React, { createRef } from 'react'
 
 import Box from "@mui/material/Box";
 
@@ -112,6 +113,7 @@ export default class HomePage extends Component {
     const key = JSON.stringify(context);
     const innerPageConfig = this.getInnerPageConfig();
     const criterionWeights = context.criterionWeights;
+    const refHomePage = createRef(null)
 
     return (
       <Box key={key}>
@@ -122,7 +124,7 @@ export default class HomePage extends Component {
           context={context}
           onChangeVersion={this.onChangeVersion.bind(this)}
         />
-        <Box sx={STYLE_INNER_PAGE_BOX}>
+        <Box sx={STYLE_INNER_PAGE_BOX} ref={refHomePage}>
           <innerPageConfig.Page
             context={context}
             onClickOpenPage={this.onClickOpenPage.bind(this)}
@@ -134,6 +136,7 @@ export default class HomePage extends Component {
         </Box>
         <HomePageBottomNavigation
           onClickOpenPage={this.onClickOpenPage.bind(this)}
+          refHomePage={refHomePage}
         />
       </Box>
     );

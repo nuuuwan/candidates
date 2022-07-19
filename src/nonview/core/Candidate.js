@@ -1,11 +1,11 @@
 import IDX from "../../nonview/base/IDX"
 export default class Candidate {
-  constructor(id, firstName, lastName, twtrHandle, imgSrc, party) {
+  constructor(id, firstName, lastName, twtrHandle, imgFile, party) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
     this.twtrHandle = twtrHandle;
-    this.imgSrc = imgSrc;
+    this.imgFile = imgFile;
     this.party = party;
   }
 
@@ -15,13 +15,17 @@ export default class Candidate {
       d.firstName,
       d.lastName,
       d.twtrHandle,
-      d.imgSrc,
+      d.imgFile,
       d.party
     );
   }
 
   static fromId(id) {
     return CANDIDATE_IDX[id];
+  }
+
+  get imgSrc() {
+    return process.env.PUBLIC_URL + '/images/' + this.imgFile;
   }
 
 }
@@ -32,8 +36,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Ranil",
     lastName: "Wickramasinghe",
     twtrHandle: "RW_UNP",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/1244.jpg",
+    imgFile:
+      "1244.jpg",
     party: "UNP",
   },
   {
@@ -41,8 +45,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Sajith",
     lastName: "Premadasa",
     twtrHandle: "SajithPremadasa",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/140.jpg",
+    imgFile:
+      "140.jpg",
     party: "SJB",
   },
   {
@@ -50,8 +54,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Sarath",
     lastName: "Fonseka",
     twtrHandle: "GeneralFonseka",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/3135.jpg",
+    imgFile:
+      "3135.jpg",
     party: "SJB",
   },
   {
@@ -59,8 +63,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Mathiaparanan Abraham",
     lastName: "Sumanthiran",
     twtrHandle: "MASumanthiran",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/3194.jpg",
+    imgFile:
+      "3194.jpg",
     party: "TNA",
   },
   {
@@ -68,8 +72,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Dullas",
     lastName: "Alahapperuma",
     twtrHandle: "DullasOfficial",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/2868.jpg",
+    imgFile:
+      "2868.jpg",
 
     party: "SLPP",
   },
@@ -78,8 +82,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Harsha",
     lastName: "de Silva",
     twtrHandle: "HarshadeSilvaMP",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/3201.jpg",
+    imgFile:
+      "3201.jpg",
     party: "SJB",
   },
   {
@@ -87,8 +91,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Anura Kumara",
     lastName: "Disanayake",
     twtrHandle: "AnuraDisanayake",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/112.jpg",
+    imgFile:
+      "112.jpg",
     party: "JVP",
   },
   {
@@ -96,8 +100,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Maithripala",
     lastName: "Sirisena",
     twtrHandle: "MaithripalaS",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/191.jpg",
+    imgFile:
+      "191.jpg",
     party: "SLFP",
   },
   {
@@ -105,8 +109,8 @@ const CANDIDATE_D_LIST = [
     firstName: "Patali Champika",
     lastName: "Ranawaka",
     twtrHandle: "PCRanawaka",
-    imgSrc:
-      "https://www.parliament.lk/uploads/images/members/profile_images/thumbs/3076.jpg",
+    imgFile:
+      "3076.jpg",
     party: "SJB",
   },
 ];
