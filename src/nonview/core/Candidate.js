@@ -26,7 +26,7 @@ export default class Candidate {
   }
 
   get imgSrc() {
-    return process.env.PUBLIC_URL + "/images/" + this.imgFile;
+    return process.env.PUBLIC_URL + "/images/candidates/" + this.imgFile;
   }
 }
 
