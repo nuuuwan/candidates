@@ -61,7 +61,7 @@ const CANDIDATE_D_LIST = [
     lastName: "Sumanthiran",
     twtrHandle: "MASumanthiran",
     imgFile: "3194.jpg",
-    party: "TNA",
+    party: "ITAK",
   },
   {
     id: "DA",
