@@ -13,8 +13,6 @@ import CategoryIcon from "@mui/icons-material/Category";
 import { t } from "../../nonview/base/I18N";
 import GroundTruth from "../../nonview/core/GroundTruth";
 
-import AppColors from "../../view/_constants/AppColors";
-
 const MESSAGE =
   "Hi Nuwan, I'd like to submit criteria for the PoliticiansLKApp";
 const URL_MESSAGE =
@@ -53,14 +51,11 @@ export default function HelpMenu({ onChangeVersion, context }) {
             onChangeVersion(version);
           };
           const isActive = activeVersion === version;
-          const color = isActive ? AppColors.Primary : AppColors.VeryLight;
 
           return (
             <MenuItem key={"menu-" + version} onClick={onClick}>
-              <ListItemIcon>
-                <CategoryIcon />
-              </ListItemIcon>
-              <ListItemText sx={{ color }}>{version}</ListItemText>
+              <ListItemIcon>{isActive ? <CategoryIcon /> : null}</ListItemIcon>
+              <ListItemText>{version}</ListItemText>
             </MenuItem>
           );
         })}

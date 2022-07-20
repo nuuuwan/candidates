@@ -1,10 +1,10 @@
 import { Component } from "react";
 import React, { createRef } from "react";
-
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";
-import I18N from "../../nonview/base/I18N";
+import I18N, { t } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 import CustomAppBar from "../../view/molecules/CustomAppBar";
@@ -71,7 +71,7 @@ export default class HomePage extends Component {
     let context = URLContext.getContext();
     context.page = page;
     this.setContext(context);
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
   }
 
   getInnerPageConfig() {
@@ -110,6 +110,7 @@ export default class HomePage extends Component {
   }
 
   onClickRandomCriteriaWeights() {
+    AudioX.playLong();
     let context = this.getContext();
     context.criterionWeights = GroundTruth.getRandomCriterionWeights(
       context.version
@@ -135,6 +136,9 @@ export default class HomePage extends Component {
           onClickOpenPage={this.onClickOpenPage.bind(this)}
         />
         <Box sx={STYLE_INNER_PAGE_BOX}>
+          <Typography sx={{ color: "lightgray", fontSize: "50%" }}>
+            {t("000 Version", context.version)}
+          </Typography>
           <innerPageConfig.Page
             refHomePage={refHomePage}
             context={context}

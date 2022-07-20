@@ -7,11 +7,11 @@ import {
 import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
   "@nuuuwan": ATTR_IDX_NUUUWAN,
-  "@nuuuwan-Economic": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
+  "@nuuuwan (Economic Only)": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Economic Experience at the National Level",
     "Will work with the IMF",
   ]),
-  "@nuuuwan-Constituitional": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
+  "@nuuuwan (Constituitional Only)": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
     "Voted for the 20th Amendment",
     "Will support abolishing the Executive Presidency while in seat",
     "Will support bringing back the 19th Amendment",
@@ -19,16 +19,18 @@ const ATTR_IDX_IDX = Object({
   "@h_liyan": ATTR_IDX_HLIYAN,
 });
 
-const VERSIONS = Object.keys(ATTR_IDX_IDX);
-
 export default class GroundTruth {
-  static DEFAULT_VERSION = VERSIONS[0];
+  static VERSIONS = Object.keys(ATTR_IDX_IDX);
+  static DEFAULT_VERSION = GroundTruth.VERSIONS[0];
 
   static getVersions() {
-    return VERSIONS;
+    return GroundTruth.VERSIONS;
   }
 
   static getCriterionToCandidateToWeight(version) {
+    if (!GroundTruth.VERSIONS[version]) {
+      version = GroundTruth.DEFAULT_VERSION;
+    }
     return ATTR_IDX_IDX[version];
   }
 

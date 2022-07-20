@@ -29,14 +29,14 @@ export default function HomePageBottomNavigation({
         <ScreenshotView refHomePage={refHomePage} />
         <Tooltip title={t("Random Criteria Weights")}>
           <BottomNavigationAction
-            icon={<CasinoIcon />}
+            icon={<CasinoIcon sx={{ color: AppColors.VeryLight }} />}
             onClick={onClickRandomCriteriaWeights}
           />
         </Tooltip>
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
           const key = "button-" + config.page;
           const isActive = config.page === activePage;
-          const color = isActive ? config.color : AppColors.Light;
+          const color = isActive ? "black" : AppColors.VeryLight;
 
           return (
             <Tooltip key={key} title={t(config.label)}>
