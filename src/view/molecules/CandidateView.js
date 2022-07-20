@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import PartyView from "../../view/molecules/PartyView";
 
 import { t } from "../../nonview/base/I18N";
 import Candidate from "../../nonview/core/Candidate";
@@ -23,11 +24,11 @@ export default function CandidateView({ candidateId, score, rank }) {
           sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
         />
         <Box>
-          <Typography variant="caption">{t(candidate.firstName)}</Typography>
-          <Typography variant="subtitle1">{t(candidate.lastName)}</Typography>
-          <Typography variant="caption" color="lightgray">
-            {t(candidate.party)}
+          <Typography sx={{ fontSize: "40%" }}>
+            {t(candidate.firstName)}
           </Typography>
+          <Typography variant="subtitle1">{t(candidate.lastName)}</Typography>
+          <PartyView id={candidate.party} />
         </Box>
         <Typography sx={{ flexGrow: 1 }}> </Typography>
         <WeightView weight={score} />
