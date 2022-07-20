@@ -3,11 +3,11 @@ import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import PartyView from "../../view/molecules/PartyView";
 
 import { t } from "../../nonview/base/I18N";
 import Candidate from "../../nonview/core/Candidate";
 
+import PartyView from "../../view/molecules/PartyView";
 import WeightView from "../../view/molecules/WeightView";
 
 const AVATAR_SIZE = 64;
