@@ -1,6 +1,5 @@
 import { Component } from "react";
 import React, { createRef } from "react";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";

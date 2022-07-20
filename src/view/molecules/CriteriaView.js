@@ -2,7 +2,7 @@ import Stack from "@mui/material/Stack";
 
 import GroundTruth from "../../nonview/core/GroundTruth";
 import Typography from "@mui/material/Typography";
-import {t} from "../../nonview/base/I18N"
+import { t } from "../../nonview/base/I18N";
 import CriterionView from "../../view/molecules/CriterionView";
 
 export default function CriteriaView({
