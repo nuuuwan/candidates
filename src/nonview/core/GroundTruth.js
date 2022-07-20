@@ -28,7 +28,7 @@ export default class GroundTruth {
   }
 
   static getCriterionToCandidateToWeight(version) {
-    if (!GroundTruth.VERSIONS[version]) {
+    if (!ATTR_IDX_IDX[version]) {
       version = GroundTruth.DEFAULT_VERSION;
     }
     return ATTR_IDX_IDX[version];
