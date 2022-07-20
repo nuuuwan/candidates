@@ -19,7 +19,7 @@ class Lang {
 export const LANG_LIST = [
   new Lang("si", "සිංහල", "Sinhala", "සිං", SriLankaColors.Sinhala),
   new Lang("ta", "தமிழ்", "Tamil", "த", SriLankaColors.Tamil),
-  new Lang("en", "English", "English", "En", SriLankaColors.Muslim),  
+  new Lang("en", "English", "English", "En", SriLankaColors.Muslim),
 ];
 
 export const LANG_IDX = IDX.build(
