@@ -42,7 +42,7 @@ export default function CriterionView({
           <Box sx={{ m: 1, marginBottom: 0 }}>
             <Slider
               value={criterionWeight}
-              min={-101}
+              min={-100}
               max={100}
               onChange={onChange}
               onChangeCommitted={onChangeCommitted}
