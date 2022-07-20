@@ -71,6 +71,7 @@ export default class HomePage extends Component {
     let context = URLContext.getContext();
     context.page = page;
     this.setContext(context);
+    window.scrollTo(0,0);
   }
 
   getInnerPageConfig() {
