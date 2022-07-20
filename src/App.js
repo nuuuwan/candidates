@@ -25,7 +25,6 @@ const THEME = createTheme({
     fontFamily: ["Duru Sans", "Dosis", "Darker Grotesque", "sans-serif"].join(
       ","
     ),
-    fontSize: 12,
   },
 });
 

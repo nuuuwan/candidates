@@ -27,7 +27,9 @@ export default function CandidateView({ candidateId, score, rank }) {
           <Typography sx={{ fontSize: "40%" }}>
             {t(candidate.firstName)}
           </Typography>
-          <Typography variant="subtitle1">{t(candidate.lastName)}</Typography>
+          <Typography sx={{ fontSize: "80%" }}>
+            {t(candidate.lastName)}
+          </Typography>
           <PartyView id={candidate.party} />
         </Box>
         <Typography sx={{ flexGrow: 1 }}> </Typography>
