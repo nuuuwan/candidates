@@ -16,17 +16,17 @@ export default class Party {
   }
 
   get imgSrc() {
-    return process.env.PUBLIC_URL + "/images/parties/" + this.imgFile;
+    return process.env.PUBLIC_URL + "/images/parties/logo_" + this.id + ".png";
   }
 }
 
 const PARTY_D_LIST = [
-  { id: "UNP", color: "darkgreen", imgFile: "UNP.png" },
-  { id: "SJB", color: "darkgreen", imgFile: "SJB.png" },
-  { id: "SLPP", color: "maroon", imgFile: "SLPP.png" },
-  { id: "SLFP", color: "blue", imgFile: "SLFP.png" },
-  { id: "TNA", color: "yellow", imgFile: "TNA.png" },
-  { id: "JVP", color: "red", imgFile: "JVP.png" },
+  { id: "UNP", color: "darkgreen" },
+  { id: "SJB", color: "darkgreen" },
+  { id: "SLPP", color: "maroon" },
+  { id: "SLFP", color: "blue" },
+  { id: "ITAK", color: "yellow" },
+  { id: "JVP", color: "red" },
 ];
 
 const PARTY_LIST = PARTY_D_LIST.map((d) => Party.fromDict(d));
