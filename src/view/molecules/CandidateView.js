@@ -1,11 +1,14 @@
-import Card from "@mui/material/Card";
-import Candidate from "../../nonview/core/Candidate";
-import WeightView from "../../view/molecules/WeightView";
-import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+
 import { t } from "../../nonview/base/I18N";
+import Candidate from "../../nonview/core/Candidate";
+
+import WeightView from "../../view/molecules/WeightView";
+
 const AVATAR_SIZE = 64;
 export default function CandidateView({ candidateId, score, rank }) {
   const candidate = Candidate.fromId(candidateId);

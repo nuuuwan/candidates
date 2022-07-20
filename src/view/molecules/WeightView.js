@@ -1,7 +1,8 @@
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Weight from "../../nonview/core/Weight";
+
 import { t } from "../../nonview/base/I18N";
+import Weight from "../../nonview/core/Weight";
 
 export default function WeightView({ weight }) {
   const color = Weight.getColor(weight);

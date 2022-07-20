@@ -1,9 +1,11 @@
+import React from "react";
+
+import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Tooltip from "@mui/material/Tooltip";
 import ScreenshotIcon from "@mui/icons-material/Screenshot";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import React from "react";
-import { toPng } from "html-to-image";
+
 import download from "downloadjs";
+import { toPng } from "html-to-image";
 
 export default function ScreenshotView({ refHomePage }) {
   const takeScreenshot = async (node) => {

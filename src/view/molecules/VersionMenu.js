@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 
 import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import CategoryIcon from "@mui/icons-material/Category";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import Divider from "@mui/material/Divider";
-import GroundTruth from "../../nonview/core/GroundTruth";
-import AppColors from "../../view/_constants/AppColors";
+import CategoryIcon from "@mui/icons-material/Category";
+
 import { t } from "../../nonview/base/I18N";
+import GroundTruth from "../../nonview/core/GroundTruth";
+
+import AppColors from "../../view/_constants/AppColors";
 
 const MESSAGE =
   "Hi Nuwan, I'd like to submit criteria for the PoliticiansLKApp";

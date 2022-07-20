@@ -4,12 +4,12 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import GroundTruth from "../../nonview/core/GroundTruth";
-import CandidatesLeaderBoardShort from "../../view/molecules/CandidatesLeaderBoardShort";
 
 import { t } from "../../nonview/base/I18N";
+import GroundTruth from "../../nonview/core/GroundTruth";
 
 import AlignCenter from "../../view/atoms/AlignCenter";
+import CandidatesLeaderBoardShort from "../../view/molecules/CandidatesLeaderBoardShort";
 import HelpMenu from "./HelpMenu.js";
 import VersionMenu from "./VersionMenu.js";
 

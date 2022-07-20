@@ -1,12 +1,15 @@
 import { useState } from "react";
-import Stack from "@mui/material/Stack";
+
+import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import Slider from "@mui/material/Slider";
+import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+
 import { t } from "../../nonview/base/I18N";
-import WeightView from "../../view/molecules/WeightView";
 import Weight from "../../nonview/core/Weight";
+
+import WeightView from "../../view/molecules/WeightView";
 
 export default function CriterionView({
   iCriterion,

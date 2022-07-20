@@ -1,7 +1,8 @@
+import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 
 import Candidate from "../../nonview/core/Candidate";
-import Avatar from "@mui/material/Avatar";
+
 const AVATAR_SIZE = 24;
 const MIN_SCORE = 1;
 export default function CandidatesLeaderBoardShort({

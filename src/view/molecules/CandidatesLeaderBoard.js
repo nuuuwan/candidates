@@ -1,4 +1,5 @@
 import Stack from "@mui/material/Stack";
+
 import CandidateView from "../../view/molecules/CandidateView";
 
 export default function CandidatesLeaderBoard({

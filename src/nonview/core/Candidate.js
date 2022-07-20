@@ -1,4 +1,5 @@
 import IDX from "../../nonview/base/IDX";
+
 export default class Candidate {
   constructor(id, firstName, lastName, twtrHandle, imgFile, party) {
     this.id = id;
