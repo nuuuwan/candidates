@@ -5,7 +5,7 @@ import Party from "../../nonview/core/Party";
 
 import AlignCenter from "../../view/atoms/AlignCenter";
 
-const AVATAR_SIZE = 12;
+const AVATAR_SIZE = 15;
 
 export default function PartyView({ id }) {
   const party = Party.fromID(id);
@@ -14,7 +14,16 @@ export default function PartyView({ id }) {
     <AlignCenter>
       <img
         src={party.imgSrc}
-        style={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
+        alt={id}
+        style={{
+          width: AVATAR_SIZE,
+          height: AVATAR_SIZE,
+          borderColor: color,
+          borderRadius: "50%",
+          borderWidth: 2,
+          borderStyle: "solid",
+          padding: AVATAR_SIZE / 5,
+        }}
       />
       <Typography variant="caption">{t(id)}</Typography>
     </AlignCenter>
