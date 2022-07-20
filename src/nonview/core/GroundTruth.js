@@ -16,7 +16,7 @@ const ATTR_IDX_IDX = Object({
     "Will support abolishing the Executive Presidency while in seat",
     "Will support bringing back the 19th Amendment",
   ]),
-  "@h_liyan": ATTR_IDX_HLIYAN,  
+  "@h_liyan": ATTR_IDX_HLIYAN,
 });
 
 const VERSIONS = Object.keys(ATTR_IDX_IDX);
@@ -36,11 +36,22 @@ export default class GroundTruth {
     return Object.keys(GroundTruth.getCriterionToCandidateToWeight(version));
   }
 
-  static getInitCriterionWeights(version) {
+  static getGenericCriterionWeights(version, funcGenerateWeight) {
     const criteria = GroundTruth.getCriteria(version);
     return criteria.map(function (criterion) {
-      return 0;
+      return funcGenerateWeight(criterion);
     });
+  }
+
+  static getInitCriterionWeights(version) {
+    return GroundTruth.getGenericCriterionWeights(version, (criterion) => 0);
+  }
+
+  static getRandomCriterionWeights(version) {
+    return GroundTruth.getGenericCriterionWeights(
+      version,
+      (criterion) => Math.random() * 200 - 100
+    );
   }
 
   static getTotalWeight(criterionWeights) {
@@ -77,21 +88,20 @@ export default class GroundTruth {
   static getSortedCandidateScoreAndRank(version, criterionWeights) {
     let prevScore = undefined;
     let prevRank = undefined;
-    return Object.entries(GroundTruth.getCandidateToScore(version, criterionWeights)).sort(
-      function(a, b) {
+    return Object.entries(
+      GroundTruth.getCandidateToScore(version, criterionWeights)
+    )
+      .sort(function (a, b) {
         return b[1] - a[1];
-      }
-    ).map(
-      function([candidate, score], iCandidate) {
-        let rank = iCandidate
+      })
+      .map(function ([candidate, score], iCandidate) {
+        let rank = iCandidate;
         if (prevScore !== undefined && prevScore === score) {
           rank = prevRank;
         }
         prevRank = rank;
         prevScore = score;
         return [candidate, score, rank];
-      },
-      [],
-    );
+      }, []);
   }
 }

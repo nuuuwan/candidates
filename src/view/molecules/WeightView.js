@@ -1,14 +1,17 @@
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
-import Weight from "../../nonview/core/Weight"
-import {t} from "../../nonview/base/I18N"
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import Weight from "../../nonview/core/Weight";
+import { t } from "../../nonview/base/I18N";
 
-export default function WeightView({weight}) {
-
+export default function WeightView({ weight }) {
   const color = Weight.getColor(weight);
 
   return (
-    <Stack direction="column" sx={{ textAlign: "right", width: 100 }} color={color}>
+    <Stack
+      direction="column"
+      sx={{ textAlign: "right", width: 100 }}
+      color={color}
+    >
       <Typography variant="h6">{Weight.signed(weight)}</Typography>
       <Typography variant="caption">
         {t(Weight.getMagnitudeText(weight))}

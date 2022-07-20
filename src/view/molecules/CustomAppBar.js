@@ -4,9 +4,8 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import GroundTruth from "../../nonview/core/GroundTruth"
-import CandidatesLeaderBoardShort from "../../view/molecules/CandidatesLeaderBoardShort"
-
+import GroundTruth from "../../nonview/core/GroundTruth";
+import CandidatesLeaderBoardShort from "../../view/molecules/CandidatesLeaderBoardShort";
 
 import { t } from "../../nonview/base/I18N";
 
@@ -21,8 +20,14 @@ const STYLE = {
   zIndex: 1,
 };
 
-export default function CustomAppBar({ title, color, Icon, context, onChangeVersion, onClickOpenPage }) {
-
+export default function CustomAppBar({
+  title,
+  color,
+  Icon,
+  context,
+  onChangeVersion,
+  onClickOpenPage,
+}) {
   const version = context.version;
   const criterionWeights = context.criterionWeights;
   const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
@@ -43,8 +48,11 @@ export default function CustomAppBar({ title, color, Icon, context, onChangeVers
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             {" "}
           </Typography>
-          <CandidatesLeaderBoardShort candidateScoreAndRank={candidateScoreAndRank} onClickOpenPage={onClickOpenPage}/>
-          <VersionMenu context={context} onChangeVersion={onChangeVersion}/>
+          <CandidatesLeaderBoardShort
+            candidateScoreAndRank={candidateScoreAndRank}
+            onClickOpenPage={onClickOpenPage}
+          />
+          <VersionMenu context={context} onChangeVersion={onChangeVersion} />
           <HelpMenu />
         </Toolbar>
       </AppBar>

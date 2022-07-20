@@ -6,12 +6,17 @@ import Paper from "@mui/material/Paper";
 import Tooltip from "@mui/material/Tooltip";
 import { t } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
+import CasinoIcon from "@mui/icons-material/Casino";
 
 import AppColors from "../../view/_constants/AppColors";
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
-import ScreenshotView from "../../view/molecules/ScreenshotView"
+import ScreenshotView from "../../view/molecules/ScreenshotView";
 
-export default function HomePageBottomNavigation({ onClickOpenPage, refHomePage }) {
+export default function HomePageBottomNavigation({
+  onClickOpenPage,
+  refHomePage,
+  onClickRandomCriteriaWeights,
+}) {
   const context = URLContext.getContext();
   const activePage = context.page;
   return (
@@ -20,7 +25,13 @@ export default function HomePageBottomNavigation({ onClickOpenPage, refHomePage 
       elevation={3}
     >
       <BottomNavigation>
-        <ScreenshotView refHomePage={refHomePage}/>
+        <ScreenshotView refHomePage={refHomePage} />
+        <Tooltip title={t("Random Criteria Weights")}>
+          <BottomNavigationAction
+            icon={<CasinoIcon />}
+            onClick={onClickRandomCriteriaWeights}
+          />
+        </Tooltip>
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
           const key = "button-" + config.page;
           const isActive = config.page === activePage;

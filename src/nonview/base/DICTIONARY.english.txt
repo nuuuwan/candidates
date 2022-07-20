@@ -6,6 +6,7 @@ Alahapperuma
 Anura Kumara
 Cabinet member between 2019 and now
 Candidates
+Random Criteria Weights
 Clear Local Cache
 Code Repository
 Copy App Link

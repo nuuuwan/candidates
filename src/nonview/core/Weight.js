@@ -23,11 +23,11 @@ export default class Weight {
     if (weight < 0) {
       return "Unsuitable";
     }
-    return ""
+    return "";
   }
 
   static signed(weight) {
-    weight = parseInt(Math.round(weight , 0));
+    weight = parseInt(Math.round(weight, 0));
     let signPrefix = "";
     if (weight > 0) {
       signPrefix = "+";
@@ -36,10 +36,10 @@ export default class Weight {
   }
 
   static getColor(weight) {
-    const hue = (weight + 100) * 120 / 200;
+    const hue = ((weight + 100) * 120) / 200;
     const absWeight = Math.abs(weight);
     const sat = absWeight;
-    const light = 50 * (100 - absWeight)/100 + 30;
+    const light = (50 * (100 - absWeight)) / 100 + 30;
     return `hsla(${hue},${sat}%,${light}%,1)`;
   }
 }
