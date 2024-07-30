@@ -13,4 +13,6 @@ export const CRITERION_LIST = [
   "Won a Electoral District Seat in the 2020 General Election",
   "Member of a Rajapaksa Cabinet",
   "Voted for the 20th Amendment",
+  "Participated in or Associated with 1987–1989 JVP insurrection",
+  "Associated with Communist Ideologies",
 ];
