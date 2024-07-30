@@ -20,12 +20,12 @@ import URLContext from "../../nonview/base/URLContext";
 const MENU_ITEM_LIST = [
   {
     name: "Code Repository",
-    url: "http://github.com/nuuuwan/politicians_lk",
+    url: "http://github.com/nuuuwan/candidates",
     Icon: GitHubIcon,
   },
   {
     name: "Report Bugs",
-    url: "https://github.com/nuuuwan/politicians_lk/issues",
+    url: "https://github.com/nuuuwan/candidates/issues",
     Icon: BugReportIcon,
   },
 ];
