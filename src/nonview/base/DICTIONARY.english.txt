@@ -13,6 +13,7 @@ Copy App Link
 Crime/war crime/corruption cases
 Criteria
 Disanayake
+Drag the sliders to set the weights of the criteria, and click the Candidates button on the menu below, to see how different candidates score on these criteria.
 Dullas
 Economic Experience at the National Level
 Ex-military or armed group connections
@@ -38,6 +39,7 @@ Member of a @GotabayaR Cabinet
 Member of a Rajapaksa Cabinet
 Member of the @PodujanaParty
 Member of the SLPP
+Member or Former-Member of the SLPP
 Military Affiliations
 Neutral
 No asset declaration
@@ -72,13 +74,16 @@ Submit your own version 2
 Suitable
 Sumanthiran
 TNA
+To set random weights, click the Dice button on the menu below.
 UNP
+Under 65 years old (Born after 1959)
 Unsuitable
 Versions
 Voted for 20A
 Voted for 20A 86
 Voted for 20th amendment
 Voted for the 20th Amendment
+What criteria would you like to see in a Presidential Candidate? What criteria would be suitable and what would be unsuitable?
 Wickramasinghe
 Will Dissolve @ParliamentLK before 2025
 Will Dissolve the Parliament before 2025

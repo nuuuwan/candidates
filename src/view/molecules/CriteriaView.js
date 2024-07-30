@@ -17,17 +17,17 @@ export default function CriteriaView({
   return (
     <Stack gap={1} ref={refHomePage}>
       <Typography variant="body1">
-        What criteria would you like to see in a Presidential Candidate? What
-        criteria would be suitable and what would be unsuitable?
+        {t(
+          "What criteria would you like to see in a Presidential Candidate? What criteria would be suitable and what would be unsuitable?"
+        )}
       </Typography>
       <Alert severity="info">
-        Drag the sliders to set the weights of the criteria, and click the
-        <strong>{" Candidates "}</strong> button on the menu below, to see how
-        different candidates score on these criteria.
+        {t(
+          "Drag the sliders to set the weights of the criteria, and click the Candidates button on the menu below, to see how different candidates score on these criteria."
+        )}
       </Alert>
       <Alert severity="info">
-        To set random weights, click the
-        <strong>{" Dice "}</strong> button on the menu below.
+        {t("To set random weights, click the Dice button on the menu below.")}
       </Alert>
       {criteria.map(function (criterionID, iCriterion) {
         const key = "criterion-" + version + "-" + criterionID;
