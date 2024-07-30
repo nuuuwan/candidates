@@ -18,7 +18,9 @@ export default function WeightView({ weight }) {
         {t(Weight.getMagnitudeText(weight))}
       </Typography>
       <Typography variant="caption">
-        {t(Weight.getDirectionText(weight))}
+        {t(Weight.getDirectionText(weight)) +
+          " " +
+          Weight.getDirectionEmoji(weight)}
       </Typography>
     </Stack>
   );

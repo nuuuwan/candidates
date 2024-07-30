@@ -23,11 +23,22 @@ export default class Weight {
   }
   static getDirectionText(weight) {
     if (weight > 0) {
-      return "Suitable " + Weight.EMOJI.SUITABLE;
+      return "Suitable";
     }
 
     if (weight < 0) {
-      return "Unsuitable " + Weight.EMOJI.UNSUITABLE;
+      return "Unsuitable";
+    }
+    return "";
+  }
+
+  static getDirectionEmoji(weight) {
+    if (weight > 0) {
+      return Weight.EMOJI.SUITABLE;
+    }
+
+    if (weight < 0) {
+      return Weight.EMOJI.UNSUITABLE;
     }
     return Weight.EMOJI.NEUTRAL;
   }

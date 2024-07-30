@@ -13,8 +13,7 @@ import CategoryIcon from "@mui/icons-material/Category";
 import { t } from "../../nonview/base/I18N";
 import GroundTruth from "../../nonview/core/GroundTruth";
 
-const MESSAGE =
-  "Hi Nuwan, I'd like to submit criteria for the PoliticiansLKApp";
+const MESSAGE = "Hi Nuwan, I'd like to submit criteria for the CandidatesLKApp";
 const URL_MESSAGE =
   "https://twitter.com/messages/compose?recipient_id=57874373&text=" +
   MESSAGE.replace(" ", "+");
