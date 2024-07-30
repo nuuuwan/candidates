@@ -30,6 +30,89 @@ const MENU_ITEM_LIST = [
   },
 ];
 
+function MenuItemCopyAppLink() {
+  const onClickCopy = function () {
+    navigator.clipboard.writeText(URLContext.getURL());
+  };
+
+  return (
+    <MenuItem onClick={onClickCopy}>
+      <ListItemIcon>
+        <ContentCopyIcon />
+      </ListItemIcon>
+      <ListItemText>{t("Copy App Link")}</ListItemText>
+    </MenuItem>
+  );
+}
+
+function MenuItemClearCache() {
+  const onClickClearCache = function () {
+    localStorage.clear();
+    window.location.reload(true);
+  };
+  return (
+    <MenuItem onClick={onClickClearCache}>
+      <ListItemIcon>
+        <AutorenewIcon />
+      </ListItemIcon>
+      <ListItemText>{t("Clear Local Cache")}</ListItemText>
+    </MenuItem>
+  );
+}
+
+function MenuItemsForLang() {
+  return (
+    <>
+      {LANG_LIST.map(function (lang, iLang) {
+        const currentLang = I18N.getLang();
+        if (currentLang === lang.lang) {
+          return null;
+        }
+
+        const onClick = function () {
+          let context = URLContext.getContext();
+          context.lang = lang.lang;
+          URLContext.setContext(context);
+          window.location.reload(true);
+        };
+
+        return (
+          <MenuItem key={"lang-" + iLang} onClick={onClick}>
+            <ListItemIcon>
+              <LanguageIcon sx={{ color: lang.color }} />
+            </ListItemIcon>
+            <ListItemText sx={{ color: lang.color }}>{lang.label}</ListItemText>
+          </MenuItem>
+        );
+      })}
+    </>
+  );
+}
+
+function MenuItemsForLinks({ onClose }) {
+  return (
+    <>
+      {MENU_ITEM_LIST.map(function (menuItem, i) {
+        const key = "app-bar-menu-item-" + i;
+        const Icon = menuItem.Icon;
+        const onClick = function (e) {
+          window.open(menuItem.url, "_blank");
+          onClose();
+        };
+
+        return (
+          <MenuItem key={key} onClick={onClick}>
+            <ListItemIcon>
+              <Icon />
+            </ListItemIcon>
+            <ListItemText>{t(menuItem.name)}</ListItemText>
+          </MenuItem>
+        );
+      })}
+    </>
+  );
+}
+
 export default function HelpMenu() {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -42,15 +125,6 @@ export default function HelpMenu() {
     setAnchorEl(null);
   };
 
-  const onClickCopy = function () {
-    navigator.clipboard.writeText(URLContext.getURL());
-  };
-
-  const onClickClearCache = function () {
-    localStorage.clear();
-    window.location.reload(true);
-  };
-
   return (
     <Box>
       <Box>
@@ -59,62 +133,12 @@ export default function HelpMenu() {
         </IconButton>
       </Box>
       <Menu anchorEl={anchorEl} open={open} onClose={onClose} onClick={onClose}>
-        {LANG_LIST.map(function (lang, iLang) {
-          const currentLang = I18N.getLang();
-          if (currentLang === lang.lang) {
-            return null;
-          }
-
-          const onClick = function () {
-            let context = URLContext.getContext();
-            context.lang = lang.lang;
-            URLContext.setContext(context);
-            window.location.reload(true);
-          };
-
-          return (
-            <MenuItem key={"lang-" + iLang} onClick={onClick}>
-              <ListItemIcon>
-                <LanguageIcon sx={{ color: lang.color }} />
-              </ListItemIcon>
-              <ListItemText sx={{ color: lang.color }}>
-                {lang.label}
-              </ListItemText>
-            </MenuItem>
-          );
-        })}
-
+        <MenuItemsForLang />
         <Divider />
-        {MENU_ITEM_LIST.map(function (menuItem, i) {
-          const key = "app-bar-menu-item-" + i;
-          const Icon = menuItem.Icon;
-          const onClick = function (e) {
-            window.open(menuItem.url, "_blank");
-            onClose();
-          };
-
-          return (
-            <MenuItem key={key} onClick={onClick}>
-              <ListItemIcon>
-                <Icon />
-              </ListItemIcon>
-              <ListItemText>{t(menuItem.name)}</ListItemText>
-            </MenuItem>
-          );
-        })}
+        <MenuItemsForLinks onClose={onClose} />
         <Divider />
-        <MenuItem onClick={onClickCopy}>
-          <ListItemIcon>
-            <ContentCopyIcon />
-          </ListItemIcon>
-          <ListItemText>{t("Copy App Link")}</ListItemText>
-        </MenuItem>
-        <MenuItem onClick={onClickClearCache}>
-          <ListItemIcon>
-            <AutorenewIcon />
-          </ListItemIcon>
-          <ListItemText>{t("Clear Local Cache")}</ListItemText>
-        </MenuItem>
+        <MenuItemCopyAppLink />
+        <MenuItemClearCache />
       </Menu>
     </Box>
   );
