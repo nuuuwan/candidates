@@ -53,7 +53,7 @@ const CANDIDATE_D_LIST = [
     lastName: "Fonseka",
     twtrHandle: "GeneralFonseka",
     imgFile: "3135.jpg",
-    party: "SJB",
+    party: "Ind",
   },
   {
     id: "MAS",
@@ -63,46 +63,64 @@ const CANDIDATE_D_LIST = [
     imgFile: "3194.jpg",
     party: "ITAK",
   },
-  {
-    id: "DA",
-    firstName: "Dullas",
-    lastName: "Alahapperuma",
-    twtrHandle: "DullasOfficial",
-    imgFile: "2868.jpg",
 
-    party: "SLPP",
-  },
-  {
-    id: "HdS",
-    firstName: "Harsha",
-    lastName: "de Silva",
-    twtrHandle: "HarshadeSilvaMP",
-    imgFile: "3201.jpg",
-    party: "SJB",
-  },
   {
     id: "AKD",
     firstName: "Anura Kumara",
     lastName: "Disanayake",
     twtrHandle: "AnuraDisanayake",
     imgFile: "112.jpg",
-    party: "JVP",
+    party: "NPP",
   },
+
+  // Added 2024
   {
-    id: "MS",
-    firstName: "Maithripala",
-    lastName: "Sirisena",
-    twtrHandle: "MaithripalaS",
-    imgFile: "191.jpg",
+    id: "WR",
+    firstName: "Wijeyadasa",
+    lastName: "Rajapakshe",
+    twtrHandle: "WijeRajapakshe",
+    imgFile: "1521.jpg",
     party: "SLFP",
   },
   {
-    id: "PCR",
-    firstName: "Patali Champika",
-    lastName: "Ranawaka",
-    twtrHandle: "PCRanawaka",
-    imgFile: "3076.jpg",
-    party: "SJB",
+    id: "JR",
+    firstName: "Janaka",
+    lastName: "Ratnayake",
+    twtrHandle: "",
+    imgFile: "JR.jpg",
+    party: "Ind",
+  },
+  {
+    id: "SK",
+    firstName: "Sarath",
+    lastName: "Keerthirathna",
+    twtrHandle: "SK.jpg",
+    imgFile: "",
+    party: "Ind",
+  },
+  {
+    id: "OH",
+    firstName: "Oshala",
+    lastName: "Herath",
+    twtrHandle: "@OshalaHerath",
+    imgFile: "",
+    party: "NIF",
+  },
+  {
+    id: "ASPL",
+    firstName: "ASP",
+    lastName: "Liyanage",
+    twtrHandle: "",
+    imgFile: "ASPL.png",
+    party: "SLLP",
+  },
+  {
+    id: "NB",
+    firstName: "Nuwan",
+    lastName: "Bopage",
+    twtrHandle: "",
+    imgFile: "NB.png",
+    party: "PSA",
   },
 ];
 
@@ -115,3 +133,14 @@ export const CANDIDATE_IDX = IDX.build(
   (x) => x.id,
   (x) => x
 );
+
+for (const d of CANDIDATE_D_LIST) {
+  console.debug(
+    d.id,
+    d.firstName,
+    d.lastName,
+    d.twtrHandle,
+    d.imgFile,
+    d.party
+  );
+}

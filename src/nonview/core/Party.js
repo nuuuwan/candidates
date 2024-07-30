@@ -22,11 +22,15 @@ export default class Party {
 
 const PARTY_D_LIST = [
   { id: "UNP", color: "darkgreen" },
-  { id: "SJB", color: "darkgreen" },
+  { id: "SJB", color: "green" },
   { id: "SLPP", color: "maroon" },
   { id: "SLFP", color: "blue" },
   { id: "ITAK", color: "yellow" },
-  { id: "JVP", color: "red" },
+  { id: "NPP", color: "red" },
+  { id: "Ind", color: "gray" },
+  { id: "PSA", color: "red" },
+  { id: "SLLP", color: "red" },
+  { id: "NIF", color: "gray" },
 ];
 
 const PARTY_LIST = PARTY_D_LIST.map((d) => Party.fromDict(d));

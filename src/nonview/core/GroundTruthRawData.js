@@ -1,55 +1,45 @@
-const ATTR_IDX_NUUUWAN_ALL = {
+export const ATTR_IDX_NUUUWAN = {
   "Voted for the 20th Amendment": {
     AKD: -100,
-    DA: 100,
-    HdS: -100,
+
     MAS: -100,
-    MS: 0,
-    PCR: -100,
+
     RW: 0,
     SF: -100,
     SP: -100,
   },
   "Member of a Rajapaksa Cabinet": {
     AKD: -100,
-    DA: 100,
-    HdS: -100,
+
     MAS: -100,
-    MS: -100,
-    PCR: -100,
+
     RW: 100,
     SF: -100,
     SP: -100,
   },
   "Has Para-Military Affiliations": {
     AKD: 100,
-    DA: -100,
-    HdS: -100,
+
     MAS: 100,
-    MS: -100,
-    PCR: 100,
+
     RW: -100,
     SF: -100,
     SP: -100,
   },
   "Has Military Affiliations": {
     AKD: -100,
-    DA: -100,
-    HdS: -100,
+
     MAS: -100,
-    MS: -100,
-    PCR: -100,
+
     RW: -100,
     SF: 100,
     SP: -100,
   },
   "Member or Former-Member of the SLPP": {
     AKD: -100,
-    DA: 100,
-    HdS: -100,
+
     MAS: -100,
-    MS: 100,
-    PCR: -100,
+
     RW: -100,
     SF: -100,
     SP: -100,
@@ -57,11 +47,9 @@ const ATTR_IDX_NUUUWAN_ALL = {
 
   "Will support abolishing the Executive Presidency while in seat": {
     AKD: 100,
-    DA: -100,
-    HdS: 100,
+
     MAS: 100,
-    MS: -100,
-    PCR: -100,
+
     RW: -100,
     SF: -100,
     SP: -100,
@@ -69,22 +57,18 @@ const ATTR_IDX_NUUUWAN_ALL = {
 
   "Economic Experience at the National Level": {
     AKD: -100,
-    DA: -100,
-    HdS: -100,
+
     MAS: -100,
-    MS: 100,
-    PCR: -100,
+
     RW: 100,
     SF: -100,
     SP: -100,
   },
   "Is a Party Leader": {
     AKD: 100,
-    DA: -100,
-    HdS: -100,
+
     MAS: 100,
-    MS: 100,
-    PCR: -100,
+
     RW: 100,
     SF: -100,
     SP: 100,
@@ -92,72 +76,51 @@ const ATTR_IDX_NUUUWAN_ALL = {
 
   "Under 65 years old (Born after 1959)": {
     AKD: 100,
-    DA: -100,
-    HdS: 100,
+
     MAS: 100,
-    MS: -100,
-    PCR: 100,
+
     RW: -100,
     SF: -100,
     SP: 100,
   },
   "Won a Electoral District Seat in the 2020 General Election": {
     AKD: 100,
-    DA: 100,
-    HdS: 100,
+
     MAS: 100,
-    MS: 100,
-    PCR: 100,
+
     RW: -100,
     SF: 100,
     SP: 100,
   },
   "History of working with a ideologically wide group of MPs": {
     AKD: -100,
-    DA: 100,
-    HdS: -100,
+
     MAS: -100,
-    MS: 100,
-    PCR: 100,
+
     RW: 100,
     SF: -100,
     SP: 100,
   },
   "Previous Affiliations with Rajapaksa Governments": {
     AKD: -100,
-    DA: 100,
-    HdS: -100,
+
     MAS: -100,
-    MS: 100,
-    PCR: 100,
+
     RW: 100,
     SF: -100,
     SP: -100,
   },
   "Over 70% Attendance in the latest Parliament": {
     AKD: 100,
-    DA: -100,
-    HdS: 100,
+
     MAS: 100,
-    MS: 100,
-    PCR: -100,
+
     RW: 100,
     SF: 100,
     SP: 100,
   },
 };
 
-const CANDIDATE_LIST = ["AKD", "MAS", "RW", "SF", "SP"];
-
-export const ATTR_IDX_NUUUWAN = Object.fromEntries(
-  Object.entries(ATTR_IDX_NUUUWAN_ALL).map(function ([id, candidateToWeight]) {
-    return [
-      id,
-      Object.fromEntries(
-        Object.entries(candidateToWeight).filter(function ([key, _]) {
-          return CANDIDATE_LIST.includes(key);
-        })
-      ),
-    ];
-  })
-);
+for (const id of Object.keys(ATTR_IDX_NUUUWAN)) {
+  console.log(id);
+}

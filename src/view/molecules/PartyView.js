@@ -9,6 +9,9 @@ const AVATAR_SIZE = 15;
 
 export default function PartyView({ id }) {
   const party = Party.fromID(id);
+  if (!party) {
+    throw new Error("Invalid party ID: " + id);
+  }
   const color = party.color;
   return (
     <AlignCenter>
