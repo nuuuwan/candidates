@@ -1,8 +1,8 @@
-import { ATTR_IDX_NUUUWAN } from "../../nonview/core/GroundTruthRawData";
+import { CRITERION_TO_CANDIDATE_TO_SCORE } from "../../nonview/data/CRITERION_TO_CANDIDATE_TO_SCORE";
 
 import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
-  "@nuuuwan": ATTR_IDX_NUUUWAN,
+  "@nuuuwan": CRITERION_TO_CANDIDATE_TO_SCORE,
 });
 
 export default class GroundTruth {

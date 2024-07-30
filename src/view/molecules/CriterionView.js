@@ -11,6 +11,21 @@ import Weight from "../../nonview/core/Weight";
 
 import WeightView from "../../view/molecules/WeightView";
 
+const MARKS = [
+  {
+    value: -100,
+    label: Weight.EMOJI.UNSUITABLE,
+  },
+  {
+    value: 0,
+    label: Weight.EMOJI.NEUTRAL,
+  },
+  {
+    value: 100,
+    label: Weight.EMOJI.SUITABLE,
+  },
+];
+
 function CustomSlider({
   setCriterionValue,
   onChangeCriterionWeight,
@@ -28,21 +43,6 @@ function CustomSlider({
 
   const color = Weight.getColor(criterionWeight);
 
-  const marks = [
-    {
-      value: -100,
-      label: Weight.EMOJI.UNSUITABLE,
-    },
-    {
-      value: 0,
-      label: Weight.EMOJI.NEUTRAL,
-    },
-    {
-      value: 100,
-      label: Weight.EMOJI.SUITABLE,
-    },
-  ];
-
   return (
     <Box>
       <Typography variant="body2">{t(criterionID)}</Typography>
@@ -59,7 +59,7 @@ function CustomSlider({
             width: Math.min(window.innerWidth * 0.5, 480),
             fontSize: 5,
           }}
-          marks={marks}
+          marks={MARKS}
         />
       </Box>
     </Box>

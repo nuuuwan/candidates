@@ -2,17 +2,8 @@
 import Candidate from "./Candidate";
 import Criterion from "./Criterion";
 import GroundTruth from "./GroundTruth";
-import GroundTruthRawData from "./GroundTruthRawData";
 import Party from "./Party";
 import Version from "./Version";
 import Weight from "./Weight";
 
-export {
-  Candidate,
-  Criterion,
-  GroundTruth,
-  GroundTruthRawData,
-  Party,
-  Version,
-  Weight,
-};
+export { Candidate, Criterion, GroundTruth, Party, Version, Weight };
