@@ -24,10 +24,10 @@ export default function CandidateView({ candidateId, score, rank }) {
           sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
         />
         <Box>
-          <Typography sx={{ fontSize: "40%" }}>
+          <Typography sx={{ fontSize: "80%" }}>
             {t(candidate.firstName)}
           </Typography>
-          <Typography sx={{ fontSize: "80%" }}>
+          <Typography sx={{ fontSize: "120%" }}>
             {t(candidate.lastName)}
           </Typography>
           <PartyView id={candidate.party} />
