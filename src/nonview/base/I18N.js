@@ -49,13 +49,12 @@ export default class I18N {
       return "";
     }
     s = s.trim();
-    if (!s || !s.trim()) {
+    if (!s.trim()) {
       return s;
     }
 
     const entry = DICTIONARY[s];
     if (!entry) {
-      console.warn(`${s}`);
       return s;
     }
 
@@ -66,7 +65,6 @@ export default class I18N {
 
     const translation = entry[currentLang];
     if (!translation) {
-      console.warn(`${s}`);
       return s;
     }
 

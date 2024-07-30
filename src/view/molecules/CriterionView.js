@@ -11,16 +11,13 @@ import Weight from "../../nonview/core/Weight";
 
 import WeightView from "../../view/molecules/WeightView";
 
-export default function CriterionView({
+function CustomSlider({
+  setCriterionValue,
+  onChangeCriterionWeight,
   iCriterion,
   criterionID,
-  onChangeCriterionWeight,
-  criterionWeights,
+  criterionWeight,
 }) {
-  const [criterionWeight, setCriterionValue] = useState(
-    criterionWeights[iCriterion]
-  );
-
   const onChange = function (e) {
     setCriterionValue(parseInt(e.target.value));
   };
@@ -32,25 +29,46 @@ export default function CriterionView({
   const color = Weight.getColor(criterionWeight);
 
   return (
+    <Box>
+      <Typography variant="body2">{t(criterionID)}</Typography>
+      <Box sx={{ m: 1, marginBottom: 0 }}>
+        <Slider
+          value={criterionWeight}
+          min={-100}
+          max={100}
+          onChange={onChange}
+          onChangeCommitted={onChangeCommitted}
+          color="neutral"
+          sx={{ width: window.innerWidth * 0.5, color }}
+        />
+      </Box>
+    </Box>
+  );
+}
+
+export default function CriterionView({
+  iCriterion,
+  criterionID,
+  onChangeCriterionWeight,
+  criterionWeights,
+}) {
+  const [criterionWeight, setCriterionValue] = useState(
+    criterionWeights[iCriterion]
+  );
+
+  return (
     <Card sx={{ m: 1, p: 1 }}>
       <Stack direction="row" gap={1}>
         <Typography variant="caption" color="lightgray">
           {iCriterion + 1}.
         </Typography>
-        <Box>
-          <Typography variant="body2">{t(criterionID)}</Typography>
-          <Box sx={{ m: 1, marginBottom: 0 }}>
-            <Slider
-              value={criterionWeight}
-              min={-100}
-              max={100}
-              onChange={onChange}
-              onChangeCommitted={onChangeCommitted}
-              color="neutral"
-              sx={{ width: window.innerWidth * 0.5, color }}
-            />
-          </Box>
-        </Box>
+        <CustomSlider
+          setCriterionValue={setCriterionValue}
+          onChangeCriterionWeight={onChangeCriterionWeight}
+          iCriterion={iCriterion}
+          criterionID={criterionID}
+          criterionWeight={criterionWeight}
+        />
         <Typography sx={{ flexGrow: 1 }}> </Typography>
         <WeightView weight={criterionWeight} />
       </Stack>
