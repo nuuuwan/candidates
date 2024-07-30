@@ -31,15 +31,15 @@ function CustomSlider({
   const marks = [
     {
       value: -100,
-      label: "☹️",
+      label: Weight.EMOJI.UNSUITABLE,
     },
     {
       value: 0,
-      label: "😐",
+      label: Weight.EMOJI.NEUTRAL,
     },
     {
       value: 100,
-      label: "😊",
+      label: Weight.EMOJI.SUITABLE,
     },
   ];
 

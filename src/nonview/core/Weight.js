@@ -1,4 +1,10 @@
 export default class Weight {
+  static EMOJI = {
+    SUITABLE: "😊",
+    UNSUITABLE: "☹️",
+    NEUTRAL: "😐",
+  };
+
   static getMagnitudeText(weight) {
     const absWeight = Math.abs(weight);
     let magnitudeText;
@@ -17,13 +23,13 @@ export default class Weight {
   }
   static getDirectionText(weight) {
     if (weight > 0) {
-      return "Suitable 😊";
+      return "Suitable " + Weight.EMOJI.SUITABLE;
     }
 
     if (weight < 0) {
-      return "Unsuitable ☹️";
+      return "Unsuitable " + Weight.EMOJI.UNSUITABLE;
     }
-    return "😐";
+    return Weight.EMOJI.NEUTRAL;
   }
 
   static signed(weight) {

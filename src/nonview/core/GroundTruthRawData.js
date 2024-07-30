@@ -1,4 +1,4 @@
-export const ATTR_IDX_NUUUWAN = {
+const ATTR_IDX_NUUUWAN_ALL = {
   "Voted for the 20th Amendment": {
     AKD: -100,
     DA: 100,
@@ -43,7 +43,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: 100,
     SP: -100,
   },
-  "Member of the SLPP": {
+  "Member or Former-Member of the SLPP": {
     AKD: -100,
     DA: 100,
     HdS: -100,
@@ -54,17 +54,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Will Dissolve the Parliament before 2025": {
-    AKD: 100,
-    DA: -100,
-    HdS: 100,
-    MAS: 100,
-    MS: -100,
-    PCR: 100,
-    RW: -100,
-    SF: 100,
-    SP: 100,
-  },
+
   "Will support abolishing the Executive Presidency while in seat": {
     AKD: 100,
     DA: -100,
@@ -76,17 +66,7 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: -100,
   },
-  "Will support bringing back the 19th Amendment": {
-    AKD: 100,
-    DA: -100,
-    HdS: 100,
-    MAS: 100,
-    MS: 100,
-    PCR: 100,
-    RW: -100,
-    SF: -100,
-    SP: 100,
-  },
+
   "Economic Experience at the National Level": {
     AKD: -100,
     DA: -100,
@@ -109,18 +89,8 @@ export const ATTR_IDX_NUUUWAN = {
     SF: -100,
     SP: 100,
   },
-  "Will work with the IMF": {
-    AKD: -100,
-    DA: 100,
-    HdS: 100,
-    MAS: 100,
-    MS: 100,
-    PCR: 100,
-    RW: 100,
-    SF: 100,
-    SP: 100,
-  },
-  "Aged less than 60 years": {
+
+  "Under 65 years old (Born after 1959)": {
     AKD: 100,
     DA: -100,
     HdS: 100,
@@ -177,119 +147,17 @@ export const ATTR_IDX_NUUUWAN = {
   },
 };
 
-export const ATTR_IDX_HLIYAN = {
-  "Voted for 20th amendment": {
-    AKD: -100,
-    DA: 100,
-    HdS: -100,
-    MAS: -100,
-    MS: 0,
-    PCR: -100,
-    RW: 0,
-    SF: -100,
-    SP: -100,
-  },
-  "Cabinet member between 2019 and now": {
-    AKD: -100,
-    DA: 100,
-    HdS: -100,
-    MAS: -100,
-    MS: -100,
-    PCR: -100,
-    RW: 100,
-    SF: -100,
-    SP: -100,
-  },
-  "Ex-military or armed group connections": {
-    AKD: 100,
-    DA: -100,
-    HdS: -100,
-    MAS: 100,
-    MS: -100,
-    PCR: 100,
-    RW: -100,
-    SF: 100,
-    SP: -100,
-  },
+const CANDIDATE_LIST = ["AKD", "MAS", "RW", "SF", "SP"];
 
-  "Known racist group connections": {
-    AKD: -100,
-    DA: 100,
-    HdS: -100,
-    MAS: -100,
-    MS: 100,
-    PCR: 100,
-    RW: -100,
-    SF: -100,
-    SP: -100,
-  },
-
-  "Crime/war crime/corruption cases": {
-    AKD: -100,
-    DA: -100,
-    HdS: -100,
-    MAS: -100,
-    MS: -100,
-    PCR: -100,
-    RW: 100,
-    SF: 100,
-    SP: -100,
-  },
-
-  "No asset declaration": {
-    AKD: 100,
-    DA: 100,
-    HdS: -100,
-    MAS: -100,
-    MS: 100,
-    PCR: 100,
-    RW: 100,
-    SF: 100,
-    SP: 100,
-  },
-
-  "Will dissolve parliament before 2025": {
-    AKD: 100,
-    DA: -100,
-    HdS: 100,
-    MAS: 100,
-    MS: -100,
-    PCR: 100,
-    RW: -100,
-    SF: 100,
-    SP: 100,
-  },
-  "Will support abolishing presidency while in the seat": {
-    AKD: 100,
-    DA: -100,
-    HdS: 100,
-    MAS: 100,
-    MS: -100,
-    PCR: -100,
-    RW: -100,
-    SF: -100,
-    SP: -100,
-  },
-  "Will support bringing back 19th amendment": {
-    AKD: 100,
-    DA: -100,
-    HdS: 100,
-    MAS: 100,
-    MS: 100,
-    PCR: 100,
-    RW: -100,
-    SF: -100,
-    SP: 100,
-  },
-  "Past economic experience": {
-    AKD: -100,
-    DA: -100,
-    HdS: 100,
-    MAS: -100,
-    MS: 100,
-    PCR: -100,
-    RW: 100,
-    SF: -100,
-    SP: -100,
-  },
-};
+export const ATTR_IDX_NUUUWAN = Object.fromEntries(
+  Object.entries(ATTR_IDX_NUUUWAN_ALL).map(function ([id, candidateToWeight]) {
+    return [
+      id,
+      Object.fromEntries(
+        Object.entries(candidateToWeight).filter(function ([key, _]) {
+          return CANDIDATE_LIST.includes(key);
+        })
+      ),
+    ];
+  })
+);

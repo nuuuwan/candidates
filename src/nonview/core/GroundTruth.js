@@ -1,22 +1,8 @@
-import DictUtils from "../../nonview/base/DictUtils";
-import {
-  ATTR_IDX_HLIYAN,
-  ATTR_IDX_NUUUWAN,
-} from "../../nonview/core/GroundTruthRawData";
+import { ATTR_IDX_NUUUWAN } from "../../nonview/core/GroundTruthRawData";
 
 import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
   "@nuuuwan": ATTR_IDX_NUUUWAN,
-  "@nuuuwan (Economic Only)": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
-    "Economic Experience at the National Level",
-    "Will work with the IMF",
-  ]),
-  "@nuuuwan (Constituitional Only)": DictUtils.filterDict(ATTR_IDX_NUUUWAN, [
-    "Voted for the 20th Amendment",
-    "Will support abolishing the Executive Presidency while in seat",
-    "Will support bringing back the 19th Amendment",
-  ]),
-  "@h_liyan": ATTR_IDX_HLIYAN,
 });
 
 export default class GroundTruth {
