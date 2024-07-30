@@ -30,7 +30,7 @@ export const CRITERION_TO_CANDIDATE_TO_SCORE = {
     AD: 100,
     AL: -100,
     JR: -100,
-    MS: 100,
+    MS: -100,
     NB: -100,
     OH: -100,
     RW: -100,
