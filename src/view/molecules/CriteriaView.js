@@ -5,6 +5,7 @@ import { t } from "../../nonview/base/I18N";
 import GroundTruth from "../../nonview/core/GroundTruth";
 
 import CriterionView from "../../view/molecules/CriterionView";
+import { Alert } from "@mui/material";
 
 export default function CriteriaView({
   version,
@@ -15,9 +16,19 @@ export default function CriteriaView({
   const criteria = GroundTruth.getCriteria(version);
   return (
     <Stack gap={1} ref={refHomePage}>
-      <Typography sx={{ color: "lightgray", fontSize: "50%" }}>
-        {t("000 Version", version)}
+      <Typography variant="body1">
+        What criteria would you like to see in a Presidential Candidate? What
+        criteria would be suitable and what would be unsuitable?
       </Typography>
+      <Alert severity="info">
+        Drag the sliders to set the weights of the criteria, and click the
+        <strong>{" Candidates "}</strong> button on the menu below, to see how
+        different candidates score on these criteria.
+      </Alert>
+      <Alert severity="info">
+        To set random weights, click the
+        <strong>{" Dice "}</strong> button on the menu below.
+      </Alert>
       {criteria.map(function (criterionID, iCriterion) {
         const key = "criterion-" + version + "-" + criterionID;
         return (
@@ -30,6 +41,9 @@ export default function CriteriaView({
           />
         );
       })}
+      <Typography sx={{ color: "lightgray", fontSize: "50%" }}>
+        {t("000 Version", version)}
+      </Typography>
     </Stack>
   );
 }
