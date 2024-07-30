@@ -28,10 +28,25 @@ function CustomSlider({
 
   const color = Weight.getColor(criterionWeight);
 
+  const marks = [
+    {
+      value: -100,
+      label: "☹️",
+    },
+    {
+      value: 0,
+      label: "😐",
+    },
+    {
+      value: 100,
+      label: "😊",
+    },
+  ];
+
   return (
     <Box>
       <Typography variant="body2">{t(criterionID)}</Typography>
-      <Box sx={{ m: 1, marginBottom: 0 }}>
+      <Box>
         <Slider
           value={criterionWeight}
           min={-100}
@@ -39,7 +54,12 @@ function CustomSlider({
           onChange={onChange}
           onChangeCommitted={onChangeCommitted}
           color="neutral"
-          sx={{ width: window.innerWidth * 0.5, color }}
+          sx={{
+            color,
+            width: Math.min(window.innerWidth * 0.5, 480),
+            fontSize: 5,
+          }}
+          marks={marks}
         />
       </Box>
     </Box>

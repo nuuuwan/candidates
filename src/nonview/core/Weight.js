@@ -17,13 +17,13 @@ export default class Weight {
   }
   static getDirectionText(weight) {
     if (weight > 0) {
-      return "Suitable";
+      return "Suitable 😊";
     }
 
     if (weight < 0) {
-      return "Unsuitable";
+      return "Unsuitable ☹️";
     }
-    return "";
+    return "😐";
   }
 
   static signed(weight) {
