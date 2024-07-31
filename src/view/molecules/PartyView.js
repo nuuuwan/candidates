@@ -5,7 +5,7 @@ import Party from "../../nonview/core/Party";
 
 import AlignCenter from "../../view/atoms/AlignCenter";
 
-const AVATAR_SIZE = 15;
+const AVATAR_SIZE = 32;
 
 export default function PartyView({ id }) {
   const party = Party.fromID(id);
