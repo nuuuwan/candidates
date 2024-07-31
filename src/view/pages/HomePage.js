@@ -117,6 +117,15 @@ export default class HomePage extends Component {
     this.setContext(context);
   }
 
+  onClickRefreshCriteriaWeights() {
+    AudioX.playLong();
+    let context = this.getContext();
+    context.criterionWeights = GroundTruth.getInitCriterionWeights(
+      context.version
+    );
+    this.setContext(context);
+  }
+
   render() {
     const { context } = this.state;
     const key = JSON.stringify(context);
@@ -148,6 +157,9 @@ export default class HomePage extends Component {
           onClickOpenPage={this.onClickOpenPage.bind(this)}
           refHomePage={refHomePage}
           onClickRandomCriteriaWeights={this.onClickRandomCriteriaWeights.bind(
+            this
+          )}
+          onClickRefreshCriteriaWeights={this.onClickRefreshCriteriaWeights.bind(
             this
           )}
         />

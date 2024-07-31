@@ -5,6 +5,7 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
 import Tooltip from "@mui/material/Tooltip";
 import CasinoIcon from "@mui/icons-material/Casino";
+import RefreshIcon from "@mui/icons-material/Refresh";
 
 import { t } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
@@ -17,6 +18,7 @@ export default function HomePageBottomNavigation({
   onClickOpenPage,
   refHomePage,
   onClickRandomCriteriaWeights,
+  onClickRefreshCriteriaWeights,
 }) {
   const context = URLContext.getContext();
   const activePage = context.page;
@@ -31,6 +33,12 @@ export default function HomePageBottomNavigation({
           <BottomNavigationAction
             icon={<CasinoIcon sx={{ color: AppColors.VeryLight }} />}
             onClick={onClickRandomCriteriaWeights}
+          />
+        </Tooltip>
+        <Tooltip title={t("Reset Weights to Zero (Neutral)")}>
+          <BottomNavigationAction
+            icon={<RefreshIcon sx={{ color: AppColors.VeryLight }} />}
+            onClick={onClickRefreshCriteriaWeights}
           />
         </Tooltip>
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
