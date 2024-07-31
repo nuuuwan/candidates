@@ -13,6 +13,7 @@ Code Repository
 Copy App Link
 Crime/war crime/corruption cases
 Criteria
+Declared Assets in Public
 Disanayake
 Drag the sliders to set the weights of the criteria, and click the Candidates button on the menu below, to see how different candidates score on these criteria.
 Dullas
@@ -24,6 +25,7 @@ Extremely Unsuitable
 Fonseka
 Harsha
 Has Military Affiliations
+Has Ongoing Criminal Case(s)
 Has Para-Military Affiliations
 Help (User Manual)
 History of working with a ideologically wide group of MPs

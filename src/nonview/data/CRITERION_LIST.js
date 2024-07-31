@@ -15,4 +15,6 @@ export const CRITERION_LIST = [
   "Voted for the 20th Amendment",
   "Participated in or Associated with 1987–1989 JVP insurrection",
   "Associated with Communist Ideologies",
+  "Declared Assets in Public",
+  "Has Ongoing Criminal Case(s)",
 ];
