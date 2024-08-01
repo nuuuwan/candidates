@@ -3,10 +3,11 @@ const AppColors = {
   Secondary: "#888",
   Success: "#080",
 
-  Version: "#fff",
-  Criterion: "#ccc",
-  Candidate: "#ccc",
+  Version: "#444",
+  Criterion: "#444",
+  Candidate: "#444",
 
+  LessLight: "#444",
   Light: "#888",
   VeryLight: "#ccc",
 };

@@ -18,7 +18,7 @@ const THEME = createTheme({
       main: AppColors.Success,
     },
     neutral: {
-      main: AppColors.Light,
+      main: AppColors.LessLight,
     },
   },
   typography: {
