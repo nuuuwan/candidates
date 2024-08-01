@@ -6,6 +6,7 @@ import DictUtils from "./DictUtils";
 import I18N from "./I18N";
 import IDX from "./IDX";
 import MathX from "./MathX";
+import Random from "./Random";
 import TimeX from "./TimeX";
 import URLContext from "./URLContext";
 import WWW from "./WWW";
@@ -18,6 +19,7 @@ export {
   I18N,
   IDX,
   MathX,
+  Random,
   TimeX,
   URLContext,
   WWW,
