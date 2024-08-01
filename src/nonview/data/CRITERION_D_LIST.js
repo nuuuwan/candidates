@@ -22,8 +22,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "JVP1989",
-    details:
-      "Participated in or Associated with 1987\u20131989 JVP insurrection",
+    details: "Participated in or Associated with 1987-1989 JVP insurrection",
   },
   {
     id: "Leader",
