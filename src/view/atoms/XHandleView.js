@@ -4,10 +4,15 @@ export default function XHandleView({ xHandle }) {
   if (!xHandle || xHandle === "Unknown") {
     return null;
   }
-  const xProfileUrl = `https://x.com/${xHandle}`;
+  const url = `https://x.com/${xHandle}`;
+
   return (
-    <Link href={xProfileUrl} target="_blank" rel="noopener noreferrer">
-      <Typography variant="body1">@{xHandle}</Typography>
-    </Link>
+    <Typography variant="body1">
+      @
+      <Link href={url} target="_blank" rel="noopener noreferrer">
+        {xHandle}
+      </Link>
+      {" on X"}
+    </Typography>
   );
 }

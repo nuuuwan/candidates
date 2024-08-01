@@ -2,6 +2,7 @@
 import AlignCenter from "./AlignCenter";
 import AlignRight from "./AlignRight";
 import TimeView from "./TimeView";
+import WikipediaPageView from "./WikipediaPageView";
 import XHandleView from "./XHandleView";
 
-export { AlignCenter, AlignRight, TimeView, XHandleView };
+export { AlignCenter, AlignRight, TimeView, WikipediaPageView, XHandleView };
