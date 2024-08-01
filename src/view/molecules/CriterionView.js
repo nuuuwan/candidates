@@ -34,7 +34,7 @@ function CustomSlider({
   };
 
   const onChangeCommitted = function (e) {
-    onChangeCriterionWeight(iCriterion, criterionWeight);
+    onChangeCriterionWeight(criterionID, criterionWeight);
   };
 
   const color = Weight.getColor(criterionWeight);

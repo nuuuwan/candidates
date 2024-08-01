@@ -52,9 +52,9 @@ export default class HomePage extends Component {
     throw new Error("Invalid page: " + context.page);
   }
 
-  onChangeCriterionWeight(iCriterion, criterionWeight) {
+  onChangeCriterionWeight(criterionID, criterionWeight) {
     HomePageContext.updateState(this, function (context) {
-      context.criterionToWeight[iCriterion] = criterionWeight;
+      context.criterionToWeight[criterionID] = criterionWeight;
     });
   }
 
