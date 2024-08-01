@@ -2,7 +2,7 @@ import { CRITERION_TO_CANDIDATE_TO_SCORE } from "../../nonview/data/CRITERION_TO
 
 import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
-  "@nuuuwan": CRITERION_TO_CANDIDATE_TO_SCORE,
+  default: CRITERION_TO_CANDIDATE_TO_SCORE,
 });
 
 export default class GroundTruth {
