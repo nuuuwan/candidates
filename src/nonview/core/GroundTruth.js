@@ -35,10 +35,13 @@ export default class GroundTruth {
     return GroundTruth.getGenericCriterionWeights(version, (criterion) => 0);
   }
 
+  static getRandomWeight() {
+    return parseInt(Math.random() * 200 - 100);
+  }
+
   static getRandomCriterionWeights(version) {
-    return GroundTruth.getGenericCriterionWeights(
-      version,
-      (criterion) => Math.random() * 200 - 100
+    return GroundTruth.getGenericCriterionWeights(version, (criterion) =>
+      GroundTruth.getRandomWeight()
     );
   }
 
