@@ -27,7 +27,7 @@ const PARTY_D_LIST = [
   { id: "SLFP", color: "blue" },
   { id: "ITAK", color: "yellow" },
   { id: "NPP", color: "red" },
-  { id: "Ind", color: "gray" },
+  { id: "Independent", color: "gray" },
   { id: "PSA", color: "red" },
   { id: "SLLP", color: "red" },
   { id: "NIF", color: "gray" },
