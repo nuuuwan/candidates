@@ -15,7 +15,7 @@ export default function CandidateView({ candidateId, score, rank }) {
   const candidate = Candidate.fromId(candidateId);
   return (
     <Card sx={{ m: 1, p: 1 }}>
-      <Stack direction="row" gap={2} sx={{ width: "100%" }}>
+      <Stack direction="row" gap={3} sx={{ width: "100%" }}>
         <Typography variant="h6" sx={{ color: "lightgray" }}>
           {"#" + (rank + 1)}
         </Typography>
@@ -23,7 +23,7 @@ export default function CandidateView({ candidateId, score, rank }) {
           src={candidate.imgSrc}
           sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
         />
-        <Box>
+        <Box sx={{ m: 0, p: 0 }}>
           <Typography sx={{ fontSize: "80%" }}>
             {t(candidate.firstName)}
           </Typography>

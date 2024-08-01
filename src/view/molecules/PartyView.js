@@ -1,11 +1,9 @@
-import { Avatar, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 import { t } from "../../nonview/base/I18N";
 import Party from "../../nonview/core/Party";
 
 import AlignCenter from "../../view/atoms/AlignCenter";
-
-const AVATAR_SIZE = 32;
 
 export default function PartyView({ id }) {
   const party = Party.fromID(id);
@@ -15,16 +13,6 @@ export default function PartyView({ id }) {
   const color = party.color;
   return (
     <AlignCenter>
-      <Avatar
-        src={party.imgSrc}
-        sx={{
-          width: AVATAR_SIZE,
-          height: AVATAR_SIZE,
-          borderColor: color,
-          color,
-        }}
-      />
-
       <Typography variant="caption" sx={{ color }}>
         {t(id)}
       </Typography>
