@@ -16,6 +16,7 @@ import PAGE_CONFIG_LIST, {
 
 const STYLE_INNER_PAGE_BOX = {
   marginTop: 10,
+  padding: 2,
 };
 
 export default class HomePage extends Component {

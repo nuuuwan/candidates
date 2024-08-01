@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
+
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
@@ -10,6 +10,8 @@ import { t } from "../../nonview/base/I18N";
 import Weight from "../../nonview/core/Weight";
 
 import WeightView from "../../view/molecules/WeightView";
+import { ListItem, ListItemAvatar, ListItemText, Paper } from "@mui/material";
+import AppColors from "../_constants/AppColors";
 
 const MARKS = [
   {
@@ -77,21 +79,29 @@ export default function CriterionView({
   );
 
   return (
-    <Card sx={{ m: 1, p: 1 }}>
-      <Stack direction="row" gap={1}>
-        <Typography variant="caption" color="lightgray">
-          {iCriterion + 1}.
+    <ListItem component={Paper} sx={{ m: 1, p: 1 }}>
+      <ListItemAvatar>
+        <Typography variant="h6" color={AppColors.Light}>
+          {String.fromCharCode(65 + iCriterion)}.
         </Typography>
-        <CustomSlider
-          setCriterionValue={setCriterionValue}
-          onChangeCriterionWeight={onChangeCriterionWeight}
-          iCriterion={iCriterion}
-          criterionID={criterionID}
-          criterionWeight={criterionWeight}
-        />
-        <Typography sx={{ flexGrow: 1 }}> </Typography>
-        <WeightView weight={criterionWeight} />
-      </Stack>
-    </Card>
+      </ListItemAvatar>
+      <ListItemText>
+        <Stack direction="row" sx={{ marginLeft: 2 }}>
+          <CustomSlider
+            setCriterionValue={setCriterionValue}
+            onChangeCriterionWeight={onChangeCriterionWeight}
+            iCriterion={iCriterion}
+            criterionID={criterionID}
+            criterionWeight={criterionWeight}
+          />
+
+          <Typography sx={{ flexGrow: 1 }}> </Typography>
+
+          <Box sx={{ marginLeft: 3 }}>
+            <WeightView weight={criterionWeight} />
+          </Box>
+        </Stack>
+      </ListItemText>
+    </ListItem>
   );
 }

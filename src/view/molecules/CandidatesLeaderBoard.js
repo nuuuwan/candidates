@@ -1,13 +1,12 @@
-import Stack from "@mui/material/Stack";
-
 import CandidateView from "../../view/molecules/CandidateView";
+import { List } from "@mui/material";
 
 export default function CandidatesLeaderBoard({
   candidateScoreAndRank,
   refHomePage,
 }) {
   return (
-    <Stack gap={1} ref={refHomePage}>
+    <List ref={refHomePage}>
       {candidateScoreAndRank.map(function ([candidateId, score, rank]) {
         const key = "candidate-" + candidateId;
         return (
@@ -19,6 +18,6 @@ export default function CandidatesLeaderBoard({
           />
         );
       })}
-    </Stack>
+    </List>
   );
 }
