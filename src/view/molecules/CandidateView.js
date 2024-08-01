@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 
 import { t } from "../../nonview/base/I18N";
 import Candidate from "../../nonview/core/Candidate";
-
+import { XHandleView } from "../../view/atoms";
 import PartyView from "../../view/molecules/PartyView";
 import WeightView from "../../view/molecules/WeightView";
 
@@ -31,6 +31,7 @@ export default function CandidateView({ candidateId, score, rank }) {
             {t(candidate.lastName)}
           </Typography>
           <PartyView id={candidate.party} />
+          <XHandleView xHandle={candidate.xHandle} />
         </Box>
         <Typography sx={{ flexGrow: 1 }}> </Typography>
         <WeightView weight={score} />

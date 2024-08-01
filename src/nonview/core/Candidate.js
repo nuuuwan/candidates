@@ -2,13 +2,14 @@ import IDX from "../../nonview/base/IDX";
 import { CANDIDATE_D_LIST } from "../../nonview/data/CANDIDATE_D_LIST";
 
 export default class Candidate {
-  constructor(id, firstName, lastName, twtrHandle, imgFile, party) {
+  constructor(id, firstName, lastName, party, imgFile, xHandle, wikipediaPage) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
-    this.twtrHandle = twtrHandle;
-    this.imgFile = imgFile;
     this.party = party;
+    this.imgFile = imgFile;
+    this.xHandle = xHandle;
+    this.wikipediaPage = wikipediaPage;
   }
 
   static fromDict(d) {
@@ -16,9 +17,10 @@ export default class Candidate {
       d.id,
       d.firstName,
       d.lastName,
-      d.twtrHandle,
+      d.party,
       d.imgFile,
-      d.party
+      d.xHandle,
+      d.wikipediaPage
     );
   }
 
