@@ -45,7 +45,7 @@ export default class HomePageContext {
   // state
   static updateState(homePage, updater) {
     let { context } = homePage.state;
-    context = updater(context);
+    updater(context);
     context.toURL();
     homePage.setState({ context });
   }
