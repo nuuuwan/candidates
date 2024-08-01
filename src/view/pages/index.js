@@ -2,6 +2,7 @@
 import AbstractInnerPage from "./AbstractInnerPage";
 import CandidatePage from "./CandidatePage";
 import CriteriaPage from "./CriteriaPage";
+import GroundTruthPage from "./GroundTruthPage";
 import HomePage from "./HomePage";
 import PAGE_CONFIG_LIST from "./PAGE_CONFIG_LIST";
 
@@ -9,6 +10,7 @@ export {
   AbstractInnerPage,
   CandidatePage,
   CriteriaPage,
+  GroundTruthPage,
   HomePage,
   PAGE_CONFIG_LIST,
 };

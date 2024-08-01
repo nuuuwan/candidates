@@ -6,6 +6,7 @@ const AppColors = {
   Version: "#444",
   Criterion: "#444",
   Candidate: "#444",
+  GroundTruth: "#444",
 
   LessLight: "#444",
   Light: "#888",
