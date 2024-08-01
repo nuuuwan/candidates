@@ -11,7 +11,7 @@ import { t } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
 
 import AppColors from "../../view/_constants/AppColors";
-import ScreenshotView from "../../view/molecules/ScreenshotView";
+
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 
 function RandomCriteriaWeightsAction({ onClickRandomCriteriaWeights }) {
@@ -38,7 +38,7 @@ function RefreshCriteriaWeightsAction({ onClickRefreshCriteriaWeights }) {
 
 export default function HomePageBottomNavigation({
   onClickOpenPage,
-  refHomePage,
+
   onClickRandomCriteriaWeights,
   onClickRefreshCriteriaWeights,
 }) {
@@ -50,7 +50,6 @@ export default function HomePageBottomNavigation({
       elevation={3}
     >
       <BottomNavigation>
-        <ScreenshotView refHomePage={refHomePage} />
         <RandomCriteriaWeightsAction
           onClickRandomCriteriaWeights={onClickRandomCriteriaWeights}
         />

@@ -12,7 +12,6 @@ import LabelledText from "./LabelledText";
 import LabelledTextInput from "./LabelledTextInput";
 import PageLink from "./PageLink";
 import PartyView from "./PartyView";
-import ScreenshotView from "./ScreenshotView";
 import VersionMenu from "./VersionMenu";
 import VersionView from "./VersionView";
 import WeightView from "./WeightView";
@@ -31,7 +30,6 @@ export {
   LabelledTextInput,
   PageLink,
   PartyView,
-  ScreenshotView,
   VersionMenu,
   VersionView,
   WeightView,

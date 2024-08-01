@@ -1,5 +1,5 @@
 import { Component, version } from "react";
-import React, { createRef } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";
@@ -117,12 +117,10 @@ export default class HomePage extends Component {
     const { context } = this.state;
     const innerPageConfig = this.getInnerPageConfig();
     const criterionWeights = context.criterionWeights;
-    const refHomePage = createRef(null);
 
     return (
       <Box sx={STYLE_INNER_PAGE_BOX}>
         <innerPageConfig.Page
-          refHomePage={refHomePage}
           version={version}
           criterionWeights={criterionWeights}
           onClickOpenPage={this.onClickOpenPage.bind(this)}
@@ -134,12 +132,9 @@ export default class HomePage extends Component {
   }
 
   renderFooter() {
-    const refHomePage = createRef(null);
-
     return (
       <HomePageBottomNavigation
         onClickOpenPage={this.onClickOpenPage.bind(this)}
-        refHomePage={refHomePage}
         onClickRandomCriteriaWeights={this.onClickRandomCriteriaWeights.bind(
           this
         )}

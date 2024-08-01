@@ -30,7 +30,6 @@ export default function CriteriaView({
   version,
   onChangeCriterionWeight,
   criterionWeights,
-  refHomePage,
 }) {
   const criteria = GroundTruth.getCriteria(version);
   return (
