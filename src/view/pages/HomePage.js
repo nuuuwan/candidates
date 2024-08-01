@@ -54,14 +54,14 @@ export default class HomePage extends Component {
 
   onChangeCriterionWeight(iCriterion, criterionWeight) {
     HomePageContext.updateState(this, function (context) {
-      context.criterionWeights[iCriterion] = criterionWeight;
+      context.criterionToWeight[iCriterion] = criterionWeight;
     });
   }
 
   onChangeVersion(version) {
     HomePageContext.updateState(this, function (context) {
       context.version = version;
-      context.criterionWeights = GroundTruth.getInitCriterionWeights(
+      context.criterionToWeight = GroundTruth.getInitCriterionWeights(
         context.version
       );
     });
@@ -77,7 +77,7 @@ export default class HomePage extends Component {
     AudioX.playLong();
 
     HomePageContext.updateState(this, function (context) {
-      context.criterionWeights = GroundTruth.getRandomCriterionWeights(
+      context.criterionToWeight = GroundTruth.getRandomCriterionWeights(
         context.version
       );
     });
@@ -87,7 +87,7 @@ export default class HomePage extends Component {
     AudioX.playLong();
 
     HomePageContext.updateState(this, function (context) {
-      context.criterionWeights = GroundTruth.getInitCriterionWeights(
+      context.criterionToWeight = GroundTruth.getInitCriterionWeights(
         context.version
       );
     });
@@ -97,7 +97,7 @@ export default class HomePage extends Component {
     const { context } = this.state;
 
     const innerPageConfig = this.getInnerPageConfig();
-    const criterionWeights = context.criterionWeights;
+    const criterionToWeight = context.criterionToWeight;
 
     return (
       <CustomAppBar
@@ -105,7 +105,7 @@ export default class HomePage extends Component {
         color={innerPageConfig.color}
         Icon={innerPageConfig.Icon}
         version={version}
-        criterionWeights={criterionWeights}
+        criterionToWeight={criterionToWeight}
         onChangeLang={this.onChangeLang.bind(this)}
         onChangeVersion={this.onChangeVersion.bind(this)}
         onClickOpenPage={this.onClickOpenPage.bind(this)}
@@ -116,13 +116,13 @@ export default class HomePage extends Component {
   renderBody() {
     const { context } = this.state;
     const innerPageConfig = this.getInnerPageConfig();
-    const criterionWeights = context.criterionWeights;
+    const criterionToWeight = context.criterionToWeight;
 
     return (
       <Box sx={STYLE_INNER_PAGE_BOX}>
         <innerPageConfig.Page
           version={version}
-          criterionWeights={criterionWeights}
+          criterionToWeight={criterionToWeight}
           onClickOpenPage={this.onClickOpenPage.bind(this)}
           onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
           onChangeVersion={this.onChangeVersion.bind(this)}

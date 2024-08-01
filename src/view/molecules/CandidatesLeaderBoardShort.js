@@ -4,12 +4,12 @@ import Stack from "@mui/material/Stack";
 import Candidate from "../../nonview/core/Candidate";
 
 const AVATAR_SIZE = 24;
-const MIN_SCORE = 1;
+const MIN_WEIGHT = 1;
 export default function CandidatesLeaderBoardShort({
-  candidateScoreAndRank,
+  candidateWeightAndRank,
   onClickOpenPage,
 }) {
-  if (candidateScoreAndRank[0][1] < MIN_SCORE) {
+  if (candidateWeightAndRank[0][1] < MIN_WEIGHT) {
     return null;
   }
 
@@ -19,7 +19,7 @@ export default function CandidatesLeaderBoardShort({
 
   return (
     <Stack direction="row" gap={1} onClick={onClick}>
-      {candidateScoreAndRank
+      {candidateWeightAndRank
         .slice(0, 3)
         .map(function ([candidateId, score, rank]) {
           const key = "candidate-" + candidateId;

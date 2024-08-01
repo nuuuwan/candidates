@@ -23,14 +23,14 @@ export default class CandidatePage extends AbstractInnerPage {
   }
 
   render() {
-    const { version, criterionWeights } = this.props;
-    const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
+    const { version, criterionToWeight } = this.props;
+    const candidateWeightAndRank = GroundTruth.getSortedCandidateWeightAndRank(
       version,
-      criterionWeights
+      criterionToWeight
     );
 
     return (
-      <CandidatesLeaderBoard candidateScoreAndRank={candidateScoreAndRank} />
+      <CandidatesLeaderBoard candidateWeightAndRank={candidateWeightAndRank} />
     );
   }
 }

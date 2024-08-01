@@ -21,12 +21,12 @@ export default class CriteriaPage extends AbstractInnerPage {
   }
 
   render() {
-    const { version, onChangeCriterionWeight, criterionWeights } = this.props;
+    const { version, onChangeCriterionWeight, criterionToWeight } = this.props;
     return (
       <CriteriaView
         version={version}
         onChangeCriterionWeight={onChangeCriterionWeight}
-        criterionWeights={criterionWeights}
+        criterionToWeight={criterionToWeight}
       />
     );
   }

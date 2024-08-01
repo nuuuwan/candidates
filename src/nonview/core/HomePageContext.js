@@ -2,11 +2,11 @@ import { URLContext, I18N } from "../../nonview/base";
 import GroundTruth from "../../nonview/core/GroundTruth";
 
 export default class HomePageContext {
-  constructor(lang, page, version, criterionWeights) {
+  constructor(lang, page, version, criterionToWeight) {
     this.lang = lang;
     this.page = page;
     this.version = version;
-    this.criterionWeights = criterionWeights;
+    this.criterionToWeight = criterionToWeight;
   }
 
   toURL() {
@@ -15,7 +15,7 @@ export default class HomePageContext {
       lang: this.lang,
       page: this.page,
       version: this.version,
-      criterionWeights_: JSON.stringify(this.criterionWeights),
+      criterionToWeight_: JSON.stringify(this.criterionToWeight),
     });
   }
 
@@ -36,8 +36,8 @@ export default class HomePageContext {
       context.lang || HomePageContext.DEFAULT.LANG,
       context.page || HomePageContext.DEFAULT.PAGE,
       context.version || HomePageContext.DEFAULT.VERSION,
-      context.criterionWeightsJSON
-        ? JSON.parse(context.criterionWeights_)
+      context.criterionToWeightJSON
+        ? JSON.parse(context.criterionToWeight_)
         : HomePageContext.DEFAULT.CRITERION_WEIGHTS
     );
   }

@@ -66,10 +66,10 @@ export default function CriterionView({
   iCriterion,
   criterionID,
   onChangeCriterionWeight,
-  criterionWeights,
+  criterionToWeight,
 }) {
   const [criterionWeight, setCriterionValue] = useState(
-    criterionWeights[iCriterion]
+    criterionToWeight[criterionID]
   );
 
   return (

@@ -25,14 +25,14 @@ export default function CustomAppBar({
   color,
   Icon,
   version,
-  criterionWeights,
+  criterionToWeight,
   onChangeVersion,
   onChangeLang,
   onClickOpenPage,
 }) {
-  const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
+  const candidateWeightAndRank = GroundTruth.getSortedCandidateWeightAndRank(
     version,
-    criterionWeights
+    criterionToWeight
   );
 
   return (
@@ -49,7 +49,7 @@ export default function CustomAppBar({
             {" "}
           </Typography>
           <CandidatesLeaderBoardShort
-            candidateScoreAndRank={candidateScoreAndRank}
+            candidateWeightAndRank={candidateWeightAndRank}
             onClickOpenPage={onClickOpenPage}
           />
           <VersionMenu version={version} onChangeVersion={onChangeVersion} />

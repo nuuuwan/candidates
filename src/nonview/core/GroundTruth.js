@@ -1,8 +1,8 @@
-import { CRITERION_TO_CANDIDATE_TO_SCORE } from "../../nonview/data/CRITERION_TO_CANDIDATE_TO_SCORE";
+import { CRITERION_TO_CANDIDATE_TO_WEIGHT } from "../../nonview/data/CRITERION_TO_CANDIDATE_TO_WEIGHT";
 
 import MathX from "../../nonview/base/MathX";
 const ATTR_IDX_IDX = Object({
-  default: CRITERION_TO_CANDIDATE_TO_SCORE,
+  default: CRITERION_TO_CANDIDATE_TO_WEIGHT,
 });
 
 export default class GroundTruth {
@@ -20,19 +20,21 @@ export default class GroundTruth {
     return ATTR_IDX_IDX[version];
   }
 
-  static getCriteria(version) {
+  static getCriterionIDs(version) {
     return Object.keys(GroundTruth.getCriterionToCandidateToWeight(version));
   }
 
-  static getGenericCriterionWeights(version, funcGenerateWeight) {
-    const criteria = GroundTruth.getCriteria(version);
-    return criteria.map(function (criterion) {
-      return funcGenerateWeight(criterion);
-    });
+  static getGenericCriterionToWeight(version, funcGenerateWeight) {
+    const criterionIDs = GroundTruth.getCriterionIDs(version);
+    return Object.fromEntries(
+      criterionIDs.map(function (criterionID) {
+        return [criterionID, funcGenerateWeight(criterionID)];
+      })
+    );
   }
 
   static getInitCriterionWeights(version) {
-    return GroundTruth.getGenericCriterionWeights(version, (criterion) => 0);
+    return GroundTruth.getGenericCriterionToWeight(version, (criterionID) => 0);
   }
 
   static getRandomWeight() {
@@ -40,26 +42,26 @@ export default class GroundTruth {
   }
 
   static getRandomCriterionWeights(version) {
-    return GroundTruth.getGenericCriterionWeights(version, (criterion) =>
+    return GroundTruth.getGenericCriterionToWeight(version, (criterionID) =>
       GroundTruth.getRandomWeight()
     );
   }
 
-  static getTotalWeight(criterionWeights) {
-    return MathX.sumL1(criterionWeights);
+  static getTotalWeight(criterionToWeight) {
+    return MathX.sumL1(Object.values(criterionToWeight));
   }
 
-  static getCandidateToScore(version, criterionWeights) {
-    let totalWeight = GroundTruth.getTotalWeight(criterionWeights);
+  static getCandidateToScore(version, criterionToWeight) {
+    let totalWeight = GroundTruth.getTotalWeight(criterionToWeight);
     if (totalWeight === 0) {
       totalWeight = 1;
     }
     const critToCandToWeight =
       GroundTruth.getCriterionToCandidateToWeight(version);
+
     return Object.entries(critToCandToWeight).reduce(function (
       candToScore,
-      [crit, candToWeight],
-      iCrit
+      [criterionID, candToWeight]
     ) {
       return Object.entries(candToWeight).reduce(function (
         candToScore,
@@ -68,7 +70,8 @@ export default class GroundTruth {
         if (!candToScore[cand]) {
           candToScore[cand] = 0;
         }
-        candToScore[cand] += (criterionWeights[iCrit] * weight) / totalWeight;
+        candToScore[cand] +=
+          (criterionToWeight[criterionID] * weight) / totalWeight;
         return candToScore;
       },
       candToScore);
@@ -76,22 +79,22 @@ export default class GroundTruth {
     {});
   }
 
-  static getSortedCandidateScoreAndRank(version, criterionWeights) {
-    let prevScore = undefined;
+  static getSortedCandidateWeightAndRank(version, criterionToWeight) {
+    let prevWeight = undefined;
     let prevRank = undefined;
     return Object.entries(
-      GroundTruth.getCandidateToScore(version, criterionWeights)
+      GroundTruth.getCandidateToScore(version, criterionToWeight)
     )
       .sort(function (a, b) {
         return b[1] - a[1];
       })
       .map(function ([candidate, score], iCandidate) {
         let rank = iCandidate;
-        if (prevScore !== undefined && prevScore === score) {
+        if (prevWeight !== undefined && prevWeight === score) {
           rank = prevRank;
         }
         prevRank = rank;
-        prevScore = score;
+        prevWeight = score;
         return [candidate, score, rank];
       }, []);
   }

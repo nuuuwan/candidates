@@ -29,21 +29,21 @@ function InfoText() {
 export default function CriteriaView({
   version,
   onChangeCriterionWeight,
-  criterionWeights,
+  criterionToWeight,
 }) {
-  const criteria = GroundTruth.getCriteria(version);
+  const criterionIDs = GroundTruth.getCriterionIDs(version);
   return (
     <Box>
       <InfoText />
       <List>
-        {criteria.map(function (criterionID, iCriterion) {
+        {criterionIDs.map(function (criterionID, iCriterion) {
           const key = "criterion-" + version + "-" + criterionID;
           return (
             <CriterionView
               key={key}
               iCriterion={iCriterion}
               criterionID={criterionID}
-              criterionWeights={criterionWeights}
+              criterionToWeight={criterionToWeight}
               onChangeCriterionWeight={onChangeCriterionWeight}
             />
           );
