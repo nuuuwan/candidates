@@ -12,6 +12,7 @@ import Weight from "../../nonview/core/Weight";
 import WeightView from "../../view/molecules/WeightView";
 import { ListItem, ListItemAvatar, ListItemText, Paper } from "@mui/material";
 import AppColors from "../_constants/AppColors";
+import Criterion from "../../nonview/core/Criterion";
 
 const MARKS = [-75, 0, 75].map(function (value) {
   return {
@@ -27,6 +28,7 @@ function CustomSlider({
   criterionID,
   criterionWeight,
 }) {
+  const criterion = Criterion.fromId(criterionID);
   const onChange = function (e) {
     setCriterionValue(parseInt(e.target.value));
   };
@@ -39,7 +41,7 @@ function CustomSlider({
 
   return (
     <Box>
-      <Typography variant="body2">{t(criterionID)}</Typography>
+      <Typography variant="body2">{t(criterion.details)}</Typography>
       <Box>
         <Slider
           value={criterionWeight}
