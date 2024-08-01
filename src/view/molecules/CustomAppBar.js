@@ -24,12 +24,12 @@ export default function CustomAppBar({
   title,
   color,
   Icon,
-  context,
+  version,
+  criterionWeights,
   onChangeVersion,
+  onChangeLang,
   onClickOpenPage,
 }) {
-  const version = context.version;
-  const criterionWeights = JSON.parse(context.criterionWeightsJSON);
   const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
     version,
     criterionWeights
@@ -52,8 +52,8 @@ export default function CustomAppBar({
             candidateScoreAndRank={candidateScoreAndRank}
             onClickOpenPage={onClickOpenPage}
           />
-          <VersionMenu context={context} onChangeVersion={onChangeVersion} />
-          <HelpMenu />
+          <VersionMenu version={version} onChangeVersion={onChangeVersion} />
+          <HelpMenu onChangeLang={onChangeLang} />
         </Toolbar>
       </AppBar>
     </Box>

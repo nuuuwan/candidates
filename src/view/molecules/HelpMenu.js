@@ -60,7 +60,7 @@ function MenuItemClearCache() {
   );
 }
 
-function MenuItemsForLang() {
+function MenuItemsForLang({ onChangeLang }) {
   return (
     <>
       {LANG_LIST.map(function (lang, iLang) {
@@ -70,10 +70,7 @@ function MenuItemsForLang() {
         }
 
         const onClick = function () {
-          let context = URLContext.getContext();
-          context.lang = lang.lang;
-          URLContext.setContext(context);
-          window.location.reload(true);
+          onChangeLang(lang.lang);
         };
 
         return (
@@ -113,7 +110,7 @@ function MenuItemsForLinks({ onClose }) {
   );
 }
 
-export default function HelpMenu() {
+export default function HelpMenu({ onChangeLang }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -133,7 +130,7 @@ export default function HelpMenu() {
         </IconButton>
       </Box>
       <Menu anchorEl={anchorEl} open={open} onClose={onClose} onClick={onClose}>
-        <MenuItemsForLang />
+        <MenuItemsForLang onChangeLang={onChangeLang} />
         <Divider />
         <MenuItemsForLinks onClose={onClose} />
         <Divider />

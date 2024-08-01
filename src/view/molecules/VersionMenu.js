@@ -18,9 +18,9 @@ const URL_MESSAGE =
   "https://twitter.com/messages/compose?recipient_id=57874373&text=" +
   MESSAGE.replace(" ", "+");
 
-function MenuItemsForVersions({ onChangeVersion, context }) {
+function MenuItemsForVersions({ onChangeVersion, version: activeVersion }) {
   const versions = GroundTruth.getVersions();
-  const activeVersion = context.version;
+
   return (
     <>
       {versions.map(function (version) {
@@ -40,7 +40,7 @@ function MenuItemsForVersions({ onChangeVersion, context }) {
   );
 }
 
-export default function VersionMenu({ onChangeVersion, context }) {
+export default function VersionMenu({ onChangeVersion, version }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
@@ -67,7 +67,7 @@ export default function VersionMenu({ onChangeVersion, context }) {
       <Menu anchorEl={anchorEl} open={open} onClose={onClose} onClick={onClose}>
         <MenuItemsForVersions
           onChangeVersion={onChangeVersion}
-          context={context}
+          version={version}
         />
         <Divider />
         <MenuItem onClick={onClickSubmitOwn}>

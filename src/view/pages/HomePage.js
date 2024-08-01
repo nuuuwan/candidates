@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, version } from "react";
 import React, { createRef } from "react";
 import Box from "@mui/material/Box";
 
@@ -109,6 +109,13 @@ export default class HomePage extends Component {
     this.setContext(context);
   }
 
+  onChangeLang(lang) {
+    let context = this.getContext();
+    context.lang = lang;
+
+    this.setContext(context);
+  }
+
   onClickRandomCriteriaWeights() {
     AudioX.playLong();
     let context = this.getContext();
@@ -127,43 +134,72 @@ export default class HomePage extends Component {
     this.setContext(context);
   }
 
-  render() {
+  renderHeader() {
     const { context } = this.state;
-    const key = JSON.stringify(context);
+
+    const innerPageConfig = this.getInnerPageConfig();
+    const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+
+    return (
+      <CustomAppBar
+        title={innerPageConfig.label}
+        color={innerPageConfig.color}
+        Icon={innerPageConfig.Icon}
+        version={version}
+        criterionWeights={criterionWeights}
+        onChangeLang={this.onChangeLang.bind(this)}
+        onChangeVersion={this.onChangeVersion.bind(this)}
+        onClickOpenPage={this.onClickOpenPage.bind(this)}
+      />
+    );
+  }
+
+  renderBody() {
+    const { context } = this.state;
     const innerPageConfig = this.getInnerPageConfig();
     const criterionWeights = JSON.parse(context.criterionWeightsJSON);
     const refHomePage = createRef(null);
 
     return (
-      <Box key={key}>
-        <CustomAppBar
-          title={innerPageConfig.label}
-          color={innerPageConfig.color}
-          Icon={innerPageConfig.Icon}
-          context={context}
-          onChangeVersion={this.onChangeVersion.bind(this)}
-          onClickOpenPage={this.onClickOpenPage.bind(this)}
-        />
-        <Box sx={STYLE_INNER_PAGE_BOX}>
-          <innerPageConfig.Page
-            refHomePage={refHomePage}
-            context={context}
-            onClickOpenPage={this.onClickOpenPage.bind(this)}
-            criterionWeights={criterionWeights}
-            onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
-            onChangeVersion={this.onChangeVersion.bind(this)}
-          />
-        </Box>
-        <HomePageBottomNavigation
-          onClickOpenPage={this.onClickOpenPage.bind(this)}
+      <Box sx={STYLE_INNER_PAGE_BOX}>
+        <innerPageConfig.Page
           refHomePage={refHomePage}
-          onClickRandomCriteriaWeights={this.onClickRandomCriteriaWeights.bind(
-            this
-          )}
-          onClickRefreshCriteriaWeights={this.onClickRefreshCriteriaWeights.bind(
-            this
-          )}
+          version={version}
+          criterionWeights={criterionWeights}
+          onClickOpenPage={this.onClickOpenPage.bind(this)}
+          onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
+          onChangeVersion={this.onChangeVersion.bind(this)}
         />
+      </Box>
+    );
+  }
+
+  renderFooter() {
+    const refHomePage = createRef(null);
+
+    return (
+      <HomePageBottomNavigation
+        onClickOpenPage={this.onClickOpenPage.bind(this)}
+        refHomePage={refHomePage}
+        onClickRandomCriteriaWeights={this.onClickRandomCriteriaWeights.bind(
+          this
+        )}
+        onClickRefreshCriteriaWeights={this.onClickRefreshCriteriaWeights.bind(
+          this
+        )}
+      />
+    );
+  }
+
+  render() {
+    const { context } = this.state;
+    const key = JSON.stringify(context);
+
+    return (
+      <Box key={key}>
+        {this.renderHeader()}
+        {this.renderBody()}
+        {this.renderFooter()}
       </Box>
     );
   }
