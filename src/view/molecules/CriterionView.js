@@ -13,20 +13,12 @@ import WeightView from "../../view/molecules/WeightView";
 import { ListItem, ListItemAvatar, ListItemText, Paper } from "@mui/material";
 import AppColors from "../_constants/AppColors";
 
-const MARKS = [
-  {
-    value: -100,
-    label: Weight.EMOJI.UNSUITABLE,
-  },
-  {
-    value: 0,
-    label: Weight.EMOJI.NEUTRAL,
-  },
-  {
-    value: 100,
-    label: Weight.EMOJI.SUITABLE,
-  },
-];
+const MARKS = [-75, 0, 75].map(function (value) {
+  return {
+    value,
+    label: Weight.getDirectionEmoji(value),
+  };
+});
 
 function CustomSlider({
   setCriterionValue,
@@ -97,7 +89,7 @@ export default function CriterionView({
 
           <Typography sx={{ flexGrow: 1 }}> </Typography>
 
-          <Box sx={{ marginLeft: 3 }}>
+          <Box sx={{ marginLeft: 1 }}>
             <WeightView weight={criterionWeight} />
           </Box>
         </Stack>

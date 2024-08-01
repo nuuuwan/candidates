@@ -1,8 +1,11 @@
 export default class Weight {
   static EMOJI = {
-    SUITABLE: "😊",
-    UNSUITABLE: "☹️",
-    NEUTRAL: "😐",
+    SUITABLE: "👍🏻",
+    UNSUITABLE: "👎🏻",
+    NEUTRAL: "",
+    SUITABLE1: "😊",
+    UNSUITABLE1: "☹️",
+    NEUTRAL1: "😐",
   };
 
   static getMagnitudeText(weight) {
@@ -33,14 +36,23 @@ export default class Weight {
   }
 
   static getDirectionEmoji(weight) {
-    if (weight > 0) {
-      return Weight.EMOJI.SUITABLE;
+    const weightAbs = Math.abs(weight);
+    let n = 1;
+    if (weightAbs > 50) {
+      n = 2;
     }
 
-    if (weight < 0) {
-      return Weight.EMOJI.UNSUITABLE;
+    let emoji = Weight.EMOJI.NEUTRAL;
+    let emoji1 = Weight.EMOJI.NEUTRAL1;
+    if (weight > 0) {
+      emoji = Weight.EMOJI.SUITABLE;
+      emoji1 = Weight.EMOJI.SUITABLE1;
+    } else if (weight < 0) {
+      emoji = Weight.EMOJI.UNSUITABLE;
+      emoji1 = Weight.EMOJI.UNSUITABLE1;
     }
-    return Weight.EMOJI.NEUTRAL;
+
+    return emoji1 + Array(n + 1).join(emoji);
   }
 
   static signed(weight) {

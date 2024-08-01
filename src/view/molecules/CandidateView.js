@@ -47,7 +47,7 @@ export default function CandidateView({ candidateId, score, rank }) {
           </Box>
           <Typography sx={{ flexGrow: 1 }}> </Typography>
 
-          <Box sx={{ marginLeft: 3 }}>
+          <Box sx={{ marginLeft: 1 }}>
             <WeightView weight={score} />
           </Box>
         </Stack>
