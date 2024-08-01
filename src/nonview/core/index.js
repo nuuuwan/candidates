@@ -2,8 +2,17 @@
 import Candidate from "./Candidate";
 import Criterion from "./Criterion";
 import GroundTruth from "./GroundTruth";
+import HomePageContext from "./HomePageContext";
 import Party from "./Party";
 import Version from "./Version";
 import Weight from "./Weight";
 
-export { Candidate, Criterion, GroundTruth, Party, Version, Weight };
+export {
+  Candidate,
+  Criterion,
+  GroundTruth,
+  HomePageContext,
+  Party,
+  Version,
+  Weight,
+};

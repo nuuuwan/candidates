@@ -3,16 +3,13 @@ import React, { createRef } from "react";
 import Box from "@mui/material/Box";
 
 import AudioX from "../../nonview/base/AudioX";
-import I18N from "../../nonview/base/I18N";
-import URLContext from "../../nonview/base/URLContext";
 
 import CustomAppBar from "../../view/molecules/CustomAppBar";
 import HomePageBottomNavigation from "../../view/molecules/HomePageBottomNavigation";
 
 import GroundTruth from "../../nonview/core/GroundTruth";
-import PAGE_CONFIG_LIST, {
-  DEFAULT_PAGE_CONFIG,
-} from "../../view/pages/PAGE_CONFIG_LIST";
+import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
+import HomePageContext from "../../nonview/core/HomePageContext";
 
 const STYLE_INNER_PAGE_BOX = {
   marginTop: 10,
@@ -22,56 +19,25 @@ const STYLE_INNER_PAGE_BOX = {
 export default class HomePage extends Component {
   constructor(props) {
     super(props);
-    const context = this.getContext();
+    const context = HomePageContext.fromURL();
     this.state = {
       context,
     };
     this.isComponentMounted = false;
-    this.setContext(context);
-  }
-
-  getContext() {
-    let context = URLContext.getContext();
-    if (!context.page) {
-      context.page = "CriteriaPage";
-    }
-    if (!context.lang) {
-      context.lang = I18N.BASE_LANG;
-    }
-    if (!context.version) {
-      context.version = GroundTruth.DEFAULT_VERSION;
-    }
-
-    if (!context.criterionWeightsJSON) {
-      const criterionWeights = GroundTruth.getInitCriterionWeights(
-        context.version
-      );
-      context.criterionWeightsJSON = JSON.stringify(criterionWeights);
-    }
-    return context;
+    context.toURL();
   }
 
   componentDidMount() {
     this.isComponentMounted = true;
   }
 
-  setContext(newContext) {
-    const oldContext = this.getContext();
-    const context = { ...oldContext, ...newContext };
-
-    URLContext.setContext(context);
-    I18N.setLang(context.lang);
-
-    if (this.isComponentMounted) {
-      this.setState({ context });
-    }
-  }
-
   onClickOpenPage(page) {
     AudioX.playShort();
-    let context = URLContext.getContext();
-    context.page = page;
-    this.setContext(context);
+
+    HomePageContext.updateState(this, function (context) {
+      context.page = page;
+    });
+
     window.scrollTo(0, 0);
   }
 
@@ -80,66 +46,58 @@ export default class HomePage extends Component {
 
     for (let config of PAGE_CONFIG_LIST) {
       if (config.page === context.page) {
-        context.page = config.page;
-        URLContext.setContext(context);
         return config;
       }
     }
-
-    context.page = DEFAULT_PAGE_CONFIG.page;
-    URLContext.setContext(context);
-    return DEFAULT_PAGE_CONFIG;
+    throw new Error("Invalid page: " + context.page);
   }
 
   onChangeCriterionWeight(iCriterion, criterionWeight) {
-    let context = this.getContext();
-    let criterionWeights = JSON.parse(context.criterionWeightsJSON);
-    criterionWeights[iCriterion] = criterionWeight;
-    context.criterionWeightsJSON = JSON.stringify(criterionWeights);
-    this.setContext(context);
+    HomePageContext.updateState(this, function (context) {
+      context.criterionWeights[iCriterion] = criterionWeight;
+    });
   }
 
   onChangeVersion(version) {
-    let context = this.getContext();
-    context.version = version;
-
-    context.criterionWeightsJSON = JSON.stringify(
-      GroundTruth.getInitCriterionWeights(context.version)
-    );
-    context.page = "CriteriaPage";
-    this.setContext(context);
+    HomePageContext.updateState(this, function (context) {
+      context.version = version;
+      context.criterionWeights = GroundTruth.getInitCriterionWeights(
+        context.version
+      );
+    });
   }
 
   onChangeLang(lang) {
-    let context = this.getContext();
-    context.lang = lang;
-
-    this.setContext(context);
+    HomePageContext.updateState(this, function (context) {
+      context.lang = lang;
+    });
   }
 
   onClickRandomCriteriaWeights() {
     AudioX.playLong();
-    let context = this.getContext();
-    context.criterionWeightsJSON = JSON.stringify(
-      GroundTruth.getRandomCriterionWeights(context.version)
-    );
-    this.setContext(context);
+
+    HomePageContext.updateState(this, function (context) {
+      context.criterionWeights = GroundTruth.getRandomCriterionWeights(
+        context.version
+      );
+    });
   }
 
   onClickRefreshCriteriaWeights() {
     AudioX.playLong();
-    let context = this.getContext();
-    context.criterionWeightsJSON = JSON.stringify(
-      GroundTruth.getInitCriterionWeights(context.version)
-    );
-    this.setContext(context);
+
+    HomePageContext.updateState(this, function (context) {
+      context.criterionWeights = GroundTruth.getInitCriterionWeights(
+        context.version
+      );
+    });
   }
 
   renderHeader() {
     const { context } = this.state;
 
     const innerPageConfig = this.getInnerPageConfig();
-    const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+    const criterionWeights = context.criterionWeights;
 
     return (
       <CustomAppBar
@@ -158,7 +116,7 @@ export default class HomePage extends Component {
   renderBody() {
     const { context } = this.state;
     const innerPageConfig = this.getInnerPageConfig();
-    const criterionWeights = JSON.parse(context.criterionWeightsJSON);
+    const criterionWeights = context.criterionWeights;
     const refHomePage = createRef(null);
 
     return (
