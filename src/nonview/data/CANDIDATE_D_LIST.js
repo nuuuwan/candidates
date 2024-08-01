@@ -25,7 +25,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Ratnayake",
     twtrHandle: "Unknown",
     imgFile: "JR.jpg",
-    party: "Ind",
+    party: "Independent",
   },
   {
     num: 4,
@@ -70,7 +70,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Fonseka",
     twtrHandle: "GeneralFonseka",
     imgFile: "3135.jpg",
-    party: "Ind",
+    party: "Independent",
   },
   {
     num: 9,
@@ -79,7 +79,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Keerthirathna",
     twtrHandle: "Unknown",
     imgFile: "SK.jpg",
-    party: "Ind",
+    party: "Independent",
   },
   {
     num: 10,
