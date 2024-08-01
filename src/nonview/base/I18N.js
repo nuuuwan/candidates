@@ -53,18 +53,20 @@ export default class I18N {
       return s;
     }
 
-    const entry = DICTIONARY[s];
-    if (!entry) {
-      return s;
-    }
-
     const currentLang = I18N.getLang();
     if (currentLang === I18N.BASE_LANG) {
       return s;
     }
 
+    const entry = DICTIONARY[s];
+    if (!entry) {
+      console.error(`No DICTIONARY entry for: '${s}'`);
+      return s;
+    }
+
     const translation = entry[currentLang];
     if (!translation) {
+      console.error(`No ${currentLang} translation for: '${s}'`);
       return s;
     }
 
