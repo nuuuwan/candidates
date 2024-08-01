@@ -15,7 +15,7 @@ export default class HomePageContext {
       lang: this.lang,
       page: this.page,
       version: this.version,
-      criterionWeightsJSON: JSON.stringify(this.criterionWeights),
+      criterionWeights_: JSON.stringify(this.criterionWeights),
     });
   }
 
@@ -37,7 +37,7 @@ export default class HomePageContext {
       context.page || HomePageContext.DEFAULT.PAGE,
       context.version || HomePageContext.DEFAULT.VERSION,
       context.criterionWeightsJSON
-        ? JSON.parse(context.criterionWeightsJSON)
+        ? JSON.parse(context.criterionWeights_)
         : HomePageContext.DEFAULT.CRITERION_WEIGHTS
     );
   }
