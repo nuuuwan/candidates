@@ -24,8 +24,8 @@ export default class CandidatePage extends AbstractInnerPage {
 
   render() {
     const { context, refHomePage } = this.props;
-    const { version, criterionWeights } = context;
-
+    const { version, criterionWeightsJSON } = context;
+    const criterionWeights = JSON.parse(criterionWeightsJSON);
     const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
       version,
       criterionWeights

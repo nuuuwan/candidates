@@ -29,7 +29,7 @@ export default function CustomAppBar({
   onClickOpenPage,
 }) {
   const version = context.version;
-  const criterionWeights = context.criterionWeights;
+  const criterionWeights = JSON.parse(context.criterionWeightsJSON);
   const candidateScoreAndRank = GroundTruth.getSortedCandidateScoreAndRank(
     version,
     criterionWeights

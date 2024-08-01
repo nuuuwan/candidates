@@ -1,25 +1,33 @@
 export default class URLContext {
-  static contextToStr(context) {
-    return encodeURIComponent(btoa(JSON.stringify(context)));
-  }
-
-  static strToContext(contextStr) {
-    return JSON.parse(atob(decodeURIComponent(contextStr)));
-  }
-
   static contextToURL(context) {
     const origin = window.location.origin;
-    let urlBase = origin + process.env.PUBLIC_URL; // TODO: Is origin needed?
-    return urlBase + "#" + URLContext.contextToStr(context);
+    let urlBase = origin + process.env.PUBLIC_URL;
+    if (!context) {
+      return urlBase;
+    }
+    return (
+      urlBase +
+      "?" +
+      Object.entries(context)
+        .map(function ([k, v]) {
+          return k + "=" + v;
+        })
+        .join("&")
+    );
   }
 
   static urlToContext(url) {
-    const urlTokens = url.split("#");
+    const urlTokens = url.split("?");
     if (urlTokens.length !== 2) {
       return {};
     }
     const contextStr = urlTokens[1];
-    return URLContext.strToContext(contextStr);
+    return Object.fromEntries(
+      contextStr.split("&").map(function (x) {
+        const [k, v] = x.split("=");
+        return [k, v];
+      })
+    );
   }
 
   static getURL() {
