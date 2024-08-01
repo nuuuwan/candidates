@@ -40,14 +40,3 @@ export const CANDIDATE_IDX = IDX.build(
   (x) => x.id,
   (x) => x
 );
-
-for (const d of CANDIDATE_D_LIST) {
-  console.debug(
-    d.id,
-    d.firstName,
-    d.lastName,
-    d.twtrHandle,
-    d.imgFile,
-    d.party
-  );
-}
