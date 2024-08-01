@@ -7,7 +7,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Disanayake",
     party: "NPP",
     imgFile: "112.jpg",
-    twtrHandle: "AnuraDisanayake",
+    xHandle: "AnuraDisanayake",
     wikipediaPage: "Anura_Kumara_Dissanayake",
   },
   {
@@ -17,7 +17,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Liyanage",
     party: "SLLP",
     imgFile: "ASPL.png",
-    twtrHandle: "Unknown",
+    xHandle: "Unknown",
     wikipediaPage: "A._S._P._Liyanage",
   },
   {
@@ -27,7 +27,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Ratnayake",
     party: "Independent",
     imgFile: "JR.jpg",
-    twtrHandle: "Unknown",
+    xHandle: "Unknown",
     wikipediaPage: "Janaka_Ratnayake",
   },
   {
@@ -37,7 +37,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Sumanthiran",
     party: "ITAK",
     imgFile: "3194.jpg",
-    twtrHandle: "MASumanthiran",
+    xHandle: "MASumanthiran",
     wikipediaPage: "M._A._Sumanthiran",
   },
   {
@@ -47,7 +47,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Bopage",
     party: "PSA",
     imgFile: "NB.png",
-    twtrHandle: "Unknown",
+    xHandle: "Unknown",
     wikipediaPage: "Unknown",
   },
   {
@@ -57,7 +57,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Herath",
     party: "NIF",
     imgFile: "OH.png",
-    twtrHandle: "OshalaHerath",
+    xHandle: "OshalaHerath",
     wikipediaPage: "Unknown",
   },
   {
@@ -67,7 +67,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Wickramasinghe",
     party: "UNP",
     imgFile: "1244.jpg",
-    twtrHandle: "RW_UNP",
+    xHandle: "RW_UNP",
     wikipediaPage: "Ranil_Wickremesinghe",
   },
   {
@@ -77,7 +77,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Fonseka",
     party: "Independent",
     imgFile: "3135.jpg",
-    twtrHandle: "GeneralFonseka",
+    xHandle: "GeneralFonseka",
     wikipediaPage: "Sarath_Fonseka",
   },
   {
@@ -87,7 +87,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Keerthirathna",
     party: "Independent",
     imgFile: "SK.jpg",
-    twtrHandle: "Unknown",
+    xHandle: "Unknown",
     wikipediaPage: "Unknown",
   },
   {
@@ -97,7 +97,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Premadasa",
     party: "SJB",
     imgFile: "140.jpg",
-    twtrHandle: "SajithPremadasa",
+    xHandle: "SajithPremadasa",
     wikipediaPage: "Sajith_Premadasa",
   },
   {
@@ -107,7 +107,7 @@ export const CANDIDATE_D_LIST = [
     lastName: "Rajapakshe",
     party: "SLFP",
     imgFile: "1521.jpg",
-    twtrHandle: "WijeRajapakshe",
+    xHandle: "WijeRajapakshe",
     wikipediaPage: "Wijeyadasa_Rajapakshe",
   },
 ];
