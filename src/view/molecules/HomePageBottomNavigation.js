@@ -14,6 +14,28 @@ import AppColors from "../../view/_constants/AppColors";
 import ScreenshotView from "../../view/molecules/ScreenshotView";
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 
+function RandomCriteriaWeightsAction({ onClickRandomCriteriaWeights }) {
+  return (
+    <Tooltip title={t("Random Criteria Weights")}>
+      <BottomNavigationAction
+        icon={<CasinoIcon sx={{ color: AppColors.VeryLight }} />}
+        onClick={onClickRandomCriteriaWeights}
+      />
+    </Tooltip>
+  );
+}
+
+function RefreshCriteriaWeightsAction({ onClickRefreshCriteriaWeights }) {
+  return (
+    <Tooltip title={t("Reset Weights to Zero (Neutral)")}>
+      <BottomNavigationAction
+        icon={<RefreshIcon sx={{ color: AppColors.VeryLight }} />}
+        onClick={onClickRefreshCriteriaWeights}
+      />
+    </Tooltip>
+  );
+}
+
 export default function HomePageBottomNavigation({
   onClickOpenPage,
   refHomePage,
@@ -29,18 +51,13 @@ export default function HomePageBottomNavigation({
     >
       <BottomNavigation>
         <ScreenshotView refHomePage={refHomePage} />
-        <Tooltip title={t("Random Criteria Weights")}>
-          <BottomNavigationAction
-            icon={<CasinoIcon sx={{ color: AppColors.VeryLight }} />}
-            onClick={onClickRandomCriteriaWeights}
-          />
-        </Tooltip>
-        <Tooltip title={t("Reset Weights to Zero (Neutral)")}>
-          <BottomNavigationAction
-            icon={<RefreshIcon sx={{ color: AppColors.VeryLight }} />}
-            onClick={onClickRefreshCriteriaWeights}
-          />
-        </Tooltip>
+        <RandomCriteriaWeightsAction
+          onClickRandomCriteriaWeights={onClickRandomCriteriaWeights}
+        />
+        <RefreshCriteriaWeightsAction
+          onClickRefreshCriteriaWeights={onClickRefreshCriteriaWeights}
+        />
+
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
           const key = "button-" + config.page;
           const isActive = config.page === activePage;
