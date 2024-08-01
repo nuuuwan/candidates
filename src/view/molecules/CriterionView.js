@@ -41,7 +41,7 @@ function CustomSlider({
 
   return (
     <Box>
-      <Typography variant="body2">{t(criterion.details)}</Typography>
+      <Typography variant="body2">{`"${t(criterion.details)}"`}</Typography>
       <Box>
         <Slider
           value={criterionWeight}

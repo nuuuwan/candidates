@@ -12,6 +12,10 @@ export default class Candidate {
     this.wikipediaPage = wikipediaPage;
   }
 
+  get fullName() {
+    return this.firstName + " " + this.lastName;
+  }
+
   static fromDict(d) {
     return new Candidate(
       d.id,

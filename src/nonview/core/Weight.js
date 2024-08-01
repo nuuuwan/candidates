@@ -8,6 +8,16 @@ export default class Weight {
     NEUTRAL1: "😐",
   };
 
+  static getLabel(weight) {
+    if (weight > 0) {
+      return "Yes";
+    }
+    if (weight < 0) {
+      return "No";
+    }
+    return "N/D";
+  }
+
   static getMagnitudeText(weight) {
     const absWeight = Math.abs(weight);
     let magnitudeText;
