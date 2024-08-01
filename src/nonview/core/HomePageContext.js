@@ -3,7 +3,6 @@ import GroundTruth from "../../nonview/core/GroundTruth";
 
 export default class HomePageContext {
   constructor(lang, page, version, criterionWeights) {
-    console.debug({ lang, page, version, criterionWeights });
     this.lang = lang;
     this.page = page;
     this.version = version;
