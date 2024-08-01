@@ -1,18 +1,20 @@
-import { Typography, Link } from "@mui/material";
+import { IconButton } from "@mui/material";
+import LanguageIcon from "@mui/icons-material/Language";
 
 export default function WikipediaPageView({ wikipediaPage }) {
   if (!wikipediaPage || wikipediaPage === "Unknown") {
     return null;
   }
   const url = `https://en.wikipedia.org/wiki/${wikipediaPage}`;
-  const wikipediaTitle = wikipediaPage.replaceAll("_", " ");
 
   return (
-    <Typography variant="body1">
-      <Link href={url} target="_blank" rel="noopener noreferrer">
-        {wikipediaTitle}
-      </Link>
-      {" on Wikipedia"}
-    </Typography>
+    <IconButton
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      size="small"
+    >
+      <LanguageIcon />
+    </IconButton>
   );
 }
