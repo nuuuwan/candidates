@@ -11,7 +11,11 @@ import {
 
 import { t } from "../../nonview/base/I18N";
 import Candidate from "../../nonview/core/Candidate";
-import { WikipediaPageView, XHandleView } from "../../view/atoms";
+import {
+  WikipediaPageView,
+  XHandleView,
+  GoogleSearchView,
+} from "../../view/atoms";
 import PartyView from "../../view/molecules/PartyView";
 import WeightView from "../../view/molecules/WeightView";
 import AppColors from "../_constants/AppColors";
@@ -44,6 +48,7 @@ export default function CandidateView({ candidateId, score, rank }) {
             <PartyView id={candidate.party} />
             <WikipediaPageView wikipediaPage={candidate.wikipediaPage} />
             <XHandleView xHandle={candidate.xHandle} />
+            <GoogleSearchView searchText={candidate.fullName} />
           </Box>
           <Typography sx={{ flexGrow: 1 }}> </Typography>
 
