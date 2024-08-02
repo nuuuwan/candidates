@@ -1,6 +1,7 @@
 import { CRITERION_TO_CANDIDATE_TO_WEIGHT } from "../../nonview/data/CRITERION_TO_CANDIDATE_TO_WEIGHT";
 
 import MathX from "../../nonview/base/MathX";
+import { CANDIDATE_LIST } from "./Candidate";
 const ATTR_IDX_IDX = Object({
   default: CRITERION_TO_CANDIDATE_TO_WEIGHT,
 });
@@ -53,7 +54,7 @@ export default class GroundTruth {
     return MathX.sumL1(Object.values(criterionToWeight));
   }
 
-  static getCandidateToScore(version, criterionToWeight) {
+  static getCandidateToWeight(version, criterionToWeight) {
     let totalWeight = GroundTruth.getTotalWeight(criterionToWeight);
     if (totalWeight === 0) {
       totalWeight = 1;
@@ -65,39 +66,46 @@ export default class GroundTruth {
       candToScore,
       [criterionID, candToWeightInfo]
     ) {
-      return Object.entries(candToWeightInfo).reduce(function (
-        candToScore,
-        [cand, weightInfo]
-      ) {
-        if (!candToScore[cand]) {
-          candToScore[cand] = 0;
+      return CANDIDATE_LIST.reduce(function (candToScore, candidate) {
+        const candidateId = candidate.id;
+        let weightInfo = candToWeightInfo[candidateId];
+        if (weightInfo === undefined) {
+          weightInfo = {
+            weight: -100,
+            refs: "",
+          };
         }
-        candToScore[cand] +=
+
+        if (!candToScore[candidateId]) {
+          candToScore[candidateId] = 0;
+        }
+        candToScore[candidateId] +=
           (criterionToWeight[criterionID] * weightInfo.weight) / totalWeight;
         return candToScore;
-      },
-      candToScore);
+      }, candToScore);
     },
     {});
   }
 
-  static getSortedCandidateWeightAndRank(version, criterionToWeight) {
+  static getSortedCandidateToWeightAndRank(version, criterionToWeight) {
     let prevWeight = undefined;
     let prevRank = undefined;
-    return Object.entries(
-      GroundTruth.getCandidateToScore(version, criterionToWeight)
-    )
-      .sort(function (a, b) {
-        return b[1] - a[1];
-      })
-      .map(function ([candidate, score], iCandidate) {
-        let rank = iCandidate;
-        if (prevWeight !== undefined && prevWeight === score) {
-          rank = prevRank;
-        }
-        prevRank = rank;
-        prevWeight = score;
-        return [candidate, score, rank];
-      }, []);
+    return Object.fromEntries(
+      Object.entries(
+        GroundTruth.getCandidateToWeight(version, criterionToWeight)
+      )
+        .sort(function (a, b) {
+          return b[1] - a[1];
+        })
+        .map(function ([candidate, weight], iCandidate) {
+          let rank = iCandidate;
+          if (prevWeight !== undefined && prevWeight === weight) {
+            rank = prevRank;
+          }
+          prevRank = rank;
+          prevWeight = weight;
+          return [candidate, { weight, rank }];
+        }, [])
+    );
   }
 }

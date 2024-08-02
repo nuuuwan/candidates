@@ -6,10 +6,10 @@ import Candidate from "../../nonview/core/Candidate";
 const AVATAR_SIZE = 24;
 const MIN_WEIGHT = 1;
 export default function CandidatesLeaderBoardShort({
-  candidateWeightAndRank,
+  candidateToWeightAndRank,
   onClickOpenPage,
 }) {
-  if (candidateWeightAndRank[0][1] < MIN_WEIGHT) {
+  if (Object.values(candidateToWeightAndRank)[0][1] < MIN_WEIGHT) {
     return null;
   }
 
@@ -19,9 +19,9 @@ export default function CandidatesLeaderBoardShort({
 
   return (
     <Stack direction="row" gap={1} onClick={onClick}>
-      {candidateWeightAndRank
+      {Object.keys(candidateToWeightAndRank)
         .slice(0, 3)
-        .map(function ([candidateId, score, rank]) {
+        .map(function (candidateId) {
           const key = "candidate-" + candidateId;
           const candidate = Candidate.fromId(candidateId);
           return (

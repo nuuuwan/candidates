@@ -24,7 +24,7 @@ import WeightView from "../../view/molecules/WeightView";
 import AppColors from "../_constants/AppColors";
 
 const AVATAR_SIZE = 64;
-export default function CandidateView({ candidateId, score, rank }) {
+export default function CandidateView({ candidateId, weight, rank }) {
   const candidate = Candidate.fromId(candidateId);
   return (
     <ListItem component={Paper} sx={{ marginBottom: 2 }}>
@@ -59,7 +59,7 @@ export default function CandidateView({ candidateId, score, rank }) {
           <Typography sx={{ flexGrow: 1 }}> </Typography>
 
           <Box sx={{ marginLeft: 1 }}>
-            <WeightView weight={score} />
+            <WeightView weight={weight} />
           </Box>
         </Stack>
       </ListItemText>

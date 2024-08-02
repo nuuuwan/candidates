@@ -1,16 +1,19 @@
 import CandidateView from "../../view/molecules/CandidateView";
 import { List } from "@mui/material";
 
-export default function CandidatesLeaderBoard({ candidateWeightAndRank }) {
+export default function CandidatesLeaderBoard({ candidateToWeightAndRank }) {
   return (
     <List>
-      {candidateWeightAndRank.map(function ([candidateId, score, rank]) {
+      {Object.entries(candidateToWeightAndRank).map(function ([
+        candidateId,
+        { weight, rank },
+      ]) {
         const key = "candidate-" + candidateId;
         return (
           <CandidateView
             key={key}
             candidateId={candidateId}
-            score={score}
+            weight={weight}
             rank={rank}
           />
         );
