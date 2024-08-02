@@ -5,6 +5,7 @@ import CandidatesLeaderBoardShort from "./CandidatesLeaderBoardShort";
 import CriteriaView from "./CriteriaView";
 import CriterionView from "./CriterionView";
 import CustomAppBar from "./CustomAppBar";
+import GroundTruthView from "./GroundTruthView";
 import HelpMenu from "./HelpMenu";
 import HomePageBottomNavigation from "./HomePageBottomNavigation";
 import IconLabel from "./IconLabel";
@@ -23,6 +24,7 @@ export {
   CriteriaView,
   CriterionView,
   CustomAppBar,
+  GroundTruthView,
   HelpMenu,
   HomePageBottomNavigation,
   IconLabel,
