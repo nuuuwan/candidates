@@ -109,4 +109,22 @@ export default class GroundTruth {
         }, [])
     );
   }
+
+  static getWeightToRefsToCandidates(candidateToWeightInfo) {
+    return Object.entries(candidateToWeightInfo).reduce(function (
+      idx,
+      [candidateID, { weight, refs }]
+    ) {
+      refs = refs || "";
+      if (!idx[weight]) {
+        idx[weight] = {};
+      }
+      if (!idx[weight][refs]) {
+        idx[weight][refs] = [];
+      }
+      idx[weight][refs].push(candidateID);
+      return idx;
+    },
+    {});
+  }
 }
