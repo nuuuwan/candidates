@@ -14,7 +14,7 @@ import { ListItem, ListItemAvatar, ListItemText, Paper } from "@mui/material";
 import AppColors from "../_constants/AppColors";
 import Criterion from "../../nonview/core/Criterion";
 
-const MARKS = [-75, 0, 75].map(function (value) {
+const MARKS = [-100, 0, 100].map(function (value) {
   return {
     value,
     label: Weight.getDirectionEmoji(value),
