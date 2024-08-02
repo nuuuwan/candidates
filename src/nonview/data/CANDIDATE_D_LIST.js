@@ -9,6 +9,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "AnuraDisanayake",
     wikipediaPage: "Anura_Kumara_Dissanayake",
     parliamentNum: 112,
+    linkedInID: "anuradissanayake",
+    manthriLKID: "anura-kumara-dissanayaka",
   },
   {
     id: "AL",
@@ -19,6 +21,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "null",
     wikipediaPage: "A._S._P._Liyanage",
     parliamentNum: "null",
+    linkedInID: "null",
+    manthriLKID: "null",
   },
   {
     id: "JR",
@@ -29,6 +33,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "null",
     wikipediaPage: "Janaka_Ratnayake",
     parliamentNum: "null",
+    linkedInID: "null",
+    manthriLKID: "null",
   },
   {
     id: "MS",
@@ -39,6 +45,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "MASumanthiran",
     wikipediaPage: "M._A._Sumanthiran",
     parliamentNum: 3194,
+    linkedInID: "m-sumanthiran-88379165",
+    manthriLKID: "m-a-sumanthiran",
   },
   {
     id: "NB",
@@ -49,6 +57,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "null",
     wikipediaPage: "null",
     parliamentNum: "null",
+    linkedInID: "null",
+    manthriLKID: "null",
   },
   {
     id: "OH",
@@ -59,6 +69,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "OshalaHerath",
     wikipediaPage: "null",
     parliamentNum: "null",
+    linkedInID: "oshalaherath",
+    manthriLKID: "null",
   },
   {
     id: "RW",
@@ -69,6 +81,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "RW_UNP",
     wikipediaPage: "Ranil_Wickremesinghe",
     parliamentNum: 1244,
+    linkedInID: "null",
+    manthriLKID: "ranil-wickremesinghe",
   },
   {
     id: "SF",
@@ -79,6 +93,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "GeneralFonseka",
     wikipediaPage: "Sarath_Fonseka",
     parliamentNum: 3135,
+    linkedInID: "field-marshal-sarath-fonseka-465815179",
+    manthriLKID: "sarath-fonseka",
   },
   {
     id: "SK",
@@ -89,6 +105,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "null",
     wikipediaPage: "null",
     parliamentNum: 3038,
+    linkedInID: "null",
+    manthriLKID: "null",
   },
   {
     id: "SP",
@@ -99,6 +117,8 @@ export const CANDIDATE_D_LIST = [
     xHandle: "SajithPremadasa",
     wikipediaPage: "Sajith_Premadasa",
     parliamentNum: 140,
+    linkedInID: "sajithpremadasa",
+    manthriLKID: "sajith-premadasa",
   },
   {
     id: "WR",
@@ -109,5 +129,7 @@ export const CANDIDATE_D_LIST = [
     xHandle: "WijeRajapakshe",
     wikipediaPage: "Wijeyadasa_Rajapakshe",
     parliamentNum: 1521,
+    linkedInID: "wijeyadasa-rajapakshe",
+    manthriLKID: "wijeyadasa-rajapakshe",
   },
 ];

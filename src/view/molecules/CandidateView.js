@@ -16,6 +16,8 @@ import {
   XHandleView,
   GoogleSearchView,
   ParliamentView,
+  LinkedInView,
+  ManthriLKView,
 } from "../../view/atoms";
 import PartyView from "../../view/molecules/PartyView";
 import WeightView from "../../view/molecules/WeightView";
@@ -48,7 +50,9 @@ export default function CandidateView({ candidateId, score, rank }) {
             </Typography>
             <PartyView id={candidate.party} />
             <ParliamentView parliamentNum={candidate.parliamentNum} />
+            <ManthriLKView manthriLKID={candidate.manthriLKID} />
             <WikipediaPageView wikipediaPage={candidate.wikipediaPage} />
+            <LinkedInView linkedInID={candidate.linkedInID} />
             <XHandleView xHandle={candidate.xHandle} />
             <GoogleSearchView searchText={candidate.fullName} />
           </Box>

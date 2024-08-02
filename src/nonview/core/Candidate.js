@@ -10,7 +10,9 @@ export default class Candidate {
     imgFile,
     xHandle,
     wikipediaPage,
-    parliamentNum
+    parliamentNum,
+    linkedInID,
+    manthriLKID
   ) {
     this.id = id;
     this.firstName = firstName;
@@ -20,6 +22,8 @@ export default class Candidate {
     this.xHandle = xHandle;
     this.wikipediaPage = wikipediaPage;
     this.parliamentNum = parliamentNum;
+    this.linkedInID = linkedInID;
+    this.manthriLKID = manthriLKID;
   }
   get fullName() {
     return this.firstName + " " + this.lastName;
@@ -34,7 +38,9 @@ export default class Candidate {
       d.imgFile,
       d.xHandle,
       d.wikipediaPage,
-      d.parliamentNum
+      d.parliamentNum,
+      d.linkedInID,
+      d.manthriLKID
     );
   }
 

@@ -2,6 +2,8 @@
 import AlignCenter from "./AlignCenter";
 import AlignRight from "./AlignRight";
 import GoogleSearchView from "./GoogleSearchView";
+import LinkedInView from "./LinkedInView";
+import ManthriLKView from "./ManthriLKView";
 import ParliamentView from "./ParliamentView";
 import TimeView from "./TimeView";
 import WikipediaPageView from "./WikipediaPageView";
@@ -11,6 +13,8 @@ export {
   AlignCenter,
   AlignRight,
   GoogleSearchView,
+  LinkedInView,
+  ManthriLKView,
   ParliamentView,
   TimeView,
   WikipediaPageView,
