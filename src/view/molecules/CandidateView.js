@@ -37,7 +37,7 @@ export default function CandidateView({ candidateId, score, rank }) {
       </ListItemAvatar>
 
       <ListItemText>
-        <Stack direction="row">
+        <Stack direction="row" sx={{ marginLeft: 1 }}>
           <Box>
             <Typography sx={{ fontSize: "80%" }}>
               {t(candidate.firstName)}

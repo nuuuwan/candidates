@@ -13,7 +13,7 @@ export default class GroundTruth {
     return GroundTruth.VERSIONS;
   }
 
-  static getCriterionToCandidateToWeight(version) {
+  static getCriterionToCandidateToWeightInfo(version) {
     if (!ATTR_IDX_IDX[version]) {
       version = GroundTruth.DEFAULT_VERSION;
     }
@@ -21,7 +21,9 @@ export default class GroundTruth {
   }
 
   static getCriterionIDs(version) {
-    return Object.keys(GroundTruth.getCriterionToCandidateToWeight(version));
+    return Object.keys(
+      GroundTruth.getCriterionToCandidateToWeightInfo(version)
+    );
   }
 
   static getGenericCriterionToWeight(version, funcGenerateWeight) {
@@ -56,27 +58,30 @@ export default class GroundTruth {
     if (totalWeight === 0) {
       totalWeight = 1;
     }
-    const critToCandToWeight =
-      GroundTruth.getCriterionToCandidateToWeight(version);
+    const critToCandToWeightInfo =
+      GroundTruth.getCriterionToCandidateToWeightInfo(version);
 
-    return Object.entries(critToCandToWeight).reduce(function (
+    const idx = Object.entries(critToCandToWeightInfo).reduce(function (
       candToScore,
-      [criterionID, candToWeight]
+      [criterionID, candToWeightInfo]
     ) {
-      return Object.entries(candToWeight).reduce(function (
+      return Object.entries(candToWeightInfo).reduce(function (
         candToScore,
-        [cand, weight]
+        [cand, weightInfo]
       ) {
+        console.debug(weightInfo);
         if (!candToScore[cand]) {
           candToScore[cand] = 0;
         }
         candToScore[cand] +=
-          (criterionToWeight[criterionID] * weight) / totalWeight;
+          (criterionToWeight[criterionID] * weightInfo.weight) / totalWeight;
         return candToScore;
       },
       candToScore);
     },
     {});
+    console.debug(idx);
+    return idx;
   }
 
   static getSortedCandidateWeightAndRank(version, criterionToWeight) {
