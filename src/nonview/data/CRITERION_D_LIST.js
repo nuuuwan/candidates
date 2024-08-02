@@ -16,6 +16,11 @@ export const CRITERION_D_LIST = [
     refs: null,
   },
   {
+    id: "Corruption",
+    details: "Has No History of Corruption Charges",
+    refs: null,
+  },
+  {
     id: "Criminal",
     details: "Has Ongoing Criminal Case(s)",
     refs: null,
@@ -23,6 +28,11 @@ export const CRITERION_D_LIST = [
   {
     id: "Economic",
     details: "Economic Experience at the National Level",
+    refs: null,
+  },
+  {
+    id: "Education",
+    details: "Has a University Degree or Higher Education",
     refs: null,
   },
   {
@@ -38,6 +48,11 @@ export const CRITERION_D_LIST = [
   {
     id: "Military",
     details: "Has Military Affiliations",
+    refs: null,
+  },
+  {
+    id: "Minister",
+    details: "Has Held a Ministerial Position in the Past",
     refs: null,
   },
   {

@@ -138,6 +138,52 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
   },
+  Corruption: {
+    AD: {
+      weight: -100,
+      refs: null,
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    MS: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: 100,
+      refs: "Has faced various allegations and criticisms regarding corruption and mismanagement during his political career. [E.g. https://www.theguardian.com/world/2022/jul/18/ranil-wickremesinghe-wily-fox-who-became-sri-lanka-pm-six-times-profile/]",
+    },
+    SF: {
+      weight: -100,
+      refs: "While he has faced legal battles and imprisonment, these were related to military and political disputes rather than corruption charges. [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SP: {
+      weight: 100,
+      refs: "Leader of the opposition, has faced allegations and scrutiny, although not all allegations have led to formal charges. [https://en.wikipedia.org/wiki/Sajith_Premadasa]",
+    },
+    WR: {
+      weight: 100,
+      refs: "Has faced allegations and controversies, though not necessarily formal corruption charges.  [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
+    },
+  },
   Criminal: {
     AD: {
       weight: -100,
@@ -228,6 +274,52 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: null,
+    },
+  },
+  Education: {
+    AD: {
+      weight: 100,
+      refs: "Holds a BSc in Physical Sciences from the University of Kelaniya [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: 100,
+      refs: "Holds a Degree in Management from Sri Jayawardenapura University, and a Masters in Business from Colombo University [https://en.wikipedia.org/wiki/Janaka_Ratnayake]",
+    },
+    MS: {
+      weight: 100,
+      refs: "BSc in Physics from the University of Madras, Attorney at Law [https://en.wikipedia.org/wiki/M._A._Sumanthiran]",
+    },
+    NB: {
+      weight: 100,
+      refs: "Attorney at Law [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]",
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: 100,
+      refs: "Attorney at Law [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
+    },
+    SF: {
+      weight: -100,
+      refs: null,
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SP: {
+      weight: 100,
+      refs: "Holds a degree from the London School of Economics. [https://en.wikipedia.org/wiki/Sajith_Premadasa]",
+    },
+    WR: {
+      weight: 100,
+      refs: "Attorney at Law [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
   },
   JVP1989: {
@@ -366,6 +458,52 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: null,
+    },
+  },
+  Minister: {
+    AD: {
+      weight: 100,
+      refs: "Minister of Agriculture, Livestock, Lands, and Irrigation (2004-2005) [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    MS: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: 100,
+      refs: "Multiple ministerial positions, including Prime Minister and various other cabinet roles [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
+    },
+    SF: {
+      weight: 100,
+      refs: "Minister of Wildlife and Sustainable Development, Minister of Regional Development [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
+    },
+    SK: {
+      weight: 100,
+      refs: "Deputy Minister of Agriculture (2000-2001) [https://en.wikipedia.org/wiki/11th_Parliament_of_Sri_Lanka]",
+    },
+    SP: {
+      weight: 100,
+      refs: "Minister of Housing, Construction and Cultural Affairs, Deputy Minister of Health [https://en.wikipedia.org/wiki/Sajith_Premadasa]",
+    },
+    WR: {
+      weight: 100,
+      refs: "Multiple ministerial positions [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
   },
   ParaMilitary: {
