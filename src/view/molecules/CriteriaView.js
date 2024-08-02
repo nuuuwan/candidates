@@ -49,9 +49,7 @@ export default function CriteriaView({
           );
         })}
       </List>
-      <Typography sx={{ color: "lightgray", fontSize: "50%" }}>
-        {t("000 Version", version)}
-      </Typography>
+      <Typography variant="caption">{t("000 Version", version)}</Typography>
     </Box>
   );
 }
