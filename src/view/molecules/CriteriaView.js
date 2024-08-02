@@ -1,10 +1,9 @@
-import Typography from "@mui/material/Typography";
+import { Alert, Box, List, Stack, Typography } from "@mui/material";
 
 import { t } from "../../nonview/base/I18N";
 import GroundTruth from "../../nonview/core/GroundTruth";
-
+import CriterionToWeightView from "./CriterionToWeightView";
 import CriterionView from "../../view/molecules/CriterionView";
-import { Alert, Box, List, Stack } from "@mui/material";
 
 function InfoText() {
   return (
@@ -25,6 +24,7 @@ export default function CriteriaView({
   return (
     <Box>
       <InfoText />
+      <CriterionToWeightView criterionToWeight={criterionToWeight} />
       <List>
         {criterionIDs.map(function (criterionID, iCriterion) {
           const key = "criterion-" + version + "-" + criterionID;

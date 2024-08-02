@@ -3,6 +3,7 @@ import CandidateView from "./CandidateView";
 import CandidatesLeaderBoard from "./CandidatesLeaderBoard";
 import CandidatesLeaderBoardShort from "./CandidatesLeaderBoardShort";
 import CriteriaView from "./CriteriaView";
+import CriterionToWeightView from "./CriterionToWeightView";
 import CriterionView from "./CriterionView";
 import CustomAppBar from "./CustomAppBar";
 import GroundTruthView from "./GroundTruthView";
@@ -22,6 +23,7 @@ export {
   CandidatesLeaderBoard,
   CandidatesLeaderBoardShort,
   CriteriaView,
+  CriterionToWeightView,
   CriterionView,
   CustomAppBar,
   GroundTruthView,

@@ -22,6 +22,8 @@ import {
 import PartyView from "../../view/molecules/PartyView";
 import WeightView from "../../view/molecules/WeightView";
 import AppColors from "../_constants/AppColors";
+import { GroundTruth } from "../../nonview/core";
+import CriterionToWeightView from "./CriterionToWeightView";
 
 const AVATAR_SIZE = 64;
 
@@ -41,8 +43,18 @@ function ProfileBox({ candidate }) {
   );
 }
 
-export default function CandidateView({ candidateId, weight, rank }) {
+export default function CandidateView({
+  version,
+  candidateId,
+  weight,
+  rank,
+  criterionToWeight,
+}) {
   const candidate = Candidate.fromId(candidateId);
+  const criterionToWeightForCandidate = GroundTruth.getCriterionToWeight(
+    version,
+    candidateId
+  );
   return (
     <ListItem component={Paper} sx={{ marginBottom: 2 }}>
       <ListItemAvatar>
@@ -57,12 +69,22 @@ export default function CandidateView({ candidateId, weight, rank }) {
       </ListItemAvatar>
 
       <ListItemText>
-        <Stack direction="row" sx={{ marginLeft: 2 }}>
-          <ProfileBox candidate={candidate} />
-          <Typography sx={{ flexGrow: 1 }}> </Typography>
-          <Box sx={{ marginLeft: 1 }}>
-            <WeightView weight={weight} />
-          </Box>
+        <Stack direction="column" gap={0} sx={{ marginLeft: 2 }}>
+          <Stack direction="row">
+            <ProfileBox candidate={candidate} />
+            <Typography sx={{ flexGrow: 1 }}> </Typography>
+            <Box sx={{ marginLeft: 1 }}>
+              <WeightView weight={weight} />
+            </Box>
+          </Stack>
+          <CriterionToWeightView
+            criterionToWeight={criterionToWeight}
+            label="Your Criteria"
+          />
+          <CriterionToWeightView
+            criterionToWeight={criterionToWeightForCandidate}
+            label="Candidate"
+          />
         </Stack>
       </ListItemText>
     </ListItem>

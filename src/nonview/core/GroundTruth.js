@@ -15,6 +15,20 @@ export default class GroundTruth {
     return GroundTruth.VERSIONS;
   }
 
+  static getCriterionToWeight(version, candidateID) {
+    if (!ATTR_IDX_IDX[version]) {
+      version = GroundTruth.DEFAULT_VERSION;
+    }
+    return Object.fromEntries(
+      Object.entries(ATTR_IDX_IDX[version]).map(function ([
+        criterionID,
+        candToWeightInfo,
+      ]) {
+        return [criterionID, candToWeightInfo[candidateID].weight];
+      })
+    );
+  }
+
   static getCriterionToCandidateToWeightInfo(version) {
     if (!ATTR_IDX_IDX[version]) {
       version = GroundTruth.DEFAULT_VERSION;

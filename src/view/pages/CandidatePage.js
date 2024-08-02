@@ -33,7 +33,9 @@ export default class CandidatePage extends AbstractInnerPage {
         </Typography>
 
         <CandidatesLeaderBoard
+          version={version}
           candidateToWeightAndRank={candidateToWeightAndRank}
+          criterionToWeight={criterionToWeight}
         />
       </Box>
     );
