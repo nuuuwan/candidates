@@ -24,7 +24,7 @@ const MARKS = [-100, 0, 100].map(function (value) {
 function CustomSlider({
   setCriterionValue,
   onChangeCriterionWeight,
-  iCriterion,
+
   criterionID,
   criterionWeight,
 }) {
@@ -80,7 +80,7 @@ export default function CriterionView({
         </Typography>
       </ListItemAvatar>
       <ListItemText>
-        <Stack direction="row" sx={{ marginLeft: 2 }}>
+        <Stack direction="row" sx={{ m: 1 }}>
           <CustomSlider
             setCriterionValue={setCriterionValue}
             onChangeCriterionWeight={onChangeCriterionWeight}
