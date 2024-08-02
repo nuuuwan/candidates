@@ -92,52 +92,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: "198/383 [https://www.parliament.lk/component/members/viewMember/1521]",
     },
   },
-  Communist: {
-    AD: {
-      weight: 100,
-      refs: "Anura Kumara Dissanayake, the leader of the Janatha Vimukthi Peramuna (JVP) and the National People's Power (NPP) in Sri Lanka, has a background associated with leftist ideologies, including Marxism-Leninism. [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna]",
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: -100,
-      refs: null,
-    },
-    SF: {
-      weight: -100,
-      refs: null,
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SP: {
-      weight: -100,
-      refs: null,
-    },
-    WR: {
-      weight: -100,
-      refs: null,
-    },
-  },
   Corruption: {
     AD: {
       weight: -100,
@@ -258,6 +212,236 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     RW: {
       weight: 100,
       refs: "Served as Minister of Finance on numerous occasions [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
+    },
+    SF: {
+      weight: -100,
+      refs: null,
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SP: {
+      weight: -100,
+      refs: null,
+    },
+    WR: {
+      weight: -100,
+      refs: null,
+    },
+  },
+  Military: {
+    AD: {
+      weight: -100,
+      refs: null,
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    MS: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: -100,
+      refs: null,
+    },
+    SF: {
+      weight: 100,
+      refs: "He was the eighteenth Commander of the Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009. [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SP: {
+      weight: -100,
+      refs: null,
+    },
+    WR: {
+      weight: -100,
+      refs: null,
+    },
+  },
+  RajapaksaCabinet: {
+    AD: {
+      weight: -100,
+      refs: null,
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    MS: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: 100,
+      refs: "He was appointed as Prime Minister and Minister of Finance, Economic Stability and National Policies by Gotabaya Rajapaksa in May 2022. [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
+    },
+    SF: {
+      weight: -100,
+      refs: null,
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SP: {
+      weight: -100,
+      refs: null,
+    },
+    WR: {
+      weight: 100,
+      refs: "He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
+    },
+  },
+  SLPP: {
+    AD: {
+      weight: -100,
+      refs: null,
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    MS: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: -100,
+      refs: null,
+    },
+    SF: {
+      weight: -100,
+      refs: null,
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SP: {
+      weight: -100,
+      refs: null,
+    },
+    WR: {
+      weight: 100,
+      refs: "He was elected to parliament in 2020 as a member of the SLPP, but has since moved to the SLFP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
+    },
+  },
+  Voted20A: {
+    AD: {
+      weight: -100,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
+    },
+    AL: {
+      weight: 0,
+      refs: "No MP",
+    },
+    JR: {
+      weight: 0,
+      refs: "No MP",
+    },
+    MS: {
+      weight: -100,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
+    },
+    NB: {
+      weight: 0,
+      refs: "Not MP",
+    },
+    OH: {
+      weight: 0,
+      refs: "Not MP",
+    },
+    RW: {
+      weight: 0,
+      refs: "Not MP at the time. The amendment was passed on 22 October 2020, while Wickremesinghe was sworn in as the national list member of parliament of the UNP on 23 June 2021. [https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka, https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
+    },
+    SF: {
+      weight: -100,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
+    },
+    SK: {
+      weight: 0,
+      refs: "Not MP at the time",
+    },
+    SP: {
+      weight: -100,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
+    },
+    WR: {
+      weight: 100,
+      refs: "Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
+    },
+  },
+  Communist: {
+    AD: {
+      weight: 100,
+      refs: "Anura Kumara Dissanayake, the leader of the Janatha Vimukthi Peramuna (JVP) and the National People's Power (NPP) in Sri Lanka, has a background associated with leftist ideologies, including Marxism-Leninism. [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna]",
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    MS: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: -100,
+      refs: null,
     },
     SF: {
       weight: -100,
@@ -414,52 +598,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
   },
-  Military: {
-    AD: {
-      weight: -100,
-      refs: null,
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: -100,
-      refs: null,
-    },
-    SF: {
-      weight: 100,
-      refs: "He was the eighteenth Commander of the Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009. [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SP: {
-      weight: -100,
-      refs: null,
-    },
-    WR: {
-      weight: -100,
-      refs: null,
-    },
-  },
   Minister: {
     AD: {
       weight: 100,
@@ -598,52 +736,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
   },
-  RajapaksaCabinet: {
-    AD: {
-      weight: -100,
-      refs: null,
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: 100,
-      refs: "He was appointed as Prime Minister and Minister of Finance, Economic Stability and National Policies by Gotabaya Rajapaksa in May 2022. [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
-    },
-    SF: {
-      weight: -100,
-      refs: null,
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SP: {
-      weight: -100,
-      refs: null,
-    },
-    WR: {
-      weight: 100,
-      refs: "He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
-    },
-  },
   Seat: {
     AD: {
       weight: 100,
@@ -690,52 +782,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
   },
-  SLPP: {
-    AD: {
-      weight: -100,
-      refs: null,
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: -100,
-      refs: null,
-    },
-    SF: {
-      weight: -100,
-      refs: null,
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SP: {
-      weight: -100,
-      refs: null,
-    },
-    WR: {
-      weight: 100,
-      refs: "He was elected to parliament in 2020 as a member of the SLPP, but has since moved to the SLFP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
-    },
-  },
   Under65: {
     AD: {
       weight: 100,
@@ -780,52 +826,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: "Born 1959 [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
-    },
-  },
-  Voted20A: {
-    AD: {
-      weight: -100,
-      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
-    },
-    AL: {
-      weight: 0,
-      refs: "No MP",
-    },
-    JR: {
-      weight: 0,
-      refs: "No MP",
-    },
-    MS: {
-      weight: -100,
-      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
-    },
-    NB: {
-      weight: 0,
-      refs: "Not MP",
-    },
-    OH: {
-      weight: 0,
-      refs: "Not MP",
-    },
-    RW: {
-      weight: 0,
-      refs: "Not MP at the time. The amendment was passed on 22 October 2020, while Wickremesinghe was sworn in as the national list member of parliament of the UNP on 23 June 2021. [https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka, https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
-    },
-    SF: {
-      weight: -100,
-      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
-    },
-    SK: {
-      weight: 0,
-      refs: "Not MP at the time",
-    },
-    SP: {
-      weight: -100,
-      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
-    },
-    WR: {
-      weight: 100,
-      refs: "Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
   },
 };
