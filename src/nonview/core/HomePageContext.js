@@ -9,13 +9,23 @@ export default class HomePageContext {
     this.criterionToWeight = criterionToWeight;
   }
 
+  static customEncode(data) {
+    return btoa(JSON.stringify(data));
+  }
+
+  static customDecode(jsonLike) {
+    return JSON.parse(atob(jsonLike));
+  }
+
   toURL() {
     I18N.setLang(this.lang);
     URLContext.setContext({
       lang: this.lang,
       page: this.page,
       version: this.version,
-      criterionToWeight_: JSON.stringify(this.criterionToWeight),
+      criterionToWeightEncoded: HomePageContext.customEncode(
+        this.criterionToWeight
+      ),
     });
   }
 
@@ -32,12 +42,13 @@ export default class HomePageContext {
 
   static fromURL() {
     const context = URLContext.getContext();
+    console.debug(context);
     return new HomePageContext(
       context.lang || HomePageContext.DEFAULT.LANG,
       context.page || HomePageContext.DEFAULT.PAGE,
       context.version || HomePageContext.DEFAULT.VERSION,
-      context.criterionToWeightJSON
-        ? JSON.parse(context.criterionToWeight_)
+      context.criterionToWeightEncoded
+        ? HomePageContext.customDecode(context.criterionToWeightEncoded)
         : HomePageContext.DEFAULT.CRITERION_WEIGHTS
     );
   }
