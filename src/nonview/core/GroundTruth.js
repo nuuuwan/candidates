@@ -9,6 +9,7 @@ const ATTR_IDX_IDX = Object({
 export default class GroundTruth {
   static VERSIONS = Object.keys(ATTR_IDX_IDX);
   static DEFAULT_VERSION = GroundTruth.VERSIONS[0];
+  static DEFAULT_WEIGHT = 0;
 
   static getVersions() {
     return GroundTruth.VERSIONS;
@@ -71,7 +72,7 @@ export default class GroundTruth {
         let weightInfo = candToWeightInfo[candidateId];
         if (weightInfo === undefined) {
           weightInfo = {
-            weight: -100,
+            weight: GroundTruth.DEFAULT_WEIGHT,
             refs: "",
           };
         }

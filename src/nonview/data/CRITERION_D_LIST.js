@@ -2,22 +2,23 @@
 export const CRITERION_D_LIST = [
   {
     id: "Assets",
-    details: "Declared Assets in Public in at least one of the last 5 years",
+    details:
+      "Has Declared Assets in Public in at least one of the last 5 years",
     refs: "https://www.tisrilanka.org/mpassets/",
   },
   {
     id: "Attendance",
-    details: "Over 70% Attendance in the Ninth Parliament",
+    details: "Has Over 70% Attendance in the Ninth Parliament",
     refs: "https://www.parliament.lk",
   },
   {
     id: "Communist",
-    details: "Associated with Communist Ideologies",
+    details: "Is Associated with Communist Ideologies",
     refs: null,
   },
   {
     id: "Corruption",
-    details: "Has No History of Corruption Charges",
+    details: "Has History of Corruption Charges",
     refs: null,
   },
   {
@@ -27,7 +28,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "Economic",
-    details: "Economic Experience at the National Level",
+    details: "Has Economic Experience at the National Level",
     refs: null,
   },
   {
@@ -37,7 +38,8 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "JVP1989",
-    details: "Participated in or Associated with 1987-1989 JVP insurrection",
+    details:
+      "Has Participated in or Is Associated with 1987-1989 JVP insurrection",
     refs: "https://en.wikipedia.org/wiki/1987%E2%80%931989_JVP_insurrection",
   },
   {
@@ -62,32 +64,32 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "Presidency",
-    details: "Will support abolishing the Executive Presidency while in seat",
+    details: "Will support abolishing the Executive Presidency ",
     refs: null,
   },
   {
     id: "RajapaksaCabinet",
-    details: "Appointed to Cabinet by a Rajapaksa President",
+    details: "Has been Appointed to Cabinet by a Rajapaksa President",
     refs: null,
   },
   {
     id: "Seat",
-    details: "Won a Electoral District Seat in the 2020 General Election",
+    details: "Has Won a Electoral District Seat in the 2020 General Election",
     refs: "https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka",
   },
   {
     id: "SLPP",
-    details: "Member or Former-Member of the SLPP",
+    details: "Is Member or Former-Member of the SLPP",
     refs: "https://en.wikipedia.org/wiki/Sri_Lanka_Podujana_Peramuna",
   },
   {
     id: "Under65",
-    details: "Under 65 years old (Born after 1959)",
+    details: "Is Under 65 years old (Born after 1959)",
     refs: null,
   },
   {
     id: "Voted20A",
-    details: "Voted for the 20th Amendment",
+    details: "Has Voted in Favour of the 20th Amendment",
     refs: "https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka",
   },
 ];
