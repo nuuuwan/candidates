@@ -23,7 +23,7 @@ const THEME = createTheme({
   },
   typography: {
     fontFamily: ["Afacad", "sans-serif"].join(","),
-    fontSize: 16,
+    fontSize: 14,
   },
 });
 

@@ -79,11 +79,11 @@ export default function CandidateView({
           </Stack>
           <CriterionToWeightView
             criterionToWeight={criterionToWeight}
-            label="Your Criteria"
+            label="You"
           />
           <CriterionToWeightView
             criterionToWeight={criterionToWeightForCandidate}
-            label="Candidate"
+            label="Cand."
           />
         </Stack>
       </ListItemText>
