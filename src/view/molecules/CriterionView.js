@@ -73,14 +73,14 @@ export default function CriterionView({
   );
 
   return (
-    <ListItem component={Paper} sx={{ m: 1, p: 1 }}>
+    <ListItem component={Paper} sx={{ marginBottom: 2 }}>
       <ListItemAvatar>
         <Typography variant="h6" color={AppColors.Light}>
           {String.fromCharCode(65 + iCriterion)}.
         </Typography>
       </ListItemAvatar>
       <ListItemText>
-        <Stack direction="row" sx={{ m: 1 }}>
+        <Stack direction="row">
           <CustomSlider
             setCriterionValue={setCriterionValue}
             onChangeCriterionWeight={onChangeCriterionWeight}

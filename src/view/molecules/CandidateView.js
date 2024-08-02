@@ -20,7 +20,7 @@ const AVATAR_SIZE = 64;
 export default function CandidateView({ candidateId, score, rank }) {
   const candidate = Candidate.fromId(candidateId);
   return (
-    <ListItem component={Paper} sx={{ m: 1, p: 1 }}>
+    <ListItem component={Paper} sx={{ marginBottom: 2 }}>
       <ListItemAvatar>
         <Typography variant="h6" sx={{ color: AppColors.Light }}>
           #{rank + 1}
@@ -33,7 +33,7 @@ export default function CandidateView({ candidateId, score, rank }) {
       </ListItemAvatar>
 
       <ListItemText>
-        <Stack direction="row" sx={{ marginLeft: 2 }}>
+        <Stack direction="row">
           <Box>
             <Typography sx={{ fontSize: "80%" }}>
               {t(candidate.firstName)}
