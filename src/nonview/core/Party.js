@@ -31,6 +31,9 @@ const PARTY_D_LIST = [
   { id: "PSA", color: "red" },
   { id: "SLLP", color: "red" },
   { id: "NIF", color: "gray" },
+  { id: "RJP", color: "gray" },
+  { id: "JP", color: "gray" },
+  { id: "JSP", color: "gray" },
 ];
 
 const PARTY_LIST = PARTY_D_LIST.map((d) => Party.fromDict(d));
