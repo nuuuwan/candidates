@@ -7,7 +7,7 @@ export const CRITERION_D_LIST = [
 },
 {
   "id": "Attendance",
-  "details": "Over 50% Attendance in the Ninth Parliament",
+  "details": "Over 70% Attendance in the Ninth Parliament",
   "refs": "https://www.parliament.lk"
 },
 {

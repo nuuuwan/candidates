@@ -72,7 +72,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       "refs": "Not MP"
     },
     "RW": {
-      "weight": 0,
+      "weight": 100,
       "refs": "76/98 [https://www.parliament.lk/en/members-of-parliament/directory-of-members/viewMember/1244]"
     },
     "SF": {

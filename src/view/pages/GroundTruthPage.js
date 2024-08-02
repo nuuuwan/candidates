@@ -50,9 +50,9 @@ export default class GroundTruthPage extends AbstractInnerPage {
 
   renderList() {
     const { version } = this.props;
-    const criterionToCandidateToWeight =
-      GroundTruth.getCriterionToCandidateToWeight(version);
-    return Object.entries(criterionToCandidateToWeight).map(function ([
+    const criterionToCandidateToWeightInfo =
+      GroundTruth.getCriterionToCandidateToWeightInfo(version);
+    return Object.entries(criterionToCandidateToWeightInfo).map(function ([
       criterionID,
       candidateToWeight,
     ]) {
@@ -63,20 +63,23 @@ export default class GroundTruthPage extends AbstractInnerPage {
           <List sx={{ m: 0, p: 0 }}>
             {Object.entries(candidateToWeight).map(function ([
               candidateID,
-              weight,
+              weightInfo,
             ]) {
               const candidate = Candidate.fromId(candidateID);
               return (
                 <ListItem key={candidateID} sx={{ m: 0, p: 0.5 }}>
                   <ListItemAvatar>
                     <Avatar sx={{ background: "white" }}>
-                      <WeightIcon weight={weight} />
+                      <WeightIcon weight={weightInfo.weight} />
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText>
                     <Typography variant="body2">
                       {t(candidate.firstName)}{" "}
                       <strong>{t(candidate.lastName)}</strong>
+                    </Typography>
+                    <Typography variant="caption" color={AppColors.Light}>
+                      {t(weightInfo.refs)}
                     </Typography>
                   </ListItemText>
                 </ListItem>
