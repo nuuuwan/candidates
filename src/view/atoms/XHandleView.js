@@ -2,7 +2,7 @@ import { IconButton } from "@mui/material";
 import XIcon from "@mui/icons-material/X";
 
 export default function XHandleView({ xHandle }) {
-  if (!xHandle || xHandle === "Unknown") {
+  if (!xHandle || xHandle === "null") {
     return null;
   }
   const url = `https://x.com/${xHandle}`;

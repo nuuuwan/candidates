@@ -28,7 +28,7 @@ export const CRITERION_D_LIST = [
   {
     id: "JVP1989",
     details: "Participated in or Associated with 1987-1989 JVP insurrection",
-    refs: null,
+    refs: "https://en.wikipedia.org/wiki/1987%E2%80%931989_JVP_insurrection",
   },
   {
     id: "Leader",
@@ -51,24 +51,19 @@ export const CRITERION_D_LIST = [
     refs: null,
   },
   {
-    id: "Rajapaksa",
-    details: "Previous Affiliations with Rajapaksa Governments",
-    refs: null,
-  },
-  {
     id: "RajapaksaCabinet",
-    details: "Member of a Rajapaksa Cabinet",
+    details: "Appointed to Cabinet by a Rajapaksa President",
     refs: null,
   },
   {
     id: "Seat",
     details: "Won a Electoral District Seat in the 2020 General Election",
-    refs: null,
+    refs: "https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka",
   },
   {
     id: "SLPP",
     details: "Member or Former-Member of the SLPP",
-    refs: null,
+    refs: "https://en.wikipedia.org/wiki/Sri_Lanka_Podujana_Peramuna",
   },
   {
     id: "Under65",
@@ -78,11 +73,6 @@ export const CRITERION_D_LIST = [
   {
     id: "Voted20A",
     details: "Voted for the 20th Amendment",
-    refs: null,
-  },
-  {
-    id: "Wide",
-    details: "History of working with a ideologically wide group of MPs",
-    refs: null,
+    refs: "https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka",
   },
 ];

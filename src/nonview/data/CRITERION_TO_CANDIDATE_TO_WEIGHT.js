@@ -95,7 +95,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   Communist: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "Anura Kumara Dissanayake, the leader of the Janatha Vimukthi Peramuna (JVP) and the National People's Power (NPP) in Sri Lanka, has a background associated with leftist ideologies, including Marxism-Leninism. [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna]",
     },
     AL: {
       weight: -100,
@@ -211,7 +211,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     RW: {
       weight: 100,
-      refs: null,
+      refs: "Served as Minister of Finance on numerous occasions [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
     SF: {
       weight: -100,
@@ -233,7 +233,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   JVP1989: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "Having been involved in the JVP from his school days, Dissanayake joined the JVP in 1987, becoming active in student politics, engaged in full time political activities from 1987, with the onset of the 1987\u20131989 JVP insurrection. [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
     },
     AL: {
       weight: -100,
@@ -279,7 +279,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   Leader: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "Leader of the JVP [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna#Leader]",
     },
     AL: {
       weight: -100,
@@ -290,8 +290,8 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     MS: {
-      weight: 100,
-      refs: null,
+      weight: -100,
+      refs: "Former leader of ITAK [https://en.wikipedia.org/wiki/M._A._Sumanthiran]",
     },
     NB: {
       weight: -100,
@@ -303,7 +303,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     RW: {
       weight: 100,
-      refs: null,
+      refs: "Leader of the UNP [https://en.wikipedia.org/wiki/United_National_Party]",
     },
     SF: {
       weight: -100,
@@ -315,7 +315,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SP: {
       weight: 100,
-      refs: null,
+      refs: "Leader of the SJB [https://en.wikipedia.org/wiki/Samagi_Jana_Balawegaya]",
     },
     WR: {
       weight: -100,
@@ -353,7 +353,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SF: {
       weight: 100,
-      refs: null,
+      refs: "He was the eighteenth Commander of the Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009. [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
     },
     SK: {
       weight: -100,
@@ -371,7 +371,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   ParaMilitary: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "He was involved in the 1987-1989 JVP insurrection, which had a paramilitary aspect [https://en.wikipedia.org/wiki/1987%E2%80%931989_JVP_insurrection]",
     },
     AL: {
       weight: -100,
@@ -398,8 +398,8 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     SF: {
-      weight: 100,
-      refs: null,
+      weight: -100,
+      refs: "Sarath Fonseka is a former army commander and has a military background. He does not have paramilitary affiliations, but his career is associated with formal military service. [https://en.wikipedia.org/wiki/Sarath_Fonseka]\n ",
     },
     SK: {
       weight: -100,
@@ -417,7 +417,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   Presidency: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "He strongly advocates for the abolishment of the executive presidency, considering it essential for the country's political and economic revival. He has promised to introduce a new constitution that includes this change if his party comes to power [https://asianmirror.lk/news/item/34833-abolishment-of-executive-presidency-needed-for-economic-revival-in-sl-akd]",
     },
     AL: {
       weight: 0,
@@ -429,80 +429,34 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     MS: {
       weight: 100,
-      refs: null,
+      refs: "He has expressed support for abolishing the executive presidency, advocating for a parliamentary system that ensures greater checks and balances [https://www.colombotelegraph.com/index.php/electing-a-new-parliament-ending-the-old-presidency]",
     },
     NB: {
-      weight: 100,
+      weight: 0,
       refs: null,
     },
     OH: {
-      weight: -100,
+      weight: 0,
       refs: null,
     },
     RW: {
       weight: -100,
-      refs: null,
+      refs: "Ranil Wickramasinghe has shown fluctuating positions on this issue. While he has supported the idea of abolishing the executive presidency in the past, his actions as president have been seen as consolidating power within the executive branch ",
     },
     SF: {
-      weight: -100,
-      refs: null,
+      weight: 100,
+      refs: "Sarath Fonseka has been critical of the executive presidency and has indicated support for its abolition, preferring a system with more distributed power [https://www.newindianexpress.com/world/2009/Nov/30/fonseka-vows-to-end-executive-presidency-108543.html]",
     },
     SK: {
       weight: 0,
       refs: null,
     },
     SP: {
-      weight: -100,
-      refs: null,
+      weight: 100,
+      refs: "Sajith Premadasa has advocated for the abolishment of the executive presidency, emphasizing the need for constitutional reforms to ensure a more balanced distribution of power [https://www.dailymirror.lk/breaking-news/Executive-Presidency-should-be-changed-even-if-Sajith-wins-Eran/108-287450]",
     },
     WR: {
       weight: -100,
-      refs: null,
-    },
-  },
-  Rajapaksa: {
-    AD: {
-      weight: -100,
-      refs: null,
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: 100,
-      refs: null,
-    },
-    SF: {
-      weight: -100,
-      refs: null,
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SP: {
-      weight: -100,
-      refs: null,
-    },
-    WR: {
-      weight: 100,
       refs: null,
     },
   },
@@ -533,7 +487,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     RW: {
       weight: 100,
-      refs: null,
+      refs: "He was appointed as Prime Minister and Minister of Finance, Economic Stability and National Policies by Gotabaya Rajapaksa in May 2022. [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
     SF: {
       weight: -100,
@@ -549,13 +503,13 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     WR: {
       weight: 100,
-      refs: null,
+      refs: "He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
   },
   Seat: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
     AL: {
       weight: -100,
@@ -567,7 +521,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     MS: {
       weight: 100,
-      refs: null,
+      refs: "Jaffna District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
     NB: {
       weight: -100,
@@ -591,11 +545,11 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SP: {
       weight: 100,
-      refs: null,
+      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
     WR: {
-      weight: -100,
-      refs: null,
+      weight: 100,
+      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
   },
   SLPP: {
@@ -641,145 +595,99 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     WR: {
       weight: 100,
-      refs: null,
+      refs: "He was elected to parliament in 2020 as a member of the SLPP, but has since moved to the SLFP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
   },
   Under65: {
     AD: {
       weight: 100,
-      refs: null,
+      refs: "Born 1968 [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
     },
     AL: {
       weight: 0,
-      refs: null,
+      refs: "No data on birth date",
     },
     JR: {
       weight: 100,
-      refs: null,
+      refs: "Born 1964 [https://en.wikipedia.org/wiki/Janaka_Ratnayake]",
     },
     MS: {
       weight: 100,
-      refs: null,
+      refs: "Born 1964 [https://en.wikipedia.org/wiki/M._A._Sumanthiran]",
     },
     NB: {
       weight: 100,
       refs: null,
     },
     OH: {
-      weight: 100,
-      refs: null,
+      weight: 0,
+      refs: "No data on birth date",
     },
     RW: {
       weight: -100,
-      refs: null,
+      refs: "Born 1946 [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
     SF: {
       weight: -100,
-      refs: null,
+      refs: "Born 1950 [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
     },
     SK: {
       weight: -100,
-      refs: null,
+      refs: "Born 1951 [https://www.parliament.lk/members-of-parliament/directory-of-members/viewMember/3038]",
     },
     SP: {
       weight: 100,
-      refs: null,
+      refs: "Born 1967 [https://en.wikipedia.org/wiki/Sajith_Premadasa]",
     },
     WR: {
       weight: -100,
-      refs: null,
+      refs: "Born 1959 [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
   },
   Voted20A: {
     AD: {
       weight: -100,
-      refs: null,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
     AL: {
-      weight: -100,
-      refs: null,
+      weight: 0,
+      refs: "No MP",
     },
     JR: {
-      weight: -100,
-      refs: null,
+      weight: 0,
+      refs: "No MP",
     },
     MS: {
       weight: -100,
-      refs: null,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
     NB: {
-      weight: -100,
-      refs: null,
+      weight: 0,
+      refs: "Not MP",
     },
     OH: {
-      weight: -100,
-      refs: null,
+      weight: 0,
+      refs: "Not MP",
     },
     RW: {
-      weight: -100,
-      refs: null,
+      weight: 0,
+      refs: "Not MP at the time. The amendment was passed on 22 October 2020, while Wickremesinghe was sworn in as the national list member of parliament of the UNP on 23 June 2021. [https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka, https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
     SF: {
       weight: -100,
-      refs: null,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
     SK: {
-      weight: -100,
-      refs: null,
+      weight: 0,
+      refs: "Not MP at the time",
     },
     SP: {
       weight: -100,
-      refs: null,
+      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
     WR: {
       weight: 100,
-      refs: null,
-    },
-  },
-  Wide: {
-    AD: {
-      weight: -100,
-      refs: null,
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: 100,
-      refs: null,
-    },
-    SF: {
-      weight: -100,
-      refs: null,
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SP: {
-      weight: 100,
-      refs: null,
-    },
-    WR: {
-      weight: -100,
-      refs: null,
+      refs: "Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
   },
 };
