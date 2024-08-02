@@ -73,18 +73,6 @@ export const CANDIDATE_D_LIST = [
     manthriLKID: "k-k-piyadasa",
   },
   {
-    id: "MS",
-    firstName: "Mathiaparanan Abraham",
-    lastName: "Sumanthiran",
-    party: "ITAK",
-    imgFile: "3194.jpg",
-    xHandle: "MASumanthiran",
-    wikipediaPage: "M._A._Sumanthiran",
-    parliamentNum: 4,
-    linkedInID: "m-sumanthiran-88379165",
-    manthriLKID: "m-a-sumanthiran",
-  },
-  {
     id: "NB",
     firstName: "Nuwan",
     lastName: "Bopage",

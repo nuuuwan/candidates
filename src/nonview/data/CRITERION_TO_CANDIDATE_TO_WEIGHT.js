@@ -25,10 +25,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    MS: {
-      weight: 100,
-      refs: "Latest declaration in 2023/24 [https://www.tisrilanka.org/mpassets/]",
-    },
     NB: {
       weight: -100,
       refs: null,
@@ -90,10 +86,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     KP: {
       weight: 0,
       refs: "Not Currently MP",
-    },
-    MS: {
-      weight: 100,
-      refs: "276/383 [https://www.parliament.lk/en/members-of-parliament/directory-of-members/viewMember/3194]",
     },
     NB: {
       weight: 0,
@@ -157,10 +149,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
     NB: {
       weight: -100,
       refs: null,
@@ -220,10 +208,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     KP: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
       weight: -100,
       refs: null,
     },
