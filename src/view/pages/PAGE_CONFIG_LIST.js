@@ -1,9 +1,11 @@
 import IDX from "../../nonview/base/IDX";
 
+import StartPage from "../../view/pages/StartPage";
 import CandidatePage from "../../view/pages/CandidatePage";
 import CriteriaPage from "../../view/pages/CriteriaPage";
 import GroundTruthPage from "../../view/pages/GroundTruthPage";
-const PAGE_LIST = [GroundTruthPage, CriteriaPage, CandidatePage];
+
+const PAGE_LIST = [StartPage, CriteriaPage, GroundTruthPage, CandidatePage];
 
 const PAGE_CONFIG_LIST = PAGE_LIST.map(function (Page) {
   const pageInstance = new Page();
@@ -25,4 +27,4 @@ export const PAGE_CONFIG_IDX = IDX.build(
   (x) => x
 );
 
-export const DEFAULT_PAGE_CONFIG = PAGE_CONFIG_IDX["CriteriaPage"];
+export const DEFAULT_PAGE_CONFIG = PAGE_CONFIG_IDX["StartPage"];

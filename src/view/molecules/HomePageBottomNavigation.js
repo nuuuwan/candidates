@@ -4,8 +4,6 @@ import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import Paper from "@mui/material/Paper";
 import Tooltip from "@mui/material/Tooltip";
-import CasinoIcon from "@mui/icons-material/Casino";
-import RefreshIcon from "@mui/icons-material/Refresh";
 
 import { t } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
@@ -14,34 +12,7 @@ import AppColors from "../../view/_constants/AppColors";
 
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 
-function RandomCriteriaWeightsAction({ onClickRandomCriteriaWeights }) {
-  return (
-    <Tooltip title={t("Random Criteria Weights")}>
-      <BottomNavigationAction
-        icon={<CasinoIcon sx={{ color: AppColors.VeryLight }} />}
-        onClick={onClickRandomCriteriaWeights}
-      />
-    </Tooltip>
-  );
-}
-
-function RefreshCriteriaWeightsAction({ onClickRefreshCriteriaWeights }) {
-  return (
-    <Tooltip title={t("Reset Weights to Zero (Neutral)")}>
-      <BottomNavigationAction
-        icon={<RefreshIcon sx={{ color: AppColors.VeryLight }} />}
-        onClick={onClickRefreshCriteriaWeights}
-      />
-    </Tooltip>
-  );
-}
-
-export default function HomePageBottomNavigation({
-  onClickOpenPage,
-
-  onClickRandomCriteriaWeights,
-  onClickRefreshCriteriaWeights,
-}) {
+export default function HomePageBottomNavigation({ onClickOpenPage }) {
   const context = URLContext.getContext();
   const activePage = context.page;
   return (
@@ -50,17 +21,10 @@ export default function HomePageBottomNavigation({
       elevation={3}
     >
       <BottomNavigation>
-        <RandomCriteriaWeightsAction
-          onClickRandomCriteriaWeights={onClickRandomCriteriaWeights}
-        />
-        <RefreshCriteriaWeightsAction
-          onClickRefreshCriteriaWeights={onClickRefreshCriteriaWeights}
-        />
-
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
           const key = "button-" + config.page;
           const isActive = config.page === activePage;
-          const color = isActive ? "black" : AppColors.VeryLight;
+          const color = isActive ? config.color : AppColors.VeryLight;
 
           return (
             <Tooltip key={key} title={t(config.label)}>

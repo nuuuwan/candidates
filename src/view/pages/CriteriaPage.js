@@ -1,15 +1,15 @@
-import PlaylistAddCheckIcon from "@mui/icons-material/PlaylistAddCheck";
-
+import { Box, Typography } from "@mui/material";
 import AppColors from "../../view/_constants/AppColors";
 import CriteriaView from "../../view/molecules/CriteriaView";
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
-
+import LooksOneIcon from "@mui/icons-material/LooksOne";
+import { t } from "../../nonview/base/I18N";
 export default class CriteriaPage extends AbstractInnerPage {
   get page() {
     return "CriteriaPage";
   }
   get Icon() {
-    return PlaylistAddCheckIcon;
+    return LooksOneIcon;
   }
 
   get label() {
@@ -23,11 +23,19 @@ export default class CriteriaPage extends AbstractInnerPage {
   render() {
     const { version, onChangeCriterionWeight, criterionToWeight } = this.props;
     return (
-      <CriteriaView
-        version={version}
-        onChangeCriterionWeight={onChangeCriterionWeight}
-        criterionToWeight={criterionToWeight}
-      />
+      <Box>
+        <Typography variant="h6" color={AppColors.Criterion}>
+          {t("Identify and Weight the criteria you care about.")}
+        </Typography>
+        <Typography variant="body1" color={AppColors.Criterion}>
+          {t("That is, what you want to see in a candidate.")}
+        </Typography>
+        <CriteriaView
+          version={version}
+          onChangeCriterionWeight={onChangeCriterionWeight}
+          criterionToWeight={criterionToWeight}
+        />
+      </Box>
     );
   }
 }

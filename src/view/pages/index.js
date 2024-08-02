@@ -5,6 +5,7 @@ import CriteriaPage from "./CriteriaPage";
 import GroundTruthPage from "./GroundTruthPage";
 import HomePage from "./HomePage";
 import PAGE_CONFIG_LIST from "./PAGE_CONFIG_LIST";
+import StartPage from "./StartPage";
 
 export {
   AbstractInnerPage,
@@ -13,4 +14,5 @@ export {
   GroundTruthPage,
   HomePage,
   PAGE_CONFIG_LIST,
+  StartPage,
 };

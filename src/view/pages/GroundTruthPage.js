@@ -1,5 +1,4 @@
 import {
-  Alert,
   Avatar,
   Box,
   List,
@@ -9,12 +8,12 @@ import {
   Typography,
   Stack,
 } from "@mui/material";
-import StorageIcon from "@mui/icons-material/Storage";
+
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
-
+import LooksTwoIcon from "@mui/icons-material/LooksTwo";
 import { t } from "../../nonview/base/I18N";
 import { Candidate, Criterion, GroundTruth } from "../../nonview/core";
 import AppColors from "../../view/_constants/AppColors";
@@ -38,11 +37,11 @@ export default class GroundTruthPage extends AbstractInnerPage {
     return "GroundTruthPage";
   }
   get Icon() {
-    return StorageIcon;
+    return LooksTwoIcon;
   }
 
   get label() {
-    return "Ground Truth";
+    return "Candidates";
   }
 
   get color() {
@@ -145,9 +144,9 @@ export default class GroundTruthPage extends AbstractInnerPage {
   render() {
     return (
       <Box>
-        <Alert severity="info">
-          {t("This tool uses the following dataset as Ground Truth.")}
-        </Alert>
+        <Typography variant="h6" color={this.color}>
+          {t("Learn how each candidate matches up to those criteria.")}
+        </Typography>
         <Stack spacing={2} sx={{ m: 1, p: 1 }}>
           {this.renderList()}
         </Stack>

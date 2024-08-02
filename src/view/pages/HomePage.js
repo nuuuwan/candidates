@@ -13,6 +13,8 @@ import HomePageContext from "../../nonview/core/HomePageContext";
 
 const STYLE_INNER_PAGE_BOX = {
   marginTop: 10,
+  marginLeft: 2,
+  marginRight: 2,
 };
 
 export default class HomePage extends Component {

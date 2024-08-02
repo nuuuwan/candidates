@@ -273,10 +273,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
     NB: {
       weight: -100,
       refs: null,
@@ -336,10 +332,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     KP: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
       weight: -100,
       refs: null,
     },
@@ -405,10 +397,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: null,
     },
-    MS: {
-      weight: 100,
-      refs: "BSc in Physics from the University of Madras, Attorney at Law [https://en.wikipedia.org/wiki/M._A._Sumanthiran]",
-    },
     NB: {
       weight: 100,
       refs: "Attorney at Law [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]",
@@ -468,10 +456,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     KP: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
       weight: -100,
       refs: null,
     },
@@ -537,10 +521,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    MS: {
-      weight: -100,
-      refs: "Former leader of ITAK [https://en.wikipedia.org/wiki/M._A._Sumanthiran]",
-    },
     NB: {
       weight: -100,
       refs: null,
@@ -600,10 +580,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     KP: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
       weight: -100,
       refs: null,
     },
@@ -669,10 +645,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
     NB: {
       weight: -100,
       refs: null,
@@ -732,10 +704,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     KP: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
       weight: -100,
       refs: null,
     },
@@ -801,10 +769,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: null,
     },
-    MS: {
-      weight: 100,
-      refs: "He has expressed support for abolishing the executive presidency, advocating for a parliamentary system that ensures greater checks and balances [https://www.colombotelegraph.com/index.php/electing-a-new-parliament-ending-the-old-presidency]",
-    },
     NB: {
       weight: 0,
       refs: null,
@@ -864,10 +828,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     KP: {
-      weight: -100,
-      refs: null,
-    },
-    MS: {
       weight: -100,
       refs: null,
     },
@@ -933,10 +893,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    MS: {
-      weight: -100,
-      refs: null,
-    },
     NB: {
       weight: -100,
       refs: null,
@@ -998,10 +954,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     KP: {
       weight: -100,
       refs: null,
-    },
-    MS: {
-      weight: 100,
-      refs: "Jaffna District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
     NB: {
       weight: -100,
@@ -1065,10 +1017,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: null,
     },
-    MS: {
-      weight: 100,
-      refs: "Born 1964 [https://en.wikipedia.org/wiki/M._A._Sumanthiran]",
-    },
     NB: {
       weight: 100,
       refs: "No data on birth date. Assuming under 65 based on appearance [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]",
@@ -1130,10 +1078,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     KP: {
       weight: 0,
       refs: "Not MP at the time",
-    },
-    MS: {
-      weight: -100,
-      refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
     NB: {
       weight: 0,

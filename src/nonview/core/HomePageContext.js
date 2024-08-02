@@ -33,7 +33,7 @@ export default class HomePageContext {
 
   static DEFAULT = {
     LANG: I18N.BASE_LANG,
-    PAGE: "CriteriaPage",
+    PAGE: "StartPage",
     VERSION: GroundTruth.DEFAULT_VERSION,
     CRITERION_WEIGHTS: GroundTruth.getInitCriterionWeights(
       GroundTruth.DEFAULT_VERSION
@@ -42,7 +42,7 @@ export default class HomePageContext {
 
   static fromURL() {
     const context = URLContext.getContext();
-    console.debug(context);
+
     return new HomePageContext(
       context.lang || HomePageContext.DEFAULT.LANG,
       context.page || HomePageContext.DEFAULT.PAGE,

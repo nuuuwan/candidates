@@ -10,8 +10,8 @@ import { t } from "../../nonview/base/I18N";
 import Weight from "../../nonview/core/Weight";
 
 import WeightView from "../../view/molecules/WeightView";
-import { ListItem, ListItemAvatar, ListItemText, Paper } from "@mui/material";
-import AppColors from "../_constants/AppColors";
+import { ListItem, ListItemText, Paper } from "@mui/material";
+
 import Criterion from "../../nonview/core/Criterion";
 
 const MARKS = [-100, 0, 100].map(function (value) {
@@ -41,7 +41,7 @@ function CustomSlider({
 
   return (
     <Box>
-      <Typography variant="body2">{`"${t(criterion.details)}"`}</Typography>
+      <Typography variant="body1">{`"${t(criterion.details)}"`}</Typography>
       <Box>
         <Slider
           value={criterionWeight}
@@ -74,11 +74,6 @@ export default function CriterionView({
 
   return (
     <ListItem component={Paper} sx={{ marginBottom: 2 }}>
-      <ListItemAvatar>
-        <Typography variant="h6" color={AppColors.Light}>
-          {String.fromCharCode(65 + iCriterion)}.
-        </Typography>
-      </ListItemAvatar>
       <ListItemText>
         <Stack direction="row">
           <CustomSlider
