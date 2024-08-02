@@ -2,6 +2,7 @@
 import AlignCenter from "./AlignCenter";
 import AlignRight from "./AlignRight";
 import GoogleSearchView from "./GoogleSearchView";
+import ParliamentView from "./ParliamentView";
 import TimeView from "./TimeView";
 import WikipediaPageView from "./WikipediaPageView";
 import XHandleView from "./XHandleView";
@@ -10,6 +11,7 @@ export {
   AlignCenter,
   AlignRight,
   GoogleSearchView,
+  ParliamentView,
   TimeView,
   WikipediaPageView,
   XHandleView,

@@ -15,6 +15,7 @@ import {
   WikipediaPageView,
   XHandleView,
   GoogleSearchView,
+  ParliamentView,
 } from "../../view/atoms";
 import PartyView from "../../view/molecules/PartyView";
 import WeightView from "../../view/molecules/WeightView";
@@ -46,6 +47,7 @@ export default function CandidateView({ candidateId, score, rank }) {
               {t(candidate.lastName)}
             </Typography>
             <PartyView id={candidate.party} />
+            <ParliamentView parliamentNum={candidate.parliamentNum} />
             <WikipediaPageView wikipediaPage={candidate.wikipediaPage} />
             <XHandleView xHandle={candidate.xHandle} />
             <GoogleSearchView searchText={candidate.fullName} />

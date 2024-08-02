@@ -2,7 +2,16 @@ import IDX from "../../nonview/base/IDX";
 import { CANDIDATE_D_LIST } from "../../nonview/data/CANDIDATE_D_LIST";
 
 export default class Candidate {
-  constructor(id, firstName, lastName, party, imgFile, xHandle, wikipediaPage) {
+  constructor(
+    id,
+    firstName,
+    lastName,
+    party,
+    imgFile,
+    xHandle,
+    wikipediaPage,
+    parliamentNum
+  ) {
     this.id = id;
     this.firstName = firstName;
     this.lastName = lastName;
@@ -10,8 +19,8 @@ export default class Candidate {
     this.imgFile = imgFile;
     this.xHandle = xHandle;
     this.wikipediaPage = wikipediaPage;
+    this.parliamentNum = parliamentNum;
   }
-
   get fullName() {
     return this.firstName + " " + this.lastName;
   }
@@ -24,7 +33,8 @@ export default class Candidate {
       d.party,
       d.imgFile,
       d.xHandle,
-      d.wikipediaPage
+      d.wikipediaPage,
+      d.parliamentNum
     );
   }
 

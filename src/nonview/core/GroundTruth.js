@@ -61,7 +61,7 @@ export default class GroundTruth {
     const critToCandToWeightInfo =
       GroundTruth.getCriterionToCandidateToWeightInfo(version);
 
-    const idx = Object.entries(critToCandToWeightInfo).reduce(function (
+    return Object.entries(critToCandToWeightInfo).reduce(function (
       candToScore,
       [criterionID, candToWeightInfo]
     ) {
@@ -69,7 +69,6 @@ export default class GroundTruth {
         candToScore,
         [cand, weightInfo]
       ) {
-        console.debug(weightInfo);
         if (!candToScore[cand]) {
           candToScore[cand] = 0;
         }
@@ -80,8 +79,6 @@ export default class GroundTruth {
       candToScore);
     },
     {});
-    console.debug(idx);
-    return idx;
   }
 
   static getSortedCandidateWeightAndRank(version, criterionToWeight) {
