@@ -1,80 +1,184 @@
 000 Version
+198/383 [https://www.parliament.lk/component/members/viewMember/1521]
+203/383 [https://www.parliament.lk/members-of-parliament/directory-of-members/viewMember/3135]
+221/383 [https://www.parliament.lk/component/members/viewMember/112]
+339/383 [https://www.parliament.lk/en/component/members/viewMember/140]
+76/98 [https://www.parliament.lk/en/members-of-parliament/directory-of-members/viewMember/1244]
 >70% Attendance in the 9th Parliament
+A score of +100 means the candidate perfectly fits your suitability criteria, while a score of -100 means the candidate perfectly fits your unsuitability criteria.
 ASP
+Against20A
 Aged <60 years
 Aged less than 60 years
+Ajantha
 Alahaperuma
 Alahapperuma
 Anura Kumara
+Anura Kumara Dissanayake, the leader of the Janatha Vimukthi Peramuna (JVP) and the National People's Power (NPP) in Sri Lanka, has a background associated with leftist ideologies, including Marxism-Leninism. [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna]
+Assets
 Associated with Communist Ideologies
+Attendance
+Attorney at Law [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]
+Attorney at Law [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]
+Attorney at Law [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]
+Bandaranayake
+Battaramulle
 Bopage
+Born 1946 [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]
+Born 1946 [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]'
+Born 1950 [https://en.wikipedia.org/wiki/Sarath_Fonseka]
+Born 1951 [https://www.parliament.lk/members-of-parliament/directory-of-members/viewMember/3038]
+Born 1959 [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]
+Born 1964 [https://en.wikipedia.org/wiki/Janaka_Ratnayake]
+Born 1967 [https://en.wikipedia.org/wiki/Sajith_Premadasa]
+Born 1968 [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]
 Cabinet member between 2019 and now
 Candidates
+Candidates are listed in Alphabetical Order of Last Name.
 Clear Local Cache
 Code Repository
+Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]
 Copy App Link
+Corruption
 Crime/war crime/corruption cases
+Criminal
 Criteria
 Declared Assets in Public
+Deputy Minister of Agriculture (2000-2001) [https://en.wikipedia.org/wiki/11th_Parliament_of_Sri_Lanka]
 Disanayake
+Do not change your criteria based on this information to avoid any bias toward a particular candidate without a rational reason.
+Do you know who you are going to vote for?
 Drag the sliders to set the weights of the criteria, and click the Candidates button on the menu below, to see how different candidates score on these criteria.
 Dullas
+Economic
 Economic Experience at the National Level
+Education
 Ex-military or armed group connections
 Extremely
 Extremely Suitable
 Extremely Unsuitable
 Fonseka
 Harsha
+Has Declared Assets in Public in at least one of the last 5 years
+Has Economic Experience at the National Level
+Has Held a Ministerial Position in the Past
 Has Military Affiliations
+Has No History of Corruption Charges
+Has No Military Affiliations
+Has No Ongoing Criminal Case(s)
+Has No Para-Military Affiliations
+Has Not Participated in and Is Not Associated with insurrections
 Has Ongoing Criminal Case(s)
+Has Over 70% Attendance in the Ninth Parliament
 Has Para-Military Affiliations
+Has Voted Against the 20th Amendment
+Has Won a Electoral District Seat in the 2020 General Election
+Has a PhD in Physics from CTH Sweden [https://sci.pdn.ac.lk/physics/staff/PWSK-Bandaranayake]
+Has a University Degree or Higher Education
+Has faced allegations and controversies, though not necessarily formal corruption charges.  [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]
+Has faced various allegations and criticisms regarding corruption and mismanagement during his political career. [E.g. https://www.theguardian.com/world/2022/jul/18/ranil-wickremesinghe-wily-fox-who-became-sri-lanka-pm-six-times-profile/]
+Has never been Appointed to Cabinet by a Rajapaksa President
+Having been involved in the JVP from his school days, Dissanayake joined the JVP in 1987, becoming active in student politics, engaged in full time political activities from 1987, with the onset of the 1987 1989 JVP insurrection. [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]
+He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]
+He strongly advocates for the abolishment of the executive presidency, considering it essential for the country's political and economic revival. He has promised to introduce a new constitution that includes this change if his party comes to power [https://asianmirror.lk/news/item/34833-abolishment-of-executive-presidency-needed-for-economic-revival-in-sl-akd]
+He was appointed as Prime Minister and Minister of Finance, Economic Stability and National Policies by Gotabaya Rajapaksa in May 2022. [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]
+He was elected to parliament in 2020 as a member of the SLPP, but has since moved to the SLFP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]
+He was involved in the 1987-1989 JVP insurrection, which had a paramilitary aspect [https://en.wikipedia.org/wiki/1987%E2%80%931989_JVP_insurrection]
+He was the eighteenth Commander of the Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009. [https://en.wikipedia.org/wiki/Sarath_Fonseka]
 Help (User Manual)
 Herath
 History of working with a ideologically wide group of MPs
+Holds a BSc in Physical Sciences from the University of Kelaniya [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]
+Holds a Degree in Management from Sri Jayawardenapura University, and a Masters in Business from Colombo University [https://en.wikipedia.org/wiki/Janaka_Ratnayake]
+Holds a degree from the London School of Economics. [https://en.wikipedia.org/wiki/Sajith_Premadasa]
+How might you pick your candidate rationally?
 ITAK
+Identify the traits that you find suitable and unsuitable. Weight the importance of these criteria to guide your selection process.
 Ind
 Independent
+Insurrections
 Is Party Leader
+Is Under 65 years old (Born after 1959)
 Is a Party Leader
+Is not a Member nor a Former-Member of the SLPP
+Is not associated with any extreme political Ideologies
 Issue Page
+It is just a simple 3-step process.
+JP
+JSP
 JVP
 Janaka
+Jayasuriya
+KK
 Keerthirathna
 Known racist group connections
+Last updated 000
+Leader
+Leader of the JVP [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna#Leader]
+Leader of the SJB [https://en.wikipedia.org/wiki/Samagi_Jana_Balawegaya]
+Leader of the UNP [https://en.wikipedia.org/wiki/United_National_Party]
+Leader of the opposition, has faced allegations and scrutiny, although not all allegations have led to formal charges. [https://en.wikipedia.org/wiki/Sajith_Premadasa]
 Liyanage
 MA
 Maithripala
+Matches
 Mathiaparanan Abraham
 Member of a @GotabayaR Cabinet
 Member of a Rajapaksa Cabinet
 Member of the @PodujanaParty
 Member of the SLPP
 Member or Former-Member of the SLPP
+Military
 Military Affiliations
+Minister
+Minister of Agriculture, Livestock, Lands, and Irrigation (2004-2005) [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]
+Minister of Housing, Construction and Cultural Affairs, Deputy Minister of Health [https://en.wikipedia.org/wiki/Sajith_Premadasa]
+Minister of Wildlife and Sustainable Development, Minister of Regional Development [https://en.wikipedia.org/wiki/Sarath_Fonseka]
+Moderate
+Move the slider to the left to make a criterion unsuitable  , and to the right to make it suitable  .
+Move the slider to the left to make a criterion unsuitable, and to the right to make it suitable.
+Multiple ministerial positions [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]
+Multiple ministerial positions, including Prime Minister and various other cabinet roles [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]
+NEXT: Step 1
+NEXT: Step 1'
+NEXT: Step 2
 NIF
 NPP
 Neutral
+Next: Step 3
 No asset declaration
+No data on birth date. Assuming under 65 based on appearance [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]
+Not Currently MP
+Not MP at the time
+Not MP at the time. The amendment was passed on 22 October 2020, while Wickremesinghe was sworn in as the national list member of parliament of the UNP on 23 June 2021. [https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka, https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]
 Nuwan
+On Election Day, Polling Stations will close at 5pm.
+Or in 000 days, 001 hours, 002 minutes, and 003 seconds, time.
 Oshala
 Over 70% Attendance in the latest Parliament
 PSA
+PWSK
 Para-Military Affiliations
+ParaMilitary
 Participated in or Associated with 1987 1989 JVP insurrection
 Participated in or Associated with 1987-1989 JVP insurrection
 Past economic experience
 Patali Champika
+Piyadasa
 Premadasa
+Presidency
 Previous Affiliation with #Rajapaksa Government
 Previous Affiliations with Rajapaksa Governments
 Quite
 Quite Suitable
 Quite Unsuitable
+RJP
+RajapaksaCabinet
 Rajapakshe
 Ranawaka
 Random Criteria Weights
 Ranil
+Ranil Wickramasinghe has shown fluctuating positions on this issue. While he has supported the idea of abolishing the executive presidency in the past, his actions as president have been seen as consolidating power within the executive branch
 Ratnayake
 Report Bugs
 Reset Weights to Zero (Neutral)
@@ -83,28 +187,51 @@ SLFP
 SLLP
 SLPP
 Sajith
+Sajith Premadasa has advocated for the abolishment of the executive presidency, emphasizing the need for constitutional reforms to ensure a more balanced distribution of power [https://www.dailymirror.lk/breaking-news/Executive-Presidency-should-be-changed-even-if-Sajith-wins-Eran/108-287450]
 Sarath
+Sarath Fonseka has been critical of the executive presidency and has indicated support for its abolition, preferring a system with more distributed power [https://www.newindianexpress.com/world/2009/Nov/30/fonseka-vows-to-end-executive-presidency-108543.html]
+Saturday, the 21st of September 2024.
+Seat
+Seelarathana
+Served as Minister of Finance on numerous occasions [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]
+Set All Weights to Zero (Neutral)
+Set Random Weights
 Sirisena
+Siritunga
 Slightly
 Slightly Suitable
 Slightly Unsuitable
 Somewhat
 Somewhat Suitable
 Somewhat Unsuitable
+Start
+Step 1: Decide on the criteria for selecting a candidate.
+Step 2: Learn how candidates match the criteria.
+Step 3: Find out which candidates are the best matches.
 Submit your own version
 Submit your own version 2
 Suitable
 Sumanthiran
 TNA
+The 2024 Sri Lankan Presidential Election is scheduled for
+This App might help you.
+To ensure everyone, regardless of political views, agrees on our evaluation, please let us know if you spot any errors.
 To set random weights, click the Dice button on the menu below.
 UNP
 Under 65 years old (Born after 1959)
+Under65
 Unsuitable
+Using this information we can derive a political fingerprint for the candidates.
 Versions
+Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]
 Voted for 20A
 Voted for 20A 86
 Voted for 20th amendment
 Voted for the 20th Amendment
+Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]
+We calculate the score by computing the vector dot product between your political finger print and the candidates political fingerprint.
+We have analyzed how the election candidates perform on our criteria, based on information from reputable sources.
+We have evaluated each candidate based on the specified criteria.
 What criteria would you like to see in a Presidential Candidate? What criteria would be suitable and what would be unsuitable?
 Wickramasinghe
 Wijeyadasa
@@ -112,6 +239,7 @@ Will Dissolve @ParliamentLK before 2025
 Will Dissolve the Parliament before 2025
 Will dissolve parliament before 2025
 Will support abolishing presidency while in the seat
+Will support abolishing the Executive Presidency
 Will support abolishing the Executive Presidency while in seat
 Will support bringing back 19A
 Will support bringing back 19th amendment
@@ -119,4 +247,6 @@ Will support bringing back 19the amendment
 Will support bringing back the 19th Amendment
 Will work with the IMF
 Won a Electoral District Seat in the 2020 General Election
+Your choices reflect your political preferences, creating a unique political fingerprint. Red represents unsuitable criteria, Green represents suitable criteria, and Grey represents neutral criteria.
 de Silva
+de Zoysa

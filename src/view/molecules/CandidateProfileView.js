@@ -60,10 +60,7 @@ export default function CandidateProfileView({ candidateID, version, custom }) {
             candidate={candidate}
             criterionToWeight={criterionToWeight}
           />{" "}
-          <CriterionToWeightView
-            criterionToWeight={criterionToWeight}
-            label={candidate.id}
-          />
+          <CriterionToWeightView criterionToWeight={criterionToWeight} />
           {custom}
         </Stack>
       </Stack>

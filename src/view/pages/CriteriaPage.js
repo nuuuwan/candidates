@@ -3,7 +3,7 @@ import AppColors from "../../view/_constants/AppColors";
 import CriteriaView from "../../view/molecules/CriteriaView";
 import AbstractStepPage from "../../view/pages/AbstractStepPage";
 import LooksOneIcon from "@mui/icons-material/LooksOne";
-import { Weight } from "../../nonview/core";
+
 import { t } from "../../nonview/base/I18N";
 import {
   ButtonPage,
@@ -38,7 +38,7 @@ export default class CriteriaPage extends AbstractStepPage {
   }
 
   get fixedHeight() {
-    return 40;
+    return 48;
   }
 
   renderFixedCustom() {
@@ -51,7 +51,7 @@ export default class CriteriaPage extends AbstractStepPage {
       <Stack direction="column" gap={0.5}>
         <Typography variant="body2">
           {t(
-            `Move the slider to the left to make a criterion unsuitable ${Weight.EMOJI.UNSUITABLE}, and to the right to make it suitable ${Weight.EMOJI.SUITABLE}.`
+            `Move the slider to the left to make a criterion unsuitable, and to the right to make it suitable.`
           )}
         </Typography>
         <Typography variant="body1">

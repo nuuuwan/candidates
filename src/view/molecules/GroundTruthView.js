@@ -7,7 +7,7 @@ import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import AppColors from "../_constants/AppColors";
 import { CRITERION_IDX } from "../../nonview/core/Criterion";
-import { CANDIDATE_IDS, CANDIDATE_LIST } from "../../nonview/core/Candidate";
+import { CANDIDATE_IDS } from "../../nonview/core/Candidate";
 function WeightIcon({ weight }) {
   let Icon = HelpOutlineIcon;
   if (weight > 0) {
@@ -31,7 +31,7 @@ function CriterionGroundTruthView({ criterionID, weight, refs }) {
           "{t(criterion.details)}"
         </Typography>{" "}
       </Stack>
-      <Typography variant="caption">{refs}</Typography>
+      <Typography variant="caption">{t(refs)}</Typography>
     </Stack>
   );
 }

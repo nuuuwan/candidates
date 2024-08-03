@@ -10,6 +10,7 @@ import { CustomAppBar, HomePageBottomNavigation } from "../../view/molecules";
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 import HomePageContext from "../../nonview/core/HomePageContext";
 import AppColors from "../_constants/AppColors";
+import { t } from "../../nonview/base/I18N";
 
 const STYLE_INNER_PAGE_BOX = {
   marginTop: 10,
@@ -130,7 +131,7 @@ export default class HomePage extends Component {
           )}
         />
         <Typography variant="caption" color={AppColors.MoreLight}>
-          {"App Last Update at " + VERSION.DATETIME_STR}
+          {t("Last updated 000", VERSION.DATETIME_STR)}
         </Typography>
       </Box>
     );

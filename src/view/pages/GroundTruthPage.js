@@ -33,7 +33,7 @@ export default class GroundTruthPage extends AbstractStepPage {
   }
 
   get fixedHeight() {
-    return 42;
+    return 48;
   }
 
   renderFixedCustom() {
