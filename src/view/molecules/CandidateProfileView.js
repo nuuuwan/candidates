@@ -1,12 +1,4 @@
-import {
-  Avatar,
-  Box,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, ListItemAvatar, Stack, Typography } from "@mui/material";
 
 import { t } from "../../nonview/base/I18N";
 import Candidate from "../../nonview/core/Candidate";
