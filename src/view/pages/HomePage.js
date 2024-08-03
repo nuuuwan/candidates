@@ -1,16 +1,14 @@
 import { Component, version } from "react";
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 
 import { AudioX } from "../../nonview/base";
-import { VERSION } from "../../nonview/constants";
+
 import GroundTruth from "../../nonview/core/GroundTruth";
 import { CustomAppBar, HomePageBottomNavigation } from "../../view/molecules";
 
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 import HomePageContext from "../../nonview/core/HomePageContext";
-import AppColors from "../_constants/AppColors";
-import { t } from "../../nonview/base/I18N";
 
 const STYLE_INNER_PAGE_BOX = {
   marginTop: 10,
@@ -133,9 +131,6 @@ export default class HomePage extends Component {
             this
           )}
         />
-        <Typography variant="caption" color={AppColors.MoreLight}>
-          {t("Last updated 000", VERSION.DATETIME_STR)}
-        </Typography>
       </Box>
     );
   }

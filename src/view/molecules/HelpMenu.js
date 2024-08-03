@@ -16,6 +16,9 @@ import SettingsIcon from "@mui/icons-material/Settings";
 
 import I18N, { t, LANG_LIST } from "../../nonview/base/I18N";
 import URLContext from "../../nonview/base/URLContext";
+import AppColors from "../_constants/AppColors";
+import { Typography } from "@mui/material";
+import { VERSION } from "../../nonview/constants";
 
 const MENU_ITEM_LIST = [
   {
@@ -136,6 +139,14 @@ export default function HelpMenu({ onChangeLang }) {
         <Divider />
         <MenuItemCopyAppLink />
         <MenuItemClearCache />
+        <Typography
+          variant="caption"
+          color={AppColors.MoreLight}
+          fontSize="100%"
+          sx={{ marginLeft: 2 }}
+        >
+          {t("v000", VERSION.DATETIME_STR)}
+        </Typography>
       </Menu>
     </Box>
   );
