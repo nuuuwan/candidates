@@ -4,7 +4,6 @@ import IDX from "../../nonview/base/IDX";
 import SriLankaColors from "../../view/_constants/SriLankaColors";
 
 const CACHE_KEY_LANG = "CACHE_KEY_LANG";
-const REPLACE_WILDCARD = "000";
 
 class Lang {
   constructor(lang, label, labelEn, shortLabel, color) {
@@ -74,10 +73,25 @@ export default class I18N {
   }
 }
 
-export function t(s, value = "") {
+export function t(
+  s,
+  value0 = undefined,
+  value1 = undefined,
+  value2 = undefined,
+  value3 = undefined
+) {
   let translatedS = I18N.translate(s);
-  if (value) {
-    return translatedS.replaceAll(REPLACE_WILDCARD, value);
+  if (value0 !== undefined) {
+    translatedS = translatedS.replaceAll("000", value0);
+  }
+  if (value1 !== undefined) {
+    translatedS = translatedS.replaceAll("001", value1);
+  }
+  if (value2 !== undefined) {
+    translatedS = translatedS.replaceAll("002", value2);
+  }
+  if (value3 !== undefined) {
+    translatedS = translatedS.replaceAll("003", value3);
   }
   return translatedS;
 }

@@ -15,6 +15,7 @@ import {
 import CriteriaPage from "./CriteriaPage";
 import CandidatePage from "./CandidatePage";
 import GroundTruthPage from "./GroundTruthPage";
+import { TimeX } from "../../nonview/base";
 
 export default class StartPage extends AbstractInnerPage {
   get page() {
@@ -33,18 +34,46 @@ export default class StartPage extends AbstractInnerPage {
   }
 
   renderHeader() {
+    const UT_PRESPOLLSL2024 = TimeX.parseTime("2024-09-21T17:00:00.000+05:30");
+    const dUT = UT_PRESPOLLSL2024 - TimeX.getUnixTime();
+    const dUTDays = Math.floor(dUT / TimeX.SECONDS_IN.DAY);
+    const dUTHours = Math.floor(
+      (dUT % TimeX.SECONDS_IN.DAY) / TimeX.SECONDS_IN.HOUR
+    );
+    const dUTMinutes = Math.floor(
+      (dUT % TimeX.SECONDS_IN.HOUR) / TimeX.SECONDS_IN.MINUTE
+    );
+    const dUTSeconds = Math.floor(dUT % TimeX.SECONDS_IN.MINUTE);
+
     return (
       <>
         <Typography variant="body1">
+          {t("The 2024 Sri Lankan Presidential Election is scheduled for")}
+        </Typography>
+        <Typography variant="h5">
+          {t("Saturday, the 21st of September 2024.")}
+        </Typography>
+        <Typography variant="body1">
+          {t("On Election Day, Polling Stations will close at 5pm.")}
+        </Typography>
+        <Typography variant="h5">
           {t(
-            "Suppose you want to pick a candidate to vote for in the upcoming 2024 Sri Lankan Presidential Election."
+            "Or in 000 days, 001 hours, 002 minutes, and 003 seconds, time.",
+            dUTDays,
+            dUTHours,
+            dUTMinutes,
+            dUTSeconds
           )}
         </Typography>
-        <Typography variant="h6">
+        <Typography variant="body1">
+          {t("Do you know who you are going to vote for?")}
+        </Typography>{" "}
+        <Typography variant="h5">
           {t("How might you pick your candidate rationally?")}
         </Typography>{" "}
-        <Typography variant="body1">
-          {t("Picking a Candidate to vote for, is a three-step process.")}
+        <Typography variant="body1">{t("This App might help you.")}</Typography>{" "}
+        <Typography variant="h5">
+          {t("It is just a simple 3-step process.")}
         </Typography>
       </>
     );
