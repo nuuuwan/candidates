@@ -3,26 +3,26 @@ import AlignCenter from "./AlignCenter";
 import AlignRight from "./AlignRight";
 import ButtonRandomWeights from "./ButtonRandomWeights";
 import ButtonRefreshWeights from "./ButtonRefreshWeights";
-import GoogleSearchView from "./GoogleSearchView";
-import LinkedInView from "./LinkedInView";
-import ManthriLKView from "./ManthriLKView";
+import ButtonGoogleSearch from "./ButtonGoogleSearch";
+import ButtonLinkedIn from "./ButtonLinkedIn";
+import ButtonManthriLK from "./ButtonManthriLK";
 import ButtonPage from "./ButtonPage";
-import ParliamentView from "./ParliamentView";
+import ButtonParliamentLK from "./ButtonParliament";
 import TimeView from "./TimeView";
-import WikipediaPageView from "./WikipediaPageView";
-import XHandleView from "./XHandleView";
+import ButtonWikipedia from "./ButtonWikipedia";
+import ButtonXTwitter from "./ButtonXTwitter";
 
 export {
   AlignCenter,
   AlignRight,
   ButtonRandomWeights,
   ButtonRefreshWeights,
-  GoogleSearchView,
-  LinkedInView,
-  ManthriLKView,
+  ButtonGoogleSearch as GoogleSearchView,
+  ButtonLinkedIn as LinkedInView,
+  ButtonManthriLK as ManthriLKView,
   ButtonPage,
-  ParliamentView,
+  ButtonParliamentLK as ParliamentView,
   TimeView,
-  WikipediaPageView,
-  XHandleView,
+  ButtonWikipedia as WikipediaPageView,
+  ButtonXTwitter as XHandleView,
 };
