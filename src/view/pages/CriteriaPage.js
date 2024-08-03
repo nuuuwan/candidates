@@ -1,10 +1,9 @@
-import { Box, Typography } from "@mui/material";
 import AppColors from "../../view/_constants/AppColors";
 import CriteriaView from "../../view/molecules/CriteriaView";
-import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
+import AbstractStepPage from "../../view/pages/AbstractStepPage";
 import LooksOneIcon from "@mui/icons-material/LooksOne";
-import { t } from "../../nonview/base/I18N";
-export default class CriteriaPage extends AbstractInnerPage {
+
+export default class CriteriaPage extends AbstractStepPage {
   get page() {
     return "CriteriaPage";
   }
@@ -20,22 +19,22 @@ export default class CriteriaPage extends AbstractInnerPage {
     return AppColors.Criterion;
   }
 
-  render() {
+  get title() {
+    return "Identify and Weight the criteria you care about.";
+  }
+
+  get subTitle() {
+    return "That is, what you want to see in a candidate.";
+  }
+
+  renderInner() {
     const { version, onChangeCriterionWeight, criterionToWeight } = this.props;
     return (
-      <Box>
-        <Typography variant="h6" color={AppColors.Criterion}>
-          {t("Identify and Weight the criteria you care about.")}
-        </Typography>
-        <Typography variant="body1" color={AppColors.Criterion}>
-          {t("That is, what you want to see in a candidate.")}
-        </Typography>
-        <CriteriaView
-          version={version}
-          onChangeCriterionWeight={onChangeCriterionWeight}
-          criterionToWeight={criterionToWeight}
-        />
-      </Box>
+      <CriteriaView
+        version={version}
+        onChangeCriterionWeight={onChangeCriterionWeight}
+        criterionToWeight={criterionToWeight}
+      />
     );
   }
 }

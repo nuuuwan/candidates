@@ -2,10 +2,9 @@ import GroundTruth from "../../nonview/core/GroundTruth";
 import Looks3Icon from "@mui/icons-material/Looks3";
 import AppColors from "../../view/_constants/AppColors";
 import CandidatesLeaderBoard from "../../view/molecules/CandidatesLeaderBoard";
-import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
-import { Box, Typography } from "@mui/material";
-import { t } from "../../nonview/base/I18N";
-export default class CandidatePage extends AbstractInnerPage {
+import AbstractStepPage from "../../view/pages/AbstractStepPage";
+
+export default class CandidatePage extends AbstractStepPage {
   get page() {
     return "CandidatePage";
   }
@@ -21,23 +20,21 @@ export default class CandidatePage extends AbstractInnerPage {
     return AppColors.Candidate;
   }
 
-  render() {
+  get title() {
+    return "Find out which candidate is the best match.";
+  }
+
+  renderInner() {
     const { version, criterionToWeight } = this.props;
     const candidateToWeightAndRank =
       GroundTruth.getSortedCandidateToWeightAndRank(version, criterionToWeight);
 
     return (
-      <Box>
-        <Typography variant="h6" color={this.color}>
-          {t("Find out which candidate is the best match.")}
-        </Typography>
-
-        <CandidatesLeaderBoard
-          version={version}
-          candidateToWeightAndRank={candidateToWeightAndRank}
-          criterionToWeight={criterionToWeight}
-        />
-      </Box>
+      <CandidatesLeaderBoard
+        version={version}
+        candidateToWeightAndRank={candidateToWeightAndRank}
+        criterionToWeight={criterionToWeight}
+      />
     );
   }
 }
