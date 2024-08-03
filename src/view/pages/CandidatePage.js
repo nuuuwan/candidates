@@ -3,8 +3,10 @@ import Looks3Icon from "@mui/icons-material/Looks3";
 import AppColors from "../../view/_constants/AppColors";
 import CandidatesLeaderBoard from "../../view/molecules/CandidatesLeaderBoard";
 import AbstractStepPage from "../../view/pages/AbstractStepPage";
-import { Stack, Typography } from "@mui/material";
+import { Alert, Box, Stack, Typography } from "@mui/material";
 import { t } from "../../nonview/base/I18N";
+import CriteriaPage from "./CriteriaPage";
+import { ButtonPage } from "../atoms";
 
 export default class CandidatePage extends AbstractStepPage {
   get page() {
@@ -62,5 +64,27 @@ export default class CandidatePage extends AbstractStepPage {
         criterionToWeight={criterionToWeight}
       />
     );
+  }
+
+  render() {
+    const { version, criterionToWeight, onChangePage } = this.props;
+    const candidateToWeightAndRank =
+      GroundTruth.getSortedCandidateToWeightAndRank(version, criterionToWeight);
+
+    if (!GroundTruth.hasWinner(candidateToWeightAndRank)) {
+      return (
+        <Alert severity="error">
+          {t("You haven't selected any criteria as yet.")}
+          <Box>
+            <ButtonPage
+              Page={CriteriaPage}
+              onChangePage={onChangePage}
+              customLabel={"Go back to Step 1"}
+            />
+          </Box>
+        </Alert>
+      );
+    }
+    return super.render();
   }
 }

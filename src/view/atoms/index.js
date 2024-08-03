@@ -6,6 +6,7 @@ import ButtonRefreshWeights from "./ButtonRefreshWeights";
 import GoogleSearchView from "./GoogleSearchView";
 import LinkedInView from "./LinkedInView";
 import ManthriLKView from "./ManthriLKView";
+import ButtonPage from "./ButtonPage";
 import ParliamentView from "./ParliamentView";
 import TimeView from "./TimeView";
 import WikipediaPageView from "./WikipediaPageView";
@@ -19,6 +20,7 @@ export {
   GoogleSearchView,
   LinkedInView,
   ManthriLKView,
+  ButtonPage,
   ParliamentView,
   TimeView,
   WikipediaPageView,

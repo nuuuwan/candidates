@@ -7,14 +7,14 @@ const AVATAR_SIZE = 24;
 const MIN_WEIGHT = 1;
 export default function CandidatesLeaderBoardShort({
   candidateToWeightAndRank,
-  onClickOpenPage,
+  onChangePage,
 }) {
   if (Object.values(candidateToWeightAndRank)[0][1] < MIN_WEIGHT) {
     return null;
   }
 
   const onClick = function () {
-    onClickOpenPage("CandidatePage");
+    onChangePage("CandidatePage");
   };
 
   return (

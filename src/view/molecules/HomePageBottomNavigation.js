@@ -12,7 +12,7 @@ import AppColors from "../../view/_constants/AppColors";
 
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 
-export default function HomePageBottomNavigation({ onClickOpenPage }) {
+export default function HomePageBottomNavigation({ onChangePage }) {
   const context = URLContext.getContext();
   const activePage = context.page;
   return (
@@ -30,7 +30,7 @@ export default function HomePageBottomNavigation({ onClickOpenPage }) {
             <Tooltip key={key} title={t(config.label)}>
               <BottomNavigationAction
                 icon={<config.Icon sx={{ color }} />}
-                onClick={() => onClickOpenPage(config.page)}
+                onClick={() => onChangePage(config.page)}
               />
             </Tooltip>
           );

@@ -1,12 +1,17 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import AppColors from "../../view/_constants/AppColors";
 import CriteriaView from "../../view/molecules/CriteriaView";
 import AbstractStepPage from "../../view/pages/AbstractStepPage";
 import LooksOneIcon from "@mui/icons-material/LooksOne";
 import { Weight } from "../../nonview/core";
 import { t } from "../../nonview/base/I18N";
-import { ButtonRandomWeights, ButtonRefreshWeights } from "../../view/atoms";
+import {
+  ButtonPage,
+  ButtonRandomWeights,
+  ButtonRefreshWeights,
+} from "../../view/atoms";
 import { CriterionToWeightView } from "../molecules";
+import GroundTruthPage from "./GroundTruthPage";
 
 export default class CriteriaPage extends AbstractStepPage {
   get page() {
@@ -71,13 +76,27 @@ export default class CriteriaPage extends AbstractStepPage {
   }
 
   renderMoving() {
-    const { version, onChangeCriterionWeight, criterionToWeight } = this.props;
+    const {
+      version,
+      onChangeCriterionWeight,
+      criterionToWeight,
+      onChangePage,
+    } = this.props;
     return (
-      <CriteriaView
-        version={version}
-        onChangeCriterionWeight={onChangeCriterionWeight}
-        criterionToWeight={criterionToWeight}
-      />
+      <Box>
+        <CriteriaView
+          version={version}
+          onChangeCriterionWeight={onChangeCriterionWeight}
+          criterionToWeight={criterionToWeight}
+        />
+        <Box>
+          <ButtonPage
+            Page={GroundTruthPage}
+            onChangePage={onChangePage}
+            customLabel={"NEXT: Step 2"}
+          />
+        </Box>
+      </Box>
     );
   }
 }

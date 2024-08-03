@@ -1,3 +1,5 @@
+import { t } from "../../nonview/base/I18N";
+
 import CandidateView from "../../view/molecules/CandidateView";
 import { List } from "@mui/material";
 

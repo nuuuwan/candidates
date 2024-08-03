@@ -3,8 +3,10 @@ import LooksTwoIcon from "@mui/icons-material/LooksTwo";
 import { GroundTruthView } from "../../view/molecules";
 import AppColors from "../../view/_constants/AppColors";
 import AbstractStepPage from "../../view/pages/AbstractStepPage";
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { t } from "../../nonview/base/I18N";
+import { ButtonPage } from "../atoms";
+import CandidatePage from "./CandidatePage";
 
 export default class GroundTruthPage extends AbstractStepPage {
   get page() {
@@ -55,7 +57,16 @@ export default class GroundTruthPage extends AbstractStepPage {
   }
 
   renderMoving() {
-    const { version } = this.props;
-    return <GroundTruthView version={version} />;
+    const { version, onChangePage } = this.props;
+    return (
+      <Box>
+        <GroundTruthView version={version} />{" "}
+        <ButtonPage
+          Page={CandidatePage}
+          onChangePage={onChangePage}
+          customLabel={"Next: Step 3"}
+        />
+      </Box>
+    );
   }
 }

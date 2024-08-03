@@ -32,7 +32,7 @@ export default class HomePage extends Component {
     this.isComponentMounted = true;
   }
 
-  onClickOpenPage(page) {
+  onChangePage(page) {
     HomePageContext.updateState(this, function (context) {
       context.page = page;
     });
@@ -104,7 +104,7 @@ export default class HomePage extends Component {
         criterionToWeight={criterionToWeight}
         onChangeLang={this.onChangeLang.bind(this)}
         onChangeVersion={this.onChangeVersion.bind(this)}
-        onClickOpenPage={this.onClickOpenPage.bind(this)}
+        onChangePage={this.onChangePage.bind(this)}
       />
     );
   }
@@ -119,7 +119,7 @@ export default class HomePage extends Component {
         <innerPageConfig.Page
           version={version}
           criterionToWeight={criterionToWeight}
-          onClickOpenPage={this.onClickOpenPage.bind(this)}
+          onChangePage={this.onChangePage.bind(this)}
           onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
           onChangeVersion={this.onChangeVersion.bind(this)}
           onChangeCriterionWeightRandom={this.onChangeCriterionWeightRandom.bind(
@@ -138,9 +138,7 @@ export default class HomePage extends Component {
 
   renderFooter() {
     return (
-      <HomePageBottomNavigation
-        onClickOpenPage={this.onClickOpenPage.bind(this)}
-      />
+      <HomePageBottomNavigation onChangePage={this.onChangePage.bind(this)} />
     );
   }
 

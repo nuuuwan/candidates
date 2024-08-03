@@ -11,11 +11,13 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  Box,
 } from "@mui/material";
 import CriteriaPage from "./CriteriaPage";
 import CandidatePage from "./CandidatePage";
 import GroundTruthPage from "./GroundTruthPage";
 import { TimeX } from "../../nonview/base";
+import { ButtonPage } from "../atoms";
 
 export default class StartPage extends AbstractInnerPage {
   get page() {
@@ -102,6 +104,8 @@ export default class StartPage extends AbstractInnerPage {
   }
 
   render() {
+    const { onChangePage } = this.props;
+
     const StepPageList = [CriteriaPage, GroundTruthPage, CandidatePage];
     return (
       <Stack direction="column" gap={1}>
@@ -113,6 +117,13 @@ export default class StartPage extends AbstractInnerPage {
             }.bind(this)
           )}
         </List>
+        <Box>
+          <ButtonPage
+            Page={CriteriaPage}
+            onChangePage={onChangePage}
+            customLabel={"NEXT: Step 1"}
+          />
+        </Box>
       </Stack>
     );
   }

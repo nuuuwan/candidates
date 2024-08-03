@@ -160,4 +160,11 @@ export default class GroundTruth {
     },
     {});
   }
+
+  static hasWinner(candidateToWeightAndRank) {
+    const weights = Object.values(candidateToWeightAndRank).map(
+      (x) => x.weight
+    );
+    return Math.max(...weights) > Math.min(...weights);
+  }
 }

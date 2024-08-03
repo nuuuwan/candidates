@@ -27,7 +27,7 @@ export default function CustomAppBar({
   criterionToWeight,
 
   onChangeLang,
-  onClickOpenPage,
+  onChangePage,
 }) {
   const candidateToWeightAndRank =
     GroundTruth.getSortedCandidateToWeightAndRank(version, criterionToWeight);
@@ -47,7 +47,7 @@ export default function CustomAppBar({
           </Typography>
           <CandidatesLeaderBoardShort
             candidateToWeightAndRank={candidateToWeightAndRank}
-            onClickOpenPage={onClickOpenPage}
+            onChangePage={onChangePage}
           />
 
           <HelpMenu onChangeLang={onChangeLang} />
