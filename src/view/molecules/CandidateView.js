@@ -100,7 +100,7 @@ export default function CandidateView({
     candidateId
   );
   return (
-    <ListItem component={Paper} sx={{ marginBottom: 2 }}>
+    <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
       <CandidateListItemAvatar candidate={candidate} rank={rank} />
       <CandidateListItemText
         candidate={candidate}
