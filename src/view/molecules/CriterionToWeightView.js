@@ -1,8 +1,8 @@
-import { Stack } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import { CRITERION_LIST } from "../../nonview/core/Criterion";
 import { Weight } from "../../nonview/core";
-
-export default function CriterionToWeightView({ criterionToWeight }) {
+import FingerprintIcon from "@mui/icons-material/Fingerprint";
+export default function CriterionToWeightView({ criterionToWeight, label }) {
   return (
     <Stack
       direction="row"
@@ -13,6 +13,7 @@ export default function CriterionToWeightView({ criterionToWeight }) {
         flexWrap: "wrap",
       }}
     >
+      <FingerprintIcon />
       {CRITERION_LIST.map(function (criterion, iCriterion) {
         const weight = criterionToWeight[criterion.id];
         const color = Weight.getColor(weight);
@@ -32,6 +33,9 @@ export default function CriterionToWeightView({ criterionToWeight }) {
           </span>
         );
       })}
+      <Typography variant="caption" sx={{ marginLeft: 1 }}>
+        {label}
+      </Typography>
     </Stack>
   );
 }

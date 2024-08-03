@@ -5,6 +5,7 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
+  Stack,
   Typography,
 } from "@mui/material";
 
@@ -34,7 +35,7 @@ function SingleCandidateView({ candidate, weight, refs }) {
   return (
     <ListItem key={refs} sx={{ m: 0, p: 0.5 }}>
       <ListItemAvatar>
-        <Avatar sx={{ background: "white" }}>
+        <Avatar sx={{ background: AppColors.VeryLight }}>
           <WeightIcon weight={weight} />
         </Avatar>
       </ListItemAvatar>
@@ -54,7 +55,7 @@ function MultipleCandidateView({ refs, candidates, weight }) {
   return (
     <ListItem key={refs} sx={{ m: 0, p: 0.5 }}>
       <ListItemAvatar>
-        <Avatar sx={{ background: "white" }}>
+        <Avatar sx={{ background: AppColors.VeryLight }}>
           <WeightIcon weight={weight} />
         </Avatar>
       </ListItemAvatar>
@@ -114,7 +115,7 @@ function RefsToCandidatesView({ weight, refsToCandidateIds }) {
 }
 
 function WeightToRefsToCandidatesView({ criterionToCandidateToWeightInfo }) {
-  return Object.entries(criterionToCandidateToWeightInfo).map(function ([
+  const inner = Object.entries(criterionToCandidateToWeightInfo).map(function ([
     criterionID,
     candidateToWeightInfo,
   ]) {
@@ -124,7 +125,10 @@ function WeightToRefsToCandidatesView({ criterionToCandidateToWeightInfo }) {
     );
 
     return (
-      <Box key={criterionID}>
+      <Box
+        key={criterionID}
+        sx={{ p: 1, backgroundColor: AppColors.VeryLight }}
+      >
         <Typography variant="h6">{`"${t(criterion.details)}"`}</Typography>
         <List sx={{ m: 0, p: 0 }}>
           {Object.entries(weightToRefsToCandidates)
@@ -143,6 +147,11 @@ function WeightToRefsToCandidatesView({ criterionToCandidateToWeightInfo }) {
       </Box>
     );
   });
+  return (
+    <Stack direction="column" gap={1}>
+      {inner}
+    </Stack>
+  );
 }
 
 export default function GroundTruthView({ version }) {

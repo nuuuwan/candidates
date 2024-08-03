@@ -14,7 +14,7 @@ const AppColors = {
   LessLight: "#444",
   Light: "#888",
   MoreLight: "#ccc",
-  VeryLight: "#fcfcfc",
+  VeryLight: "#f8f8f8",
 };
 
 export default AppColors;

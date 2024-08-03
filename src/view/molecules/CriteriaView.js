@@ -1,7 +1,7 @@
 import { Box, List } from "@mui/material";
 
 import GroundTruth from "../../nonview/core/GroundTruth";
-import CriterionToWeightView from "./CriterionToWeightView";
+
 import CriterionView from "../../view/molecules/CriterionView";
 
 export default function CriteriaView({
@@ -12,7 +12,6 @@ export default function CriteriaView({
   const criterionIDs = GroundTruth.getCriterionIDs(version);
   return (
     <Box>
-      <CriterionToWeightView criterionToWeight={criterionToWeight} />
       <List>
         {criterionIDs.map(function (criterionID, iCriterion) {
           const key = "criterion-" + version + "-" + criterionID;

@@ -73,6 +73,22 @@ export default class HomePage extends Component {
     });
   }
 
+  onChangeCriterionWeightRandom() {
+    HomePageContext.updateState(this, function (context) {
+      context.criterionToWeight = GroundTruth.getRandomCriterionWeights(
+        context.version
+      );
+    });
+  }
+
+  onChangeCriterionWeightRefresh() {
+    HomePageContext.updateState(this, function (context) {
+      context.criterionToWeight = GroundTruth.getInitCriterionWeights(
+        context.version
+      );
+    });
+  }
+
   renderHeader() {
     const { context } = this.state;
 
@@ -106,6 +122,12 @@ export default class HomePage extends Component {
           onClickOpenPage={this.onClickOpenPage.bind(this)}
           onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
           onChangeVersion={this.onChangeVersion.bind(this)}
+          onChangeCriterionWeightRandom={this.onChangeCriterionWeightRandom.bind(
+            this
+          )}
+          onChangeCriterionWeightRefresh={this.onChangeCriterionWeightRefresh.bind(
+            this
+          )}
         />
         <Typography variant="caption" color={AppColors.MoreLight}>
           {"App Last Update at " + VERSION.DATETIME_STR}

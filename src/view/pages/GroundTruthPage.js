@@ -3,6 +3,8 @@ import LooksTwoIcon from "@mui/icons-material/LooksTwo";
 import { GroundTruthView } from "../../view/molecules";
 import AppColors from "../../view/_constants/AppColors";
 import AbstractStepPage from "../../view/pages/AbstractStepPage";
+import { Stack, Typography } from "@mui/material";
+import { t } from "../../nonview/base/I18N";
 
 export default class GroundTruthPage extends AbstractStepPage {
   get page() {
@@ -21,10 +23,35 @@ export default class GroundTruthPage extends AbstractStepPage {
   }
 
   get title() {
-    return "Learn how each candidate matches up to those criteria.";
+    return "Step 2: Learn how candidates match the criteria.";
   }
 
-  renderInner() {
+  get subTitle() {
+    return `We have analyzed how the election candidates perform on our criteria, based on information from reputable sources.`;
+  }
+
+  get fixedHeight() {
+    return 35;
+  }
+
+  renderFixedCustom() {
+    return (
+      <Stack direction="column" gap={0.5}>
+        <Typography variant="body1">
+          {t(
+            "Do not change your criteria based on this information to avoid any bias toward a particular candidate without a rational reason."
+          )}
+        </Typography>{" "}
+        <Typography variant="body1">
+          {t(
+            "To ensure everyone, regardless of political views, agrees on our evaluation, please let us know if you spot any errors."
+          )}
+        </Typography>
+      </Stack>
+    );
+  }
+
+  renderMoving() {
     const { version } = this.props;
     return <GroundTruthView version={version} />;
   }

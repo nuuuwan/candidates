@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { t } from "../../nonview/base/I18N";
 import AbstractInnerPage from "../../view/pages/AbstractInnerPage";
 
@@ -11,20 +11,29 @@ export default class AbstractStepPage extends AbstractInnerPage {
     return null;
   }
 
+  get fixedHeight() {
+    return 15;
+  }
+
+  renderFixedCustom() {
+    return null;
+  }
+
   renderFixed() {
     return (
-      <Box>
+      <Stack direction="column" gap={1} sx={{ m: 1 }}>
         <Typography variant="h6" color={this.color}>
           {t(this.title)}
         </Typography>
-        <Typography variant="body1" color={this.color}>
+        <Typography variant="body2" color={this.color}>
           {t(this.subTitle)}
         </Typography>
-      </Box>
+        {this.renderFixedCustom()}
+      </Stack>
     );
   }
 
-  renderInner() {
+  renderMoving() {
     return null;
   }
 
@@ -34,17 +43,17 @@ export default class AbstractStepPage extends AbstractInnerPage {
         <Box
           sx={{
             position: "fixed",
-            top: 60,
+            top: 48,
             paddingTop: 2,
-            paddingBottom: 2,
+            paddingBottom: 1,
             zIndex: 100,
             backgroundColor: "white",
-            width: STYLE.maxWidth,
+            maxWidth: STYLE.maxWidth,
           }}
         >
           {this.renderFixed()}
         </Box>
-        <Box sx={{ marginTop: 15 }}>{this.renderInner()}</Box>
+        <Box sx={{ marginTop: this.fixedHeight }}>{this.renderMoving()}</Box>
       </Box>
     );
   }

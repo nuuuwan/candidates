@@ -74,12 +74,12 @@ function CandidateListItemText({
           </Box>
         </Stack>
         <CriterionToWeightView
-          criterionToWeight={criterionToWeight}
-          label="You"
-        />
-        <CriterionToWeightView
           criterionToWeight={criterionToWeightForCandidate}
-          label="Cand."
+          label=""
+        />{" "}
+        <CriterionToWeightView
+          criterionToWeight={criterionToWeight}
+          label="(You)"
         />
       </Stack>
     </ListItemText>
