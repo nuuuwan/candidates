@@ -10,7 +10,7 @@ import GroundTruthView from "./GroundTruthView";
 import HelpMenu from "./HelpMenu";
 import HomePageBottomNavigation from "./HomePageBottomNavigation";
 import PartyView from "./PartyView";
-import VersionView from "./VersionView";
+
 import WeightView from "./WeightView";
 
 export {
@@ -25,6 +25,5 @@ export {
   HelpMenu,
   HomePageBottomNavigation,
   PartyView,
-  VersionView,
   WeightView,
 };
