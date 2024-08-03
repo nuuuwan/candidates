@@ -2,6 +2,8 @@ import { Stack, Typography } from "@mui/material";
 import { CRITERION_LIST } from "../../nonview/core/Criterion";
 import { Weight } from "../../nonview/core";
 import FingerprintIcon from "@mui/icons-material/Fingerprint";
+
+const DIM = 8;
 export default function CriterionToWeightView({ criterionToWeight, label }) {
   return (
     <Stack
@@ -23,17 +25,17 @@ export default function CriterionToWeightView({ criterionToWeight, label }) {
             style={{
               backgroundColor: color,
               color,
-              width: 10,
-              height: 10,
-              borderRadius: 10,
-              fontSize: 10,
+              width: DIM,
+              height: DIM,
+              borderRadius: DIM,
+              fontSize: DIM,
             }}
           >
             {"."}
           </span>
         );
       })}
-      <Typography variant="caption" sx={{ marginLeft: 1 }}>
+      <Typography variant="caption" sx={{ marginLeft: 0.5 }}>
         {label}
       </Typography>
     </Stack>

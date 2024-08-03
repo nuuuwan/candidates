@@ -46,7 +46,7 @@ export default class CandidatePage extends AbstractStepPage {
         </Typography>
         <Typography variant="body1">
           {t(
-            "We compute the score by computing the vector dot product between your political finger print and the candidates political fingerprint."
+            "We calculate the score by computing the vector dot product between your political finger print and the candidates political fingerprint."
           )}
         </Typography>
       </Stack>

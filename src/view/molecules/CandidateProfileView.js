@@ -26,7 +26,7 @@ import { GroundTruth } from "../../nonview/core";
 
 const AVATAR_SIZE = 64;
 
-function ProfileBox({ candidate }) {
+function ProfileTextView({ candidate }) {
   return (
     <Box>
       <Typography sx={{ fontSize: "80%" }}>{t(candidate.firstName)}</Typography>
@@ -42,7 +42,7 @@ function ProfileBox({ candidate }) {
   );
 }
 
-function CandidateListItemAvatar({ candidate }) {
+function ProfileAvatarView({ candidate }) {
   return (
     <ListItemAvatar>
       <Avatar
@@ -53,30 +53,28 @@ function CandidateListItemAvatar({ candidate }) {
   );
 }
 
-function CandidateListItemText({ candidate, criterionToWeight }) {
-  return (
-    <ListItemText>
-      <Stack direction="column" gap={0} sx={{ marginLeft: 2 }}>
-        <ProfileBox candidate={candidate} />
-        <CriterionToWeightView criterionToWeight={criterionToWeight} />
-      </Stack>
-    </ListItemText>
-  );
-}
-
-export default function CandidateProfileView({ candidateID, version }) {
+export default function CandidateProfileView({ candidateID, version, custom }) {
   const candidate = Candidate.fromID(candidateID);
   const criterionToWeight = GroundTruth.getCriterionToWeightForCandidate(
     version,
     candidateID
   );
   return (
-    <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
-      <CandidateListItemAvatar candidate={candidate} />
-      <CandidateListItemText
-        candidate={candidate}
-        criterionToWeight={criterionToWeight}
-      />
-    </ListItem>
+    <Box sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
+      <Stack direction="row" gap={1}>
+        <ProfileAvatarView candidate={candidate} />
+        <Stack direction="column" gap={1}>
+          <ProfileTextView
+            candidate={candidate}
+            criterionToWeight={criterionToWeight}
+          />{" "}
+          <CriterionToWeightView
+            criterionToWeight={criterionToWeight}
+            label={candidate.id}
+          />
+          {custom}
+        </Stack>
+      </Stack>
+    </Box>
   );
 }
