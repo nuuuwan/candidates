@@ -5,16 +5,6 @@ import GroundTruth from "../../nonview/core/GroundTruth";
 import CriterionToWeightView from "./CriterionToWeightView";
 import CriterionView from "../../view/molecules/CriterionView";
 
-function InfoText() {
-  return (
-    <Stack direction="column" gap={1}>
-      <Alert severity="info">
-        {t("Drag the sliders to set the weights of the criteria.")}
-      </Alert>
-    </Stack>
-  );
-}
-
 export default function CriteriaView({
   version,
   onChangeCriterionWeight,
@@ -23,7 +13,6 @@ export default function CriteriaView({
   const criterionIDs = GroundTruth.getCriterionIDs(version);
   return (
     <Box>
-      <InfoText />
       <CriterionToWeightView criterionToWeight={criterionToWeight} />
       <List>
         {criterionIDs.map(function (criterionID, iCriterion) {

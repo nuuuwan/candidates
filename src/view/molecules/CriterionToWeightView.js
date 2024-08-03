@@ -13,9 +13,6 @@ export default function CriterionToWeightView({ criterionToWeight, label }) {
         flexWrap: "wrap",
       }}
     >
-      <Typography variant="caption" sx={{ width: 40 }}>
-        {label}
-      </Typography>
       {CRITERION_LIST.map(function (criterion, iCriterion) {
         const weight = criterionToWeight[criterion.id];
         const color = Weight.getColor(weight);
