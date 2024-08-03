@@ -1,9 +1,7 @@
 import StartIcon from "@mui/icons-material/Start";
-import AppColors from "../_constants/AppColors";
 
-import LooksOneIcon from "@mui/icons-material/LooksOne";
-import LooksTwoIcon from "@mui/icons-material/LooksTwo";
-import Looks3Icon from "@mui/icons-material/Looks3";
+import { t } from "../../nonview/base/I18N";
+import AppColors from "../_constants/AppColors";
 
 import AbstractInnerPage from "./AbstractInnerPage";
 import {
@@ -14,24 +12,9 @@ import {
   ListItemText,
   ListItemIcon,
 } from "@mui/material";
-
-function CustomListItem({ Icon, color, text, subText }) {
-  return (
-    <ListItem>
-      <ListItemIcon>
-        <Icon sx={{ color }} />
-      </ListItemIcon>
-      <ListItemText>
-        <Typography variant="body1" color={color}>
-          {text}
-        </Typography>{" "}
-        <Typography variant="caption" color={color}>
-          {subText}
-        </Typography>
-      </ListItemText>
-    </ListItem>
-  );
-}
+import CriteriaPage from "./CriteriaPage";
+import CandidatePage from "./CandidatePage";
+import GroundTruthPage from "./GroundTruthPage";
 
 export default class StartPage extends AbstractInnerPage {
   get page() {
@@ -49,38 +32,57 @@ export default class StartPage extends AbstractInnerPage {
     return AppColors.Start;
   }
 
-  render() {
+  renderHeader() {
     return (
-      <Stack direction="column" gap={1}>
+      <>
         <Typography variant="body1">
-          Suppose you want to pick a candidate to vote for in the upcoming 2024
-          Sri Lankan Presidential Election.
+          {t(
+            "Suppose you want to pick a candidate to vote for in the upcoming 2024 Sri Lankan Presidential Election."
+          )}
         </Typography>
         <Typography variant="h6">
-          How might you pick your candidate rationally?
+          {t("How might you pick your candidate rationally?")}
         </Typography>{" "}
         <Typography variant="body1">
-          Rationally picking a Candidate to vote for, is a three-step process.
+          {t("Picking a Candidate to vote for, is a three-step process.")}
         </Typography>
+      </>
+    );
+  }
+
+  renderStepPage(StepPage, iStepPage) {
+    const stepPage = new StepPage();
+    const color = stepPage.color;
+    const Icon = stepPage.Icon;
+
+    return (
+      <ListItem key={"step-page-" + iStepPage}>
+        <ListItemIcon>
+          <Icon sx={{ color }} />
+        </ListItemIcon>
+        <ListItemText>
+          <Typography variant="body1" color={color}>
+            {t(stepPage.title)}
+          </Typography>{" "}
+          <Typography variant="caption" color={color}>
+            {t(stepPage.subTitle)}
+          </Typography>
+        </ListItemText>
+      </ListItem>
+    );
+  }
+
+  render() {
+    const StepPageList = [CriteriaPage, GroundTruthPage, CandidatePage];
+    return (
+      <Stack direction="column" gap={1}>
+        {this.renderHeader()}
         <List>
-          <CustomListItem
-            Icon={LooksOneIcon}
-            color={AppColors.Criterion}
-            text="Identify and Weight the criteria you care about."
-            subText="That is, what you want to see in a candidate."
-          />
-
-          <CustomListItem
-            Icon={LooksTwoIcon}
-            color={AppColors.GroundTruth}
-            text="Learn how each candidate matches up to those criteria."
-          />
-
-          <CustomListItem
-            Icon={Looks3Icon}
-            color={AppColors.Candidate}
-            text="Find out which candidate is the best match."
-          />
+          {StepPageList.map(
+            function (StepPage, iStepPage) {
+              return this.renderStepPage(StepPage, iStepPage);
+            }.bind(this)
+          )}
         </List>
       </Stack>
     );
