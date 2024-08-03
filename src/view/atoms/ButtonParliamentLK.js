@@ -1,7 +1,7 @@
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import GenericButtonLink from "./GenericButtonLink";
 
-export default function ButtonParliamentLK({ parliamentNum }) {
+export default function ButtonParliamentLKLK({ parliamentNum }) {
   if (!parliamentNum || parliamentNum === "null") {
     return null;
   }

@@ -3,12 +3,12 @@ import { Avatar, Box, ListItemAvatar, Stack, Typography } from "@mui/material";
 import { t } from "../../nonview/base/I18N";
 import Candidate from "../../nonview/core/Candidate";
 import {
-  WikipediaPageView,
-  XHandleView,
-  GoogleSearchView,
-  ParliamentView,
-  LinkedInView,
-  ManthriLKView,
+  ButtonWikipedia,
+  ButtonXTwitter,
+  ButtonGoogleSearch,
+  ButtonParliamentLK,
+  ButtonLinkedIn,
+  ButtonManthriLK,
 } from "../atoms";
 import CriterionToWeightView from "../../view/molecules/CriterionToWeightView";
 import PartyView from "./PartyView";
@@ -24,12 +24,12 @@ function ProfileTextView({ candidate }) {
       <Typography sx={{ fontSize: "80%" }}>{t(candidate.firstName)}</Typography>
       <Typography sx={{ fontSize: "120%" }}>{t(candidate.lastName)}</Typography>
       <PartyView id={candidate.party} />
-      <ParliamentView parliamentNum={candidate.parliamentNum} />
-      <ManthriLKView manthriLKID={candidate.manthriLKID} />
-      <WikipediaPageView wikipediaPage={candidate.wikipediaPage} />
-      <LinkedInView linkedInID={candidate.linkedInID} />
-      <XHandleView xHandle={candidate.xHandle} />
-      <GoogleSearchView searchText={candidate.fullName} />
+      <ButtonParliamentLK parliamentNum={candidate.parliamentNum} />
+      <ButtonManthriLK manthriLKID={candidate.manthriLKID} />
+      <ButtonWikipedia wikipediaPage={candidate.wikipediaPage} />
+      <ButtonLinkedIn linkedInID={candidate.linkedInID} />
+      <ButtonXTwitter xHandle={candidate.xHandle} />
+      <ButtonGoogleSearch searchText={candidate.fullName} />
     </Box>
   );
 }

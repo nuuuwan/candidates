@@ -33,7 +33,7 @@ export default class GroundTruthPage extends AbstractStepPage {
   }
 
   get fixedHeight() {
-    return 38;
+    return 42;
   }
 
   renderFixedCustom() {
@@ -41,10 +41,15 @@ export default class GroundTruthPage extends AbstractStepPage {
       <Stack direction="column" gap={0.5}>
         <Typography variant="body1">
           {t(
+            "Using this information we can derive a political fingerprint for the candidates."
+          )}
+        </Typography>{" "}
+        <Typography variant="caption">
+          {t(
             "Do not change your criteria based on this information to avoid any bias toward a particular candidate without a rational reason."
           )}
         </Typography>{" "}
-        <Typography variant="body1">
+        <Typography variant="caption">
           {t(
             "To ensure everyone, regardless of political views, agrees on our evaluation, please let us know if you spot any errors."
           )}

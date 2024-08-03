@@ -5,7 +5,7 @@ import ButtonGoogleSearch from "./ButtonGoogleSearch";
 import ButtonLinkedIn from "./ButtonLinkedIn";
 import ButtonManthriLK from "./ButtonManthriLK";
 import ButtonPage from "./ButtonPage";
-import ButtonParliament from "./ButtonParliament";
+import ButtonParliamentLK from "./ButtonParliamentLK";
 import ButtonRandomWeights from "./ButtonRandomWeights";
 import ButtonRefreshWeights from "./ButtonRefreshWeights";
 import ButtonWikipedia from "./ButtonWikipedia";
@@ -20,7 +20,7 @@ export {
   ButtonLinkedIn,
   ButtonManthriLK,
   ButtonPage,
-  ButtonParliament,
+  ButtonParliamentLK,
   ButtonRandomWeights,
   ButtonRefreshWeights,
   ButtonWikipedia,

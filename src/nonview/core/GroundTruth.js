@@ -75,7 +75,10 @@ export default class GroundTruth {
   }
 
   static getRandomWeight() {
-    return parseInt(Math.random() * 200 - 100);
+    if (Math.random() < 0.5) {
+      return parseInt(Math.random() * 200 - 100);
+    }
+    return parseInt(Math.random() * 100);
   }
 
   static getRandomCriterionWeights(version) {
