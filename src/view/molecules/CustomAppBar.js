@@ -11,7 +11,6 @@ import GroundTruth from "../../nonview/core/GroundTruth";
 import AlignCenter from "../../view/atoms/AlignCenter";
 import CandidatesLeaderBoardShort from "../../view/molecules/CandidatesLeaderBoardShort";
 import HelpMenu from "./HelpMenu.js";
-import VersionMenu from "./VersionMenu.js";
 
 const STYLE = {
   position: "fixed",
@@ -50,7 +49,7 @@ export default function CustomAppBar({
             candidateToWeightAndRank={candidateToWeightAndRank}
             onClickOpenPage={onClickOpenPage}
           />
-          <VersionMenu version={version} onChangeVersion={onChangeVersion} />
+
           <HelpMenu onChangeLang={onChangeLang} />
         </Toolbar>
       </AppBar>

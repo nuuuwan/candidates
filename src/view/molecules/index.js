@@ -9,12 +9,7 @@ import CustomAppBar from "./CustomAppBar";
 import GroundTruthView from "./GroundTruthView";
 import HelpMenu from "./HelpMenu";
 import HomePageBottomNavigation from "./HomePageBottomNavigation";
-import IconLabel from "./IconLabel";
-import LabelledText from "./LabelledText";
-import LabelledTextInput from "./LabelledTextInput";
-import PageLink from "./PageLink";
 import PartyView from "./PartyView";
-import VersionMenu from "./VersionMenu";
 import VersionView from "./VersionView";
 import WeightView from "./WeightView";
 
@@ -29,12 +24,7 @@ export {
   GroundTruthView,
   HelpMenu,
   HomePageBottomNavigation,
-  IconLabel,
-  LabelledText,
-  LabelledTextInput,
-  PageLink,
   PartyView,
-  VersionMenu,
   VersionView,
   WeightView,
 };

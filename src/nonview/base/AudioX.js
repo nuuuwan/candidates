@@ -6,6 +6,8 @@ const URL_BASE = [
 const URL_SHORT = URL_BASE + "/tabla-short.mp3";
 const URL_LONG = URL_BASE + "/tabla-long.mp3";
 
+const TEST_MODE = true;
+
 export default class AudioX {
   static tracks = {
     short: new Audio(URL_SHORT),
@@ -19,6 +21,9 @@ export default class AudioX {
   }
 
   static async playLong() {
+    if (TEST_MODE) {
+      return null;
+    }
     await this.playIfNotNull(this.tracks.long);
   }
 
