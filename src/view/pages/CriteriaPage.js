@@ -49,11 +49,6 @@ export default class CriteriaPage extends AbstractStepPage {
     } = this.props;
     return (
       <Stack direction="column" gap={0.5}>
-        <Typography variant="body2">
-          {t(
-            `Move the slider to the left to make a criterion unsuitable, and to the right to make it suitable.`
-          )}
-        </Typography>
         <Typography variant="body1">
           {t(
             "Your choices reflect your political preferences, creating a unique political fingerprint. Red represents unsuitable criteria, Green represents suitable criteria, and Grey represents neutral criteria."
@@ -71,6 +66,11 @@ export default class CriteriaPage extends AbstractStepPage {
             onChangeCriterionWeightRefresh={onChangeCriterionWeightRefresh}
           />
         </Stack>
+        <Typography variant="body2">
+          {t(
+            `Move the slider to the left to make a criterion unsuitable, and to the right to make it suitable.`
+          )}
+        </Typography>
       </Stack>
     );
   }
