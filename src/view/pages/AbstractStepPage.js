@@ -17,9 +17,9 @@ export default class AbstractStepPage extends AbstractInnerPage {
       return 35;
     }
     if (lang === "si") {
-      return 10;
+      return 20;
     }
-    return 5;
+    return 10;
   }
 
   renderFixedCustom() {
