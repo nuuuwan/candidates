@@ -21,9 +21,9 @@ export default function CandidatesLeaderBoardShort({
     <Stack direction="row" gap={1} onClick={onClick}>
       {Object.keys(candidateToWeightAndRank)
         .slice(0, 3)
-        .map(function (candidateId) {
-          const key = "candidate-" + candidateId;
-          const candidate = Candidate.fromId(candidateId);
+        .map(function (candidateID) {
+          const key = "candidate-" + candidateID;
+          const candidate = Candidate.fromID(candidateID);
           return (
             <Avatar
               key={key}

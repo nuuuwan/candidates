@@ -10,7 +10,7 @@ export default class Criterion {
     return new Criterion(d.id, d.details);
   }
 
-  static fromId(id) {
+  static fromID(id) {
     return CRITERION_IDX[id];
   }
 }

@@ -29,7 +29,7 @@ function CustomSlider({
   criterionID,
   criterionWeight,
 }) {
-  const criterion = Criterion.fromId(criterionID);
+  const criterion = Criterion.fromID(criterionID);
   const onChange = function (e) {
     setCriterionValue(parseInt(e.target.value));
   };

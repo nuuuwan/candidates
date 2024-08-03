@@ -9,15 +9,15 @@ export default function CandidatesLeaderBoard({
   return (
     <List>
       {Object.entries(candidateToWeightAndRank).map(function ([
-        candidateId,
+        candidateID,
         { weight, rank },
       ]) {
-        const key = "candidate-" + candidateId;
+        const key = "candidate-" + candidateID;
         return (
           <CandidateView
             key={key}
             version={version}
-            candidateId={candidateId}
+            candidateID={candidateID}
             weight={weight}
             rank={rank}
             criterionToWeight={criterionToWeight}

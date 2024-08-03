@@ -1,165 +1,81 @@
-import {
-  Avatar,
-  Box,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemText,
-  Stack,
-  Typography,
-} from "@mui/material";
-
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
-
+import { Stack, Typography } from "@mui/material";
+import { Criterion, GroundTruth, Weight } from "../../nonview/core";
+import CandidateProfileView from "./CandidateProfileView";
 import { t } from "../../nonview/base/I18N";
-import { Candidate, Criterion, GroundTruth } from "../../nonview/core";
-import AppColors from "../../view/_constants/AppColors";
-
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import HighlightOffIcon from "@mui/icons-material/HighlightOff";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import AppColors from "../_constants/AppColors";
 function WeightIcon({ weight }) {
   let Icon = HelpOutlineIcon;
-  let color = "#ccc";
   if (weight > 0) {
-    Icon = AddCircleOutlineIcon;
-    color = "#080";
+    Icon = CheckCircleOutlineIcon;
   } else if (weight < 0) {
-    Icon = RemoveCircleOutlineIcon;
-    color = "#f00";
+    Icon = HighlightOffIcon;
   }
+  const color = Weight.getColor(weight);
   return <Icon sx={{ color }} />;
 }
 
-function SingleCandidateView({ candidate, weight, refs }) {
+function CriterionGroundTruthView({ criterionID, weight, refs }) {
+  const color = Weight.getColor(weight);
+  const criterion = Criterion.fromID(criterionID);
   return (
-    <ListItem key={refs} sx={{ m: 0, p: 0.5 }}>
-      <ListItemAvatar>
-        <Avatar sx={{ background: AppColors.VeryLight }}>
-          <WeightIcon weight={weight} />
-        </Avatar>
-      </ListItemAvatar>
-      <ListItemText>
-        <Typography variant="body2">
-          {t(candidate.firstName)} <strong>{t(candidate.lastName)}</strong>
-        </Typography>
-        <Typography variant="caption" color={AppColors.Light}>
-          {t(refs)}
-        </Typography>
-      </ListItemText>
-    </ListItem>
+    <Stack direction="column" gap={1}>
+      {" "}
+      <Stack direction="row" gap={1} sx={{ alignItems: "center" }}>
+        <WeightIcon weight={weight} />
+        <Typography variant="body2" color={color}>
+          "{t(criterion.details)}"
+        </Typography>{" "}
+      </Stack>
+      <Typography variant="caption">{refs}</Typography>
+    </Stack>
   );
 }
 
-function MultipleCandidateView({ refs, candidates, weight }) {
+function CandidateGroundTruthView({ candidateID, criterionToWeightInfo }) {
   return (
-    <ListItem key={refs} sx={{ m: 0, p: 0.5 }}>
-      <ListItemAvatar>
-        <Avatar sx={{ background: AppColors.VeryLight }}>
-          <WeightIcon weight={weight} />
-        </Avatar>
-      </ListItemAvatar>
-      <ListItemText>
-        <Box>
-          {candidates.map(function (candidate) {
-            return (
-              <Typography
-                variant="body2"
-                key={"candidate-" + candidate.id}
-                sx={{ fontSize: "67%" }}
-              >
-                {t(candidate.firstName)}{" "}
-                <strong>{t(candidate.lastName)}</strong>
-              </Typography>
-            );
-          })}
-        </Box>
-        <Typography variant="caption" color={AppColors.Light}>
-          {t(refs)}
-        </Typography>
-      </ListItemText>
-    </ListItem>
-  );
-}
-
-function RefsToCandidatesView({ weight, refsToCandidateIds }) {
-  return Object.entries(refsToCandidateIds)
-    .sort(function (a, b) {
-      return b[1].length - a[1].length;
-    })
-    .map(function ([refs, candidateIds]) {
-      const candidates = candidateIds.map(function (candidateId) {
-        return Candidate.fromId(candidateId);
-      });
-
-      if (candidates.length === 1) {
-        const candidate = candidates[0];
+    <Stack
+      direction="column"
+      gap={1}
+      sx={{ backgroundColor: AppColors.VeryLight, p: 1 }}
+    >
+      <CandidateProfileView candidateID={candidateID} />
+      {Object.entries(criterionToWeightInfo).map(function ([
+        criterionID,
+        { weight, refs },
+      ]) {
         return (
-          <SingleCandidateView
-            key={refs}
-            candidate={candidate}
+          <CriterionGroundTruthView
+            key={criterionID}
+            criterionID={criterionID}
             weight={weight}
             refs={refs}
           />
         );
-      }
-      return (
-        <MultipleCandidateView
-          key={refs}
-          refs={refs}
-          candidates={candidates}
-          weight={weight}
-        />
-      );
-    });
-}
-
-function WeightToRefsToCandidatesView({ criterionToCandidateToWeightInfo }) {
-  const inner = Object.entries(criterionToCandidateToWeightInfo).map(function ([
-    criterionID,
-    candidateToWeightInfo,
-  ]) {
-    const criterion = Criterion.fromId(criterionID);
-    const weightToRefsToCandidates = GroundTruth.getWeightToRefsToCandidates(
-      candidateToWeightInfo
-    );
-
-    return (
-      <Box
-        key={criterionID}
-        sx={{ p: 1, backgroundColor: AppColors.VeryLight }}
-      >
-        <Typography variant="h6">{`"${t(criterion.details)}"`}</Typography>
-        <List sx={{ m: 0, p: 0 }}>
-          {Object.entries(weightToRefsToCandidates)
-            .sort(function (a, b) {
-              return b[0] - a[0];
-            })
-            .map(function ([weight, refsToCandidateIds]) {
-              return (
-                <RefsToCandidatesView
-                  weight={weight}
-                  refsToCandidateIds={refsToCandidateIds}
-                />
-              );
-            })}
-        </List>
-      </Box>
-    );
-  });
-  return (
-    <Stack direction="column" gap={1}>
-      {inner}
+      })}
     </Stack>
   );
 }
 
 export default function GroundTruthView({ version }) {
-  const criterionToCandidateToWeightInfo =
-    GroundTruth.getCriterionToCandidateToWeightInfo(version);
+  const candidateToCriterionToWeightInfo =
+    GroundTruth.getCandidateToCriterionToWeightInfo(version);
   return (
-    <WeightToRefsToCandidatesView
-      criterionToCandidateToWeightInfo={criterionToCandidateToWeightInfo}
-    />
+    <Stack direction="column" gap={1}>
+      {Object.entries(candidateToCriterionToWeightInfo).map(function ([
+        candidateID,
+        criterionToWeightInfo,
+      ]) {
+        return (
+          <CandidateGroundTruthView
+            key={candidateID}
+            candidateID={candidateID}
+            criterionToWeightInfo={criterionToWeightInfo}
+          />
+        );
+      })}
+    </Stack>
   );
 }

@@ -36,6 +36,25 @@ export default class GroundTruth {
     return ATTR_IDX_IDX[version];
   }
 
+  static getCandidateToCriterionToWeightInfo(version) {
+    if (!ATTR_IDX_IDX[version]) {
+      version = GroundTruth.DEFAULT_VERSION;
+    }
+    return Object.entries(ATTR_IDX_IDX[version]).reduce(function (
+      idx,
+      [criterionID, candToWeightInfo]
+    ) {
+      Object.entries(candToWeightInfo).forEach(function ([candidateID, info]) {
+        if (!idx[candidateID]) {
+          idx[candidateID] = {};
+        }
+        idx[candidateID][criterionID] = info;
+      });
+      return idx;
+    },
+    {});
+  }
+
   static getCriterionIDs(version) {
     return Object.keys(
       GroundTruth.getCriterionToCandidateToWeightInfo(version)
@@ -82,8 +101,8 @@ export default class GroundTruth {
       [criterionID, candToWeightInfo]
     ) {
       return CANDIDATE_LIST.reduce(function (candToScore, candidate) {
-        const candidateId = candidate.id;
-        let weightInfo = candToWeightInfo[candidateId];
+        const candidateID = candidate.id;
+        let weightInfo = candToWeightInfo[candidateID];
         if (weightInfo === undefined) {
           weightInfo = {
             weight: GroundTruth.DEFAULT_WEIGHT,
@@ -91,10 +110,10 @@ export default class GroundTruth {
           };
         }
 
-        if (!candToScore[candidateId]) {
-          candToScore[candidateId] = 0;
+        if (!candToScore[candidateID]) {
+          candToScore[candidateID] = 0;
         }
-        candToScore[candidateId] +=
+        candToScore[candidateID] +=
           (criterionToWeight[criterionID] * weightInfo.weight) / totalWeight;
         return candToScore;
       }, candToScore);

@@ -17,12 +17,10 @@ import {
   ParliamentView,
   LinkedInView,
   ManthriLKView,
-} from "../../view/atoms";
-import PartyView from "../../view/molecules/PartyView";
-import WeightView from "../../view/molecules/WeightView";
+} from "../atoms";
+import PartyView from "./PartyView";
+
 import AppColors from "../_constants/AppColors";
-import { GroundTruth } from "../../nonview/core";
-import CriterionToWeightView from "./CriterionToWeightView";
 
 const AVATAR_SIZE = 64;
 
@@ -42,13 +40,9 @@ function ProfileBox({ candidate }) {
   );
 }
 
-function CandidateListItemAvatar({ candidate, rank }) {
+function CandidateListItemAvatar({ candidate }) {
   return (
     <ListItemAvatar>
-      <Typography variant="h6" sx={{ color: AppColors.Light }}>
-        #{rank + 1}
-      </Typography>
-
       <Avatar
         src={candidate.imgSrc}
         sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
@@ -57,56 +51,23 @@ function CandidateListItemAvatar({ candidate, rank }) {
   );
 }
 
-function CandidateListItemText({
-  candidate,
-  weight,
-  criterionToWeight,
-  criterionToWeightForCandidate,
-}) {
+function CandidateListItemText({ candidate }) {
   return (
     <ListItemText>
       <Stack direction="column" gap={0} sx={{ marginLeft: 2 }}>
-        <Stack direction="row">
-          <ProfileBox candidate={candidate} />
-          <Typography sx={{ flexGrow: 1 }}> </Typography>
-          <Box sx={{ marginLeft: 1 }}>
-            <WeightView weight={weight} />
-          </Box>
-        </Stack>
-        <CriterionToWeightView
-          criterionToWeight={criterionToWeightForCandidate}
-          label=""
-        />{" "}
-        <CriterionToWeightView
-          criterionToWeight={criterionToWeight}
-          label="(You)"
-        />
+        <ProfileBox candidate={candidate} />
       </Stack>
     </ListItemText>
   );
 }
 
-export default function CandidateView({
-  version,
-  candidateID,
-  weight,
-  rank,
-  criterionToWeight,
-}) {
+export default function CandidateProfileView({ candidateID }) {
   const candidate = Candidate.fromID(candidateID);
-  const criterionToWeightForCandidate = GroundTruth.getCriterionToWeight(
-    version,
-    candidateID
-  );
+
   return (
     <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
-      <CandidateListItemAvatar candidate={candidate} rank={rank} />
-      <CandidateListItemText
-        candidate={candidate}
-        weight={weight}
-        criterionToWeight={criterionToWeight}
-        criterionToWeightForCandidate={criterionToWeightForCandidate}
-      />
+      <CandidateListItemAvatar candidate={candidate} />
+      <CandidateListItemText candidate={candidate} />
     </ListItem>
   );
 }

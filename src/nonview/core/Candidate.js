@@ -44,7 +44,7 @@ export default class Candidate {
     );
   }
 
-  static fromId(id) {
+  static fromID(id) {
     return CANDIDATE_IDX[id];
   }
 
