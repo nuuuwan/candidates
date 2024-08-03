@@ -43,6 +43,50 @@ function ProfileBox({ candidate }) {
   );
 }
 
+function CandidateListItemAvatar({ candidate, rank }) {
+  return (
+    <ListItemAvatar>
+      <Typography variant="h6" sx={{ color: AppColors.Light }}>
+        #{rank + 1}
+      </Typography>
+
+      <Avatar
+        src={candidate.imgSrc}
+        sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
+      />
+    </ListItemAvatar>
+  );
+}
+
+function CandidateListItemText({
+  candidate,
+  weight,
+  criterionToWeight,
+  criterionToWeightForCandidate,
+}) {
+  return (
+    <ListItemText>
+      <Stack direction="column" gap={0} sx={{ marginLeft: 2 }}>
+        <Stack direction="row">
+          <ProfileBox candidate={candidate} />
+          <Typography sx={{ flexGrow: 1 }}> </Typography>
+          <Box sx={{ marginLeft: 1 }}>
+            <WeightView weight={weight} />
+          </Box>
+        </Stack>
+        <CriterionToWeightView
+          criterionToWeight={criterionToWeight}
+          label="You"
+        />
+        <CriterionToWeightView
+          criterionToWeight={criterionToWeightForCandidate}
+          label="Cand."
+        />
+      </Stack>
+    </ListItemText>
+  );
+}
+
 export default function CandidateView({
   version,
   candidateId,
@@ -57,36 +101,13 @@ export default function CandidateView({
   );
   return (
     <ListItem component={Paper} sx={{ marginBottom: 2 }}>
-      <ListItemAvatar>
-        <Typography variant="h6" sx={{ color: AppColors.Light }}>
-          #{rank + 1}
-        </Typography>
-
-        <Avatar
-          src={candidate.imgSrc}
-          sx={{ width: AVATAR_SIZE, height: AVATAR_SIZE }}
-        />
-      </ListItemAvatar>
-
-      <ListItemText>
-        <Stack direction="column" gap={0} sx={{ marginLeft: 2 }}>
-          <Stack direction="row">
-            <ProfileBox candidate={candidate} />
-            <Typography sx={{ flexGrow: 1 }}> </Typography>
-            <Box sx={{ marginLeft: 1 }}>
-              <WeightView weight={weight} />
-            </Box>
-          </Stack>
-          <CriterionToWeightView
-            criterionToWeight={criterionToWeight}
-            label="You"
-          />
-          <CriterionToWeightView
-            criterionToWeight={criterionToWeightForCandidate}
-            label="Cand."
-          />
-        </Stack>
-      </ListItemText>
+      <CandidateListItemAvatar candidate={candidate} rank={rank} />
+      <CandidateListItemText
+        candidate={candidate}
+        weight={weight}
+        criterionToWeight={criterionToWeight}
+        criterionToWeightForCandidate={criterionToWeightForCandidate}
+      />
     </ListItem>
   );
 }
