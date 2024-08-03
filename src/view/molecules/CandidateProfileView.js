@@ -16,7 +16,7 @@ import PartyView from "./PartyView";
 import AppColors from "../_constants/AppColors";
 import { GroundTruth } from "../../nonview/core";
 
-const AVATAR_SIZE = 64;
+const AVATAR_SIZE = 48;
 
 function ProfileTextView({ candidate }) {
   return (
