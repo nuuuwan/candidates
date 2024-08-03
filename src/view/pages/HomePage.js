@@ -33,13 +33,12 @@ export default class HomePage extends Component {
   }
 
   onClickOpenPage(page) {
-    AudioX.playShort();
-
     HomePageContext.updateState(this, function (context) {
       context.page = page;
     });
 
     window.scrollTo(0, 0);
+    AudioX.playLong();
   }
 
   getInnerPageConfig() {
@@ -71,26 +70,6 @@ export default class HomePage extends Component {
   onChangeLang(lang) {
     HomePageContext.updateState(this, function (context) {
       context.lang = lang;
-    });
-  }
-
-  onClickRandomCriteriaWeights() {
-    AudioX.playLong();
-
-    HomePageContext.updateState(this, function (context) {
-      context.criterionToWeight = GroundTruth.getRandomCriterionWeights(
-        context.version
-      );
-    });
-  }
-
-  onClickRefreshCriteriaWeights() {
-    AudioX.playLong();
-
-    HomePageContext.updateState(this, function (context) {
-      context.criterionToWeight = GroundTruth.getInitCriterionWeights(
-        context.version
-      );
     });
   }
 
@@ -136,12 +115,6 @@ export default class HomePage extends Component {
     return (
       <HomePageBottomNavigation
         onClickOpenPage={this.onClickOpenPage.bind(this)}
-        onClickRandomCriteriaWeights={this.onClickRandomCriteriaWeights.bind(
-          this
-        )}
-        onClickRefreshCriteriaWeights={this.onClickRefreshCriteriaWeights.bind(
-          this
-        )}
       />
     );
   }
