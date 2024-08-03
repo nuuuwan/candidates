@@ -33,7 +33,7 @@ export default class CandidatePage extends AbstractStepPage {
   }
 
   get fixedHeight() {
-    return 40;
+    return super.fixedHeight + 30;
   }
 
   renderFixedCustom() {

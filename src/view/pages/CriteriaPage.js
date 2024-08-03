@@ -38,7 +38,7 @@ export default class CriteriaPage extends AbstractStepPage {
   }
 
   get fixedHeight() {
-    return 48;
+    return super.fixedHeight + 35;
   }
 
   renderFixedCustom() {

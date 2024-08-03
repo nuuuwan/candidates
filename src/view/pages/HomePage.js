@@ -115,10 +115,13 @@ export default class HomePage extends Component {
     const innerPageConfig = this.getInnerPageConfig();
     const criterionToWeight = context.criterionToWeight;
 
+    const { version, lang } = context;
+
     return (
       <Box sx={STYLE_INNER_PAGE_BOX}>
         <innerPageConfig.Page
           version={version}
+          lang={lang}
           criterionToWeight={criterionToWeight}
           onChangePage={this.onChangePage.bind(this)}
           onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}

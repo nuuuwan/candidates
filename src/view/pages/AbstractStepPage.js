@@ -12,7 +12,14 @@ export default class AbstractStepPage extends AbstractInnerPage {
   }
 
   get fixedHeight() {
-    return 15;
+    const { lang } = this.props;
+    if (lang === "ta") {
+      return 35;
+    }
+    if (lang === "si") {
+      return 10;
+    }
+    return 5;
   }
 
   renderFixedCustom() {
