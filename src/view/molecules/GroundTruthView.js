@@ -81,9 +81,39 @@ function MultipleCandidateView({ refs, candidates, weight }) {
   );
 }
 
-export default function GroundTruthView({ version }) {
-  const criterionToCandidateToWeightInfo =
-    GroundTruth.getCriterionToCandidateToWeightInfo(version);
+function RefsToCandidatesView({ weight, refsToCandidateIds }) {
+  return Object.entries(refsToCandidateIds)
+    .sort(function (a, b) {
+      return b[1].length - a[1].length;
+    })
+    .map(function ([refs, candidateIds]) {
+      const candidates = candidateIds.map(function (candidateId) {
+        return Candidate.fromId(candidateId);
+      });
+
+      if (candidates.length === 1) {
+        const candidate = candidates[0];
+        return (
+          <SingleCandidateView
+            key={refs}
+            candidate={candidate}
+            weight={weight}
+            refs={refs}
+          />
+        );
+      }
+      return (
+        <MultipleCandidateView
+          key={refs}
+          refs={refs}
+          candidates={candidates}
+          weight={weight}
+        />
+      );
+    });
+}
+
+function WeightToRefsToCandidatesView({ criterionToCandidateToWeightInfo }) {
   return Object.entries(criterionToCandidateToWeightInfo).map(function ([
     criterionID,
     candidateToWeightInfo,
@@ -102,38 +132,25 @@ export default function GroundTruthView({ version }) {
               return b[0] - a[0];
             })
             .map(function ([weight, refsToCandidateIds]) {
-              return Object.entries(refsToCandidateIds)
-                .sort(function (a, b) {
-                  return b[1].length - a[1].length;
-                })
-                .map(function ([refs, candidateIds]) {
-                  const candidates = candidateIds.map(function (candidateId) {
-                    return Candidate.fromId(candidateId);
-                  });
-
-                  if (candidates.length === 1) {
-                    const candidate = candidates[0];
-                    return (
-                      <SingleCandidateView
-                        key={refs}
-                        candidate={candidate}
-                        weight={weight}
-                        refs={refs}
-                      />
-                    );
-                  }
-                  return (
-                    <MultipleCandidateView
-                      key={refs}
-                      refs={refs}
-                      candidates={candidates}
-                      weight={weight}
-                    />
-                  );
-                });
+              return (
+                <RefsToCandidatesView
+                  weight={weight}
+                  refsToCandidateIds={refsToCandidateIds}
+                />
+              );
             })}
         </List>
       </Box>
     );
   });
+}
+
+export default function GroundTruthView({ version }) {
+  const criterionToCandidateToWeightInfo =
+    GroundTruth.getCriterionToCandidateToWeightInfo(version);
+  return (
+    <WeightToRefsToCandidatesView
+      criterionToCandidateToWeightInfo={criterionToCandidateToWeightInfo}
+    />
+  );
 }
