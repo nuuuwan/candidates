@@ -15,7 +15,7 @@ export default function CriterionToWeightView({ criterionToWeight, label }) {
         flexWrap: "wrap",
       }}
     >
-      <FingerprintIcon />
+      <FingerprintIcon sx={{ fontSize: DIM * 3 }} />
       {CRITERION_LIST.map(function (criterion, iCriterion) {
         const weight = criterionToWeight[criterion.id];
         const color = Weight.getColor(weight);

@@ -50,17 +50,13 @@ export default class StartPage extends AbstractInnerPage {
     return (
       <>
         <Typography variant="body1">
-          {t("The 2024 Sri Lankan Presidential Election is scheduled for")}
-        </Typography>
-        <Typography variant="h5">
-          {t("Saturday, the 21st of September 2024.")}
-        </Typography>
-        <Typography variant="body1">
-          {t("On Election Day, Polling Stations will close at 5pm.")}
-        </Typography>
-        <Typography variant="h5">
           {t(
-            "Or in 000 days, 001 hours, 002 minutes, and 003 seconds, time.",
+            "The 2024 Sri Lankan Presidential Election is scheduled for Saturday, the 21st of September 2024."
+          )}
+        </Typography>
+        <Typography variant="h6" color={{ color: AppColors.Criterion }}>
+          {t(
+            "On Election Day, Polling Stations will close at 5pm. Or in 000 days, 001 hours, 002 minutes, and 003 seconds, time.",
             dUTDays,
             dUTHours,
             dUTMinutes,
@@ -70,11 +66,11 @@ export default class StartPage extends AbstractInnerPage {
         <Typography variant="body1">
           {t("Do you know who you are going to vote for?")}
         </Typography>{" "}
-        <Typography variant="h5">
+        <Typography variant="h6" color={{ color: AppColors.GroundTruth }}>
           {t("How might you pick your candidate rationally?")}
         </Typography>{" "}
         <Typography variant="body1">{t("This App might help you.")}</Typography>{" "}
-        <Typography variant="h5">
+        <Typography variant="h6" color={{ color: AppColors.Candidate }}>
           {t("It is just a simple 3-step process.")}
         </Typography>
       </>
