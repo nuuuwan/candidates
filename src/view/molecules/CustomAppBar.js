@@ -16,7 +16,7 @@ const STYLE = {
   position: "fixed",
   top: 0,
   right: 0,
-  zIndex: 1,
+  zIndex: 1000,
 };
 
 export default function CustomAppBar({
@@ -25,7 +25,7 @@ export default function CustomAppBar({
   Icon,
   version,
   criterionToWeight,
-  onChangeVersion,
+
   onChangeLang,
   onClickOpenPage,
 }) {

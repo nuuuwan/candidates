@@ -1,6 +1,5 @@
-import { Alert, Box, List, Stack, Typography } from "@mui/material";
+import { Box, List } from "@mui/material";
 
-import { t } from "../../nonview/base/I18N";
 import GroundTruth from "../../nonview/core/GroundTruth";
 import CriterionToWeightView from "./CriterionToWeightView";
 import CriterionView from "../../view/molecules/CriterionView";

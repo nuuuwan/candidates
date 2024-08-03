@@ -1,7 +1,6 @@
 import {
   Avatar,
   Box,
-  Paper,
   ListItem,
   ListItemAvatar,
   ListItemText,

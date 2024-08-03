@@ -1,8 +1,8 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack } from "@mui/material";
 import { CRITERION_LIST } from "../../nonview/core/Criterion";
 import { Weight } from "../../nonview/core";
 
-export default function CriterionToWeightView({ criterionToWeight, label }) {
+export default function CriterionToWeightView({ criterionToWeight }) {
   return (
     <Stack
       direction="row"

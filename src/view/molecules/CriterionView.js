@@ -10,7 +10,7 @@ import { t } from "../../nonview/base/I18N";
 import Weight from "../../nonview/core/Weight";
 
 import WeightView from "../../view/molecules/WeightView";
-import { ListItem, ListItemText, Paper } from "@mui/material";
+import { ListItem, ListItemText } from "@mui/material";
 
 import Criterion from "../../nonview/core/Criterion";
 import AppColors from "../_constants/AppColors";

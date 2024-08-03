@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import Box from "@mui/material/Box";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-import AppColors from "./view/_constants/AppColors";
+import AppColors from "./view/_constants/AppColors.js";
+import STYLE from "./view/_constants/STYLE.js";
 import HomePage from "./view/pages/HomePage.js";
 
 const THEME = createTheme({
@@ -26,12 +27,6 @@ const THEME = createTheme({
     fontSize: 14,
   },
 });
-
-const STYLE = {
-  maxWidth: 800,
-  margin: "auto",
-  marginBottom: 10,
-};
 
 export default class App extends Component {
   render() {
