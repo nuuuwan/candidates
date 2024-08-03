@@ -107,7 +107,7 @@ export default class HomePage extends Component {
           onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
           onChangeVersion={this.onChangeVersion.bind(this)}
         />
-        <Typography variant="caption" color={AppColors.VeryLight}>
+        <Typography variant="caption" color={AppColors.MoreLight}>
           {"App Last Update at " + VERSION.DATETIME_STR}
         </Typography>
       </Box>

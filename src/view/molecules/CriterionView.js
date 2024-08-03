@@ -13,6 +13,7 @@ import WeightView from "../../view/molecules/WeightView";
 import { ListItem, ListItemText, Paper } from "@mui/material";
 
 import Criterion from "../../nonview/core/Criterion";
+import AppColors from "../_constants/AppColors";
 
 const MARKS = [-100, 0, 100].map(function (value) {
   return {
@@ -41,6 +42,9 @@ function CustomSlider({
 
   return (
     <Box>
+      <Typography variant="h6" color={color}>
+        #{`${t(criterion.id)}`}
+      </Typography>
       <Typography variant="body1">{`"${t(criterion.details)}"`}</Typography>
       <Box>
         <Slider
@@ -73,7 +77,7 @@ export default function CriterionView({
   );
 
   return (
-    <ListItem component={Paper} sx={{ marginBottom: 2 }}>
+    <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
       <ListItemText>
         <Stack direction="row">
           <CustomSlider

@@ -24,7 +24,7 @@ export default function HomePageBottomNavigation({ onClickOpenPage }) {
         {PAGE_CONFIG_LIST.slice(0, 5).map(function (config) {
           const key = "button-" + config.page;
           const isActive = config.page === activePage;
-          const color = isActive ? config.color : AppColors.VeryLight;
+          const color = isActive ? config.color : AppColors.MoreLight;
 
           return (
             <Tooltip key={key} title={t(config.label)}>
