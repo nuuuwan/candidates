@@ -6,7 +6,7 @@ const URL_BASE = [
 const URL_SHORT = URL_BASE + "/tabla-short.mp3";
 const URL_LONG = URL_BASE + "/tabla-long.mp3";
 
-const TEST_MODE = true;
+const TEST_MODE = false;
 
 export default class AudioX {
   static tracks = {
