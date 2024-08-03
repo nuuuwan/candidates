@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import AppColors from "../../view/_constants/AppColors";
 import CriteriaView from "../../view/molecules/CriteriaView";
 import AbstractStepPage from "../../view/pages/AbstractStepPage";
