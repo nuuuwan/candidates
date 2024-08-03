@@ -94,10 +94,8 @@ export default function CandidateView({
   criterionToWeight,
 }) {
   const candidate = Candidate.fromID(candidateID);
-  const criterionToWeightForCandidate = GroundTruth.getCriterionToWeight(
-    version,
-    candidateID
-  );
+  const criterionToWeightForCandidate =
+    GroundTruth.getCriterionToWeightForCandidate(version, candidateID);
   return (
     <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
       <CandidateListItemAvatar candidate={candidate} rank={rank} />

@@ -31,7 +31,7 @@ export default class GroundTruthPage extends AbstractStepPage {
   }
 
   get fixedHeight() {
-    return 35;
+    return 38;
   }
 
   renderFixedCustom() {
@@ -46,6 +46,9 @@ export default class GroundTruthPage extends AbstractStepPage {
           {t(
             "To ensure everyone, regardless of political views, agrees on our evaluation, please let us know if you spot any errors."
           )}
+        </Typography>{" "}
+        <Typography variant="caption">
+          {t("Candidates are listed in Alphabetical Order of Last Name.")}
         </Typography>
       </Stack>
     );

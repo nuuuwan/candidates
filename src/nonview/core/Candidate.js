@@ -55,6 +55,10 @@ export default class Candidate {
 
 export const CANDIDATE_LIST = CANDIDATE_D_LIST.map((d) =>
   Candidate.fromDict(d)
+).sort(
+  (a, b) =>
+    a.lastName.localeCompare(b.lastName) ||
+    a.firstName.localeCompare(b.firstName)
 );
 
 export const CANDIDATE_IDX = IDX.build(
@@ -62,3 +66,5 @@ export const CANDIDATE_IDX = IDX.build(
   (x) => x.id,
   (x) => x
 );
+
+export const CANDIDATE_IDS = Object.keys(CANDIDATE_IDX);

@@ -17,10 +17,12 @@ export default class Criterion {
 
 export const CRITERION_LIST = CRITERION_D_LIST.map((d) =>
   Criterion.fromDict(d)
-);
+).sort((a, b) => a.id.localeCompare(b.id));
 
 export const CRITERION_IDX = IDX.build(
   CRITERION_LIST,
   (x) => x.id,
   (x) => x
 );
+
+export const CRITERION_IDS = Object.keys(CRITERION_IDX);

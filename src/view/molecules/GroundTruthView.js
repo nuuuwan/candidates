@@ -6,6 +6,8 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import AppColors from "../_constants/AppColors";
+import { CRITERION_IDX } from "../../nonview/core/Criterion";
+import { CANDIDATE_IDS, CANDIDATE_LIST } from "../../nonview/core/Candidate";
 function WeightIcon({ weight }) {
   let Icon = HelpOutlineIcon;
   if (weight > 0) {
@@ -34,18 +36,21 @@ function CriterionGroundTruthView({ criterionID, weight, refs }) {
   );
 }
 
-function CandidateGroundTruthView({ candidateID, criterionToWeightInfo }) {
+function CandidateGroundTruthView({
+  candidateID,
+  criterionToWeightInfo,
+  version,
+}) {
+  const criterionIDs = Object.keys(CRITERION_IDX);
   return (
     <Stack
       direction="column"
       gap={1}
       sx={{ backgroundColor: AppColors.VeryLight, p: 1 }}
     >
-      <CandidateProfileView candidateID={candidateID} />
-      {Object.entries(criterionToWeightInfo).map(function ([
-        criterionID,
-        { weight, refs },
-      ]) {
+      <CandidateProfileView candidateID={candidateID} version={version} />
+      {criterionIDs.map(function (criterionID) {
+        const { weight, refs } = criterionToWeightInfo[criterionID];
         return (
           <CriterionGroundTruthView
             key={criterionID}
@@ -64,15 +69,15 @@ export default function GroundTruthView({ version }) {
     GroundTruth.getCandidateToCriterionToWeightInfo(version);
   return (
     <Stack direction="column" gap={1}>
-      {Object.entries(candidateToCriterionToWeightInfo).map(function ([
-        candidateID,
-        criterionToWeightInfo,
-      ]) {
+      {CANDIDATE_IDS.map(function (candidateID) {
+        const criterionToWeightInfo =
+          candidateToCriterionToWeightInfo[candidateID];
         return (
           <CandidateGroundTruthView
             key={candidateID}
             candidateID={candidateID}
             criterionToWeightInfo={criterionToWeightInfo}
+            version={version}
           />
         );
       })}

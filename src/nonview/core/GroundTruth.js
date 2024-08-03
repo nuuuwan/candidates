@@ -2,6 +2,7 @@ import { CRITERION_TO_CANDIDATE_TO_WEIGHT } from "../../nonview/data/CRITERION_T
 
 import MathX from "../../nonview/base/MathX";
 import { CANDIDATE_LIST } from "./Candidate";
+import { CRITERION_IDX } from "./Criterion";
 const ATTR_IDX_IDX = Object({
   default: CRITERION_TO_CANDIDATE_TO_WEIGHT,
 });
@@ -15,15 +16,14 @@ export default class GroundTruth {
     return GroundTruth.VERSIONS;
   }
 
-  static getCriterionToWeight(version, candidateID) {
+  static getCriterionToWeightForCandidate(version, candidateID) {
     if (!ATTR_IDX_IDX[version]) {
       version = GroundTruth.DEFAULT_VERSION;
     }
+    const criterionIDs = Object.keys(CRITERION_IDX);
     return Object.fromEntries(
-      Object.entries(ATTR_IDX_IDX[version]).map(function ([
-        criterionID,
-        candToWeightInfo,
-      ]) {
+      criterionIDs.map(function (criterionID) {
+        const candToWeightInfo = ATTR_IDX_IDX[version][criterionID];
         return [criterionID, candToWeightInfo[candidateID].weight];
       })
     );

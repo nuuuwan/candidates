@@ -18,9 +18,11 @@ import {
   LinkedInView,
   ManthriLKView,
 } from "../atoms";
+import CriterionToWeightView from "../../view/molecules/CriterionToWeightView";
 import PartyView from "./PartyView";
 
 import AppColors from "../_constants/AppColors";
+import { GroundTruth } from "../../nonview/core";
 
 const AVATAR_SIZE = 64;
 
@@ -51,23 +53,30 @@ function CandidateListItemAvatar({ candidate }) {
   );
 }
 
-function CandidateListItemText({ candidate }) {
+function CandidateListItemText({ candidate, criterionToWeight }) {
   return (
     <ListItemText>
       <Stack direction="column" gap={0} sx={{ marginLeft: 2 }}>
         <ProfileBox candidate={candidate} />
+        <CriterionToWeightView criterionToWeight={criterionToWeight} />
       </Stack>
     </ListItemText>
   );
 }
 
-export default function CandidateProfileView({ candidateID }) {
+export default function CandidateProfileView({ candidateID, version }) {
   const candidate = Candidate.fromID(candidateID);
-
+  const criterionToWeight = GroundTruth.getCriterionToWeightForCandidate(
+    version,
+    candidateID
+  );
   return (
     <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
       <CandidateListItemAvatar candidate={candidate} />
-      <CandidateListItemText candidate={candidate} />
+      <CandidateListItemText
+        candidate={candidate}
+        criterionToWeight={criterionToWeight}
+      />
     </ListItem>
   );
 }
