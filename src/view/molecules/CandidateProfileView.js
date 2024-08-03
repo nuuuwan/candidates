@@ -20,17 +20,19 @@ const AVATAR_SIZE = 48;
 
 function ProfileTextView({ candidate }) {
   return (
-    <Box>
+    <Stack direction="column" gap={0} sx={{ alignContent: "left" }}>
       <Typography sx={{ fontSize: "80%" }}>{t(candidate.firstName)}</Typography>
       <Typography sx={{ fontSize: "120%" }}>{t(candidate.lastName)}</Typography>
       <PartyView id={candidate.party} />
-      <ButtonParliamentLK parliamentNum={candidate.parliamentNum} />
-      <ButtonManthriLK manthriLKID={candidate.manthriLKID} />
-      <ButtonWikipedia wikipediaPage={candidate.wikipediaPage} />
-      <ButtonLinkedIn linkedInID={candidate.linkedInID} />
-      <ButtonXTwitter xHandle={candidate.xHandle} />
-      <ButtonGoogleSearch searchText={candidate.fullName} />
-    </Box>
+      <Stack direction="row" gap={0} sx={{ alignItems: "center" }}>
+        <ButtonParliamentLK parliamentNum={candidate.parliamentNum} />
+        <ButtonManthriLK manthriLKID={candidate.manthriLKID} />
+        <ButtonWikipedia wikipediaPage={candidate.wikipediaPage} />
+        <ButtonLinkedIn linkedInID={candidate.linkedInID} />
+        <ButtonXTwitter xHandle={candidate.xHandle} />
+        <ButtonGoogleSearch searchText={candidate.fullName} />
+      </Stack>
+    </Stack>
   );
 }
 

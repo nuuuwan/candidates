@@ -20,7 +20,7 @@ export default function CandidateView({
   return (
     <ListItem sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
       <ListItemText>
-        <Stack direction="row" gap={1}>
+        <Stack direction="row" gap={0}>
           <Typography variant="h6" color={color}>
             #{rank + 1}
           </Typography>
