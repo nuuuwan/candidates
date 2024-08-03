@@ -1,15 +1,15 @@
 import { Component, version } from "react";
 import React from "react";
-import Box from "@mui/material/Box";
+import { Box, Typography } from "@mui/material";
 
-import AudioX from "../../nonview/base/AudioX";
-
-import CustomAppBar from "../../view/molecules/CustomAppBar";
-import HomePageBottomNavigation from "../../view/molecules/HomePageBottomNavigation";
-
+import { AudioX } from "../../nonview/base";
+import { VERSION } from "../../nonview/constants";
 import GroundTruth from "../../nonview/core/GroundTruth";
+import { CustomAppBar, HomePageBottomNavigation } from "../../view/molecules";
+
 import PAGE_CONFIG_LIST from "../../view/pages/PAGE_CONFIG_LIST";
 import HomePageContext from "../../nonview/core/HomePageContext";
+import AppColors from "../_constants/AppColors";
 
 const STYLE_INNER_PAGE_BOX = {
   marginTop: 10,
@@ -107,6 +107,9 @@ export default class HomePage extends Component {
           onChangeCriterionWeight={this.onChangeCriterionWeight.bind(this)}
           onChangeVersion={this.onChangeVersion.bind(this)}
         />
+        <Typography variant="caption" color={AppColors.VeryLight}>
+          {"App Last Update at " + VERSION.DATETIME_STR}
+        </Typography>
       </Box>
     );
   }

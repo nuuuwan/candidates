@@ -39,7 +39,6 @@ export default function CriteriaView({
           );
         })}
       </List>
-      <Typography variant="caption">{t("000 Version", version)}</Typography>
     </Box>
   );
 }
