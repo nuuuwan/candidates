@@ -12,18 +12,18 @@ export const CRITERION_D_LIST = [
     refs: "https://www.parliament.lk",
   },
   {
-    id: "Communist",
-    details: "Is Associated with Communist Ideologies",
+    id: "Moderate",
+    details: "Is not associated with any extreme political Ideologies",
     refs: null,
   },
   {
     id: "Corruption",
-    details: "Has History of Corruption Charges",
+    details: "Has No History of Corruption Charges",
     refs: null,
   },
   {
     id: "Criminal",
-    details: "Has Ongoing Criminal Case(s)",
+    details: "Has No Ongoing Criminal Case(s)",
     refs: null,
   },
   {
@@ -37,9 +37,8 @@ export const CRITERION_D_LIST = [
     refs: null,
   },
   {
-    id: "JVP1989",
-    details:
-      "Has Participated in or Is Associated with 1987-1989 JVP insurrection",
+    id: "Insurrections",
+    details: "Has Not Participated in and Is Not Associated with insurrections",
     refs: "https://en.wikipedia.org/wiki/1987%E2%80%931989_JVP_insurrection",
   },
   {
@@ -49,7 +48,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "Military",
-    details: "Has Military Affiliations",
+    details: "Has No Military Affiliations",
     refs: null,
   },
   {
@@ -59,7 +58,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "ParaMilitary",
-    details: "Has Para-Military Affiliations",
+    details: "Has No Para-Military Affiliations",
     refs: null,
   },
   {
@@ -69,7 +68,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "RajapaksaCabinet",
-    details: "Has been Appointed to Cabinet by a Rajapaksa President",
+    details: "Has never been Appointed to Cabinet by a Rajapaksa President",
     refs: null,
   },
   {
@@ -79,7 +78,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "SLPP",
-    details: "Is Member or Former-Member of the SLPP",
+    details: "Is not a Member nor a Former-Member of the SLPP",
     refs: "https://en.wikipedia.org/wiki/Sri_Lanka_Podujana_Peramuna",
   },
   {
@@ -88,8 +87,8 @@ export const CRITERION_D_LIST = [
     refs: null,
   },
   {
-    id: "Voted20A",
-    details: "Has Voted in Favour of the 20th Amendment",
+    id: "Against20A",
+    details: "Has Voted Against the 20th Amendment",
     refs: "https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka",
   },
 ];
