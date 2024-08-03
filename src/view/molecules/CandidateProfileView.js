@@ -53,13 +53,13 @@ export default function CandidateProfileView({ candidateID, version, custom }) {
   );
   return (
     <Box sx={{ marginBottom: 2, backgroundColor: AppColors.VeryLight }}>
-      <Stack direction="row" gap={1}>
+      <Stack direction="row" gap={1} sx={{ alignItems: "center" }}>
         <ProfileAvatarView candidate={candidate} />
         <Stack direction="column" gap={1}>
           <ProfileTextView
             candidate={candidate}
             criterionToWeight={criterionToWeight}
-          />{" "}
+          />
           <CriterionToWeightView criterionToWeight={criterionToWeight} />
           {custom}
         </Stack>
