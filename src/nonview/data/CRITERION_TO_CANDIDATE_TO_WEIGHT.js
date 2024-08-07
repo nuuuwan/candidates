@@ -657,6 +657,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
   },
   Leader: {
+    AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
     AKD: {
       weight: 100,
       refs: "Leader of the JVP [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna#Leader]",
@@ -675,6 +683,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: -100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -697,6 +709,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Leader of the UNP [https://en.wikipedia.org/wiki/United_National_Party]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: null,
@@ -709,6 +725,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    SM: {
+      weight: 0,
+      refs: null,
+    },
     SP: {
       weight: 100,
       refs: "Leader of the SJB [https://en.wikipedia.org/wiki/Samagi_Jana_Balawegaya]",
@@ -716,26 +736,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: 100,
       refs: null,
-    },
-    AD: {
-      weight: 0,
-      refs: "",
-    },
-    AK: {
-      weight: 0,
-      refs: "",
-    },
-    KK: {
-      weight: 0,
-      refs: "",
-    },
-    SA: {
-      weight: 0,
-      refs: "",
-    },
-    SM: {
-      weight: 0,
-      refs: "",
     },
   },
   Military: {
