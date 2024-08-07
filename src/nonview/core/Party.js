@@ -12,7 +12,7 @@ export default class Party {
   }
 
   static fromID(id) {
-    return PARTY_IDX[id];
+    return PARTY_IDX[id] || new Party(id, "gray");
   }
 
   get imgSrc() {
@@ -27,13 +27,8 @@ const PARTY_D_LIST = [
   { id: "SLFP", color: "blue" },
   { id: "ITAK", color: "yellow" },
   { id: "NPP", color: "red" },
+
   { id: "Independent", color: "gray" },
-  { id: "PSA", color: "red" },
-  { id: "SLLP", color: "red" },
-  { id: "NIF", color: "gray" },
-  { id: "RJP", color: "gray" },
-  { id: "JP", color: "gray" },
-  { id: "JSP", color: "gray" },
 ];
 
 const PARTY_LIST = PARTY_D_LIST.map((d) => Party.fromDict(d));

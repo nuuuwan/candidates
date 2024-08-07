@@ -2,6 +2,14 @@
 export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   Against20A: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
@@ -20,6 +28,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     JR: {
       weight: 0,
       refs: "Not MP at the time",
+    },
+    KK: {
+      weight: 0,
+      refs: null,
     },
     KP: {
       weight: 0,
@@ -41,6 +53,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: "Not MP at the time. The amendment was passed on 22 October 2020, while Wickremesinghe was sworn in as the national list member of parliament of the UNP on 23 June 2021. [https://en.wikipedia.org/wiki/Twentieth_Amendment_to_the_Constitution_of_Sri_Lanka, https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
@@ -53,6 +69,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: "Not MP at the time",
     },
+    SM: {
+      weight: 0,
+      refs: null,
+    },
     SP: {
       weight: 100,
       refs: "Voted Against [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
@@ -64,6 +84,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Assets: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: -100,
       refs: null,
     },
@@ -81,6 +109,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: -100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -103,6 +135,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: null,
@@ -113,6 +149,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: -100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -126,6 +166,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Attendance: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: -100,
       refs: "221/383 [https://www.parliament.lk/component/members/viewMember/112]",
     },
@@ -144,6 +192,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     JR: {
       weight: 0,
       refs: "Not Currently MP",
+    },
+    KK: {
+      weight: 0,
+      refs: null,
     },
     KP: {
       weight: 0,
@@ -165,6 +217,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "76/98 [https://www.parliament.lk/en/members-of-parliament/directory-of-members/viewMember/1244]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: "203/383 [https://www.parliament.lk/members-of-parliament/directory-of-members/viewMember/3135]",
@@ -177,6 +233,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: "Not Currently MP",
     },
+    SM: {
+      weight: 0,
+      refs: null,
+    },
     SP: {
       weight: 100,
       refs: "339/383 [https://www.parliament.lk/en/component/members/viewMember/140]",
@@ -188,6 +248,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Corruption: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: null,
     },
@@ -205,6 +273,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -227,6 +299,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "Has faced various allegations and criticisms regarding corruption and mismanagement during his political career. [E.g. https://www.theguardian.com/world/2022/jul/18/ranil-wickremesinghe-wily-fox-who-became-sri-lanka-pm-six-times-profile/]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -237,6 +313,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -250,6 +330,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Criminal: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: null,
     },
@@ -267,6 +355,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -289,6 +381,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -299,6 +395,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -312,6 +412,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Economic: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: -100,
       refs: null,
     },
@@ -329,6 +437,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: -100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -351,6 +463,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Served as Minister of Finance on numerous occasions [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: null,
@@ -361,6 +477,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: -100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -374,6 +494,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Education: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: "Holds a BSc in Physical Sciences from the University of Kelaniya [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
     },
@@ -392,6 +520,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     JR: {
       weight: 100,
       refs: "Holds a Degree in Management from Sri Jayawardenapura University, and a Masters in Business from Colombo University [https://en.wikipedia.org/wiki/Janaka_Ratnayake]",
+    },
+    KK: {
+      weight: 0,
+      refs: null,
     },
     KP: {
       weight: 0,
@@ -413,6 +545,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Attorney at Law [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: null,
@@ -422,6 +558,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     SK: {
+      weight: 0,
+      refs: null,
+    },
+    SM: {
       weight: 0,
       refs: null,
     },
@@ -436,6 +576,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Insurrections: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: -100,
       refs: "Having been involved in the JVP from his school days, Dissanayake joined the JVP in 1987, becoming active in student politics, engaged in full time political activities from 1987, with the onset of the 1987\u20131989 JVP insurrection. [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
     },
@@ -453,6 +601,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -475,6 +627,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -487,6 +643,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SM: {
+      weight: 0,
+      refs: null,
+    },
     SP: {
       weight: 100,
       refs: null,
@@ -497,7 +657,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
   },
   Leader: {
-    AD: {
+    AKD: {
       weight: 100,
       refs: "Leader of the JVP [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna#Leader]",
     },
@@ -557,9 +717,37 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    AD: {
+      weight: 0,
+      refs: "",
+    },
+    AK: {
+      weight: 0,
+      refs: "",
+    },
+    KK: {
+      weight: 0,
+      refs: "",
+    },
+    SA: {
+      weight: 0,
+      refs: "",
+    },
+    SM: {
+      weight: 0,
+      refs: "",
+    },
   },
   Military: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: null,
     },
@@ -577,6 +765,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -599,6 +791,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: "He was the eighteenth Commander of the Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009. [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
@@ -609,6 +805,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -622,6 +822,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Minister: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: "Minister of Agriculture, Livestock, Lands, and Irrigation (2004-2005) [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
     },
@@ -639,6 +847,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: -100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -661,6 +873,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Multiple ministerial positions, including Prime Minister and various other cabinet roles [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: "Minister of Wildlife and Sustainable Development, Minister of Regional Development [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
@@ -673,6 +889,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Deputy Minister of Agriculture (2000-2001) [https://en.wikipedia.org/wiki/11th_Parliament_of_Sri_Lanka]",
     },
+    SM: {
+      weight: 0,
+      refs: null,
+    },
     SP: {
       weight: 100,
       refs: "Minister of Housing, Construction and Cultural Affairs, Deputy Minister of Health [https://en.wikipedia.org/wiki/Sajith_Premadasa]",
@@ -684,8 +904,16 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Moderate: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: -100,
-      refs: "Anura Kumara Dissanayake, the leader of the Janatha Vimukthi Peramuna (JVP) and the National People's Power (NPP) in Sri Lanka, has a background associated with leftist ideologies, including Marxism-Leninism. [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna]",
+      refs: "Anura Kumara Dissanayake, the Leader of the Janatha Vimukthi Peramuna (JVP) and the National People's Power (NPP) in Sri Lanka, has a background associated with leftist ideologies, including Marxism-Leninism. [https://en.wikipedia.org/wiki/Janatha_Vimukthi_Peramuna]",
     },
     AL: {
       weight: 100,
@@ -701,6 +929,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -723,6 +955,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -733,6 +969,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -746,6 +986,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   ParaMilitary: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: -100,
       refs: "He was involved in the 1987-1989 JVP insurrection, which had a paramilitary aspect [https://en.wikipedia.org/wiki/1987%E2%80%931989_JVP_insurrection]",
     },
@@ -765,6 +1013,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    KK: {
+      weight: 0,
+      refs: null,
+    },
     KP: {
       weight: 100,
       refs: null,
@@ -785,6 +1037,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -795,6 +1051,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -808,6 +1068,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Presidency: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: "He strongly advocates for the abolishment of the executive presidency, considering it essential for the country's political and economic revival. He has promised to introduce a new constitution that includes this change if his party comes to power [https://asianmirror.lk/news/item/34833-abolishment-of-executive-presidency-needed-for-economic-revival-in-sl-akd]",
     },
@@ -824,6 +1092,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     JR: {
+      weight: 0,
+      refs: null,
+    },
+    KK: {
       weight: 0,
       refs: null,
     },
@@ -847,6 +1119,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "Ranil Wickramasinghe has shown fluctuating positions on this issue. While he has supported the idea of abolishing the executive presidency in the past, his actions as president have been seen as consolidating power within the executive branch ",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: "Sarath Fonseka has been critical of the executive presidency and has indicated support for its abolition, preferring a system with more distributed power [https://www.newindianexpress.com/world/2009/Nov/30/fonseka-vows-to-end-executive-presidency-108543.html]",
@@ -856,6 +1132,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     SK: {
+      weight: 0,
+      refs: null,
+    },
+    SM: {
       weight: 0,
       refs: null,
     },
@@ -870,6 +1150,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   RajapaksaCabinet: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: null,
     },
@@ -887,6 +1175,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -909,6 +1201,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "He was appointed as Prime Minister and Minister of Finance, Economic Stability and National Policies by Gotabaya Rajapaksa in May 2022. [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -919,6 +1215,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -932,6 +1232,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   SLPP: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: null,
     },
@@ -949,6 +1257,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: 100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -971,6 +1283,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: 100,
       refs: null,
@@ -981,6 +1297,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: 100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -994,6 +1314,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Seat: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
@@ -1011,6 +1339,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     JR: {
       weight: -100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
       refs: null,
     },
     KP: {
@@ -1033,6 +1365,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: null,
@@ -1043,6 +1379,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     SK: {
       weight: -100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
       refs: null,
     },
     SP: {
@@ -1056,6 +1396,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   },
   Under65: {
     AD: {
+      weight: 0,
+      refs: null,
+    },
+    AK: {
+      weight: 0,
+      refs: null,
+    },
+    AKD: {
       weight: 100,
       refs: "Born 1968 [https://en.wikipedia.org/wiki/Anura_Kumara_Dissanayake]",
     },
@@ -1074,6 +1422,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     JR: {
       weight: 100,
       refs: "Born 1964 [https://en.wikipedia.org/wiki/Janaka_Ratnayake]",
+    },
+    KK: {
+      weight: 0,
+      refs: null,
     },
     KP: {
       weight: 0,
@@ -1095,6 +1447,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "Born 1946 [https://en.wikipedia.org/wiki/Ranil_Wickremesinghe]",
     },
+    SA: {
+      weight: 0,
+      refs: null,
+    },
     SF: {
       weight: -100,
       refs: "Born 1950 [https://en.wikipedia.org/wiki/Sarath_Fonseka]",
@@ -1106,6 +1462,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     SK: {
       weight: -100,
       refs: "Born 1951 [https://www.parliament.lk/members-of-parliament/directory-of-members/viewMember/3038]",
+    },
+    SM: {
+      weight: 0,
+      refs: null,
     },
     SP: {
       weight: 100,

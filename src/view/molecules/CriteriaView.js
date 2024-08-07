@@ -10,6 +10,10 @@ export default function CriteriaView({
   criterionToWeight,
 }) {
   const criterionIDs = GroundTruth.getCriterionIDs(version);
+  console.debug({
+    criterionIDs,
+    criterionToWeight,
+  });
   return (
     <Box>
       <List>

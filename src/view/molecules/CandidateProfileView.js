@@ -21,7 +21,9 @@ const AVATAR_SIZE = 48;
 function ProfileTextView({ candidate }) {
   return (
     <Stack direction="column" gap={0} sx={{ alignContent: "left" }}>
-      <Typography sx={{ fontSize: "80%" }}>{t(candidate.firstName)}</Typography>
+      <Typography sx={{ fontSize: "80%" }}>
+        {t(candidate.firstNameShort)}
+      </Typography>
       <Typography sx={{ fontSize: "120%" }}>{t(candidate.lastName)}</Typography>
       <PartyView id={candidate.party} />
       <Stack direction="row" gap={0} sx={{ alignItems: "center" }}>
