@@ -43,7 +43,7 @@ export const CRITERION_D_LIST = [
   },
   {
     id: "Leader",
-    details: "Is a Party Leader",
+    details: "Is Leader of a Party with at least One Seat in Parliament",
     refs: null,
   },
   {

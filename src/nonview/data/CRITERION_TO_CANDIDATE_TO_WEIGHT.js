@@ -3,7 +3,7 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
   Against20A: {
     AD: {
       weight: 0,
-      refs: null,
+      refs: "Not an MP [https://en.wikipedia.org/wiki/Akmeemana_Dayarathana_Thero]",
     },
     AK: {
       weight: 0,
@@ -25,6 +25,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: "Not MP at the time",
     },
+    DJ: {
+      weight: 0,
+      refs: "Not an MP [https://en.wikipedia.org/wiki/Dilith_Jayaweera]",
+    },
     JR: {
       weight: 0,
       refs: "Not MP at the time",
@@ -40,6 +44,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 0,
       refs: "Not MP at the time",
+    },
+    NR: {
+      weight: -100,
+      refs: "Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
     OH: {
       weight: 0,
@@ -81,18 +89,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Assets: {
     AD: {
-      weight: 0,
+      weight: -100,
       refs: null,
     },
     AK: {
@@ -115,6 +115,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
     JR: {
       weight: -100,
       refs: null,
@@ -128,6 +132,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: -100,
+      refs: null,
+    },
+    NR: {
       weight: -100,
       refs: null,
     },
@@ -171,19 +179,11 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Attendance: {
     AD: {
       weight: 0,
-      refs: null,
+      refs: "Not an MP [https://en.wikipedia.org/wiki/Akmeemana_Dayarathana_Thero]",
     },
     AK: {
       weight: 0,
@@ -205,6 +205,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: "Not Currently MP",
     },
+    DJ: {
+      weight: 0,
+      refs: "Not an MP [https://en.wikipedia.org/wiki/Dilith_Jayaweera]",
+    },
     JR: {
       weight: 0,
       refs: "Not Currently MP",
@@ -220,6 +224,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 0,
       refs: "Not Currently MP",
+    },
+    NR: {
+      weight: -100,
+      refs: "205/383 [https://www.parliament.lk/component/members/viewMember/1521]",
     },
     OH: {
       weight: 0,
@@ -261,18 +269,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "198/383 [https://www.parliament.lk/component/members/viewMember/1521]",
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Corruption: {
     AD: {
-      weight: 0,
+      weight: 100,
       refs: null,
     },
     AK: {
@@ -295,6 +295,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 0,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -310,6 +314,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 100,
       refs: null,
+    },
+    NR: {
+      weight: -100,
+      refs: "Has faced allegations and controversies, though not necessarily formal corruption charges.  [https://en.wikipedia.org/wiki/Namal_Rajapaksa]",
     },
     OH: {
       weight: 100,
@@ -351,18 +359,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "Has faced allegations and controversies, though not necessarily formal corruption charges.  [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Criminal: {
     AD: {
-      weight: 0,
+      weight: 100,
       refs: null,
     },
     AK: {
@@ -385,6 +385,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -398,6 +402,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: 100,
+      refs: null,
+    },
+    NR: {
       weight: 100,
       refs: null,
     },
@@ -441,18 +449,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Economic: {
     AD: {
-      weight: 0,
+      weight: -100,
       refs: null,
     },
     AK: {
@@ -475,6 +475,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
     JR: {
       weight: -100,
       refs: null,
@@ -488,6 +492,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: -100,
+      refs: null,
+    },
+    NR: {
       weight: -100,
       refs: null,
     },
@@ -531,19 +539,11 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Education: {
     AD: {
-      weight: 0,
-      refs: null,
+      weight: 100,
+      refs: "Bachelor of Arts, University of Peradeniya [https://en.wikipedia.org/wiki/Akmeemana_Dayarathana_Thero]",
     },
     AK: {
       weight: 0,
@@ -565,6 +565,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: null,
     },
+    DJ: {
+      weight: 100,
+      refs: "Attorney-at-Law [https://en.wikipedia.org/wiki/Dilith_Jayaweera]",
+    },
     JR: {
       weight: 100,
       refs: "Holds a Degree in Management from Sri Jayawardenapura University, and a Masters in Business from Colombo University [https://en.wikipedia.org/wiki/Janaka_Ratnayake]",
@@ -580,6 +584,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 100,
       refs: "Attorney at Law [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]",
+    },
+    NR: {
+      weight: 100,
+      refs: "Attorney at Law [https://en.wikipedia.org/wiki/Namal_Rajapaksa]",
     },
     OH: {
       weight: 0,
@@ -621,18 +629,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Attorney at Law [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Insurrections: {
     AD: {
-      weight: 0,
+      weight: 100,
       refs: null,
     },
     AK: {
@@ -655,6 +655,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 100,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -668,6 +672,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: 100,
+      refs: null,
+    },
+    NR: {
       weight: 100,
       refs: null,
     },
@@ -711,18 +719,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Leader: {
     AD: {
-      weight: 0,
+      weight: -100,
       refs: null,
     },
     AK: {
@@ -745,6 +745,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
     JR: {
       weight: -100,
       refs: null,
@@ -758,6 +762,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: -100,
+      refs: null,
+    },
+    NR: {
       weight: -100,
       refs: null,
     },
@@ -798,21 +806,13 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: "Leader of the SJB [https://en.wikipedia.org/wiki/Samagi_Jana_Balawegaya]",
     },
     WR: {
-      weight: 100,
+      weight: -100,
       refs: null,
-    },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
     },
   },
   Military: {
     AD: {
-      weight: 0,
+      weight: 100,
       refs: null,
     },
     AK: {
@@ -835,6 +835,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 100,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -848,6 +852,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: 100,
+      refs: null,
+    },
+    NR: {
       weight: 100,
       refs: null,
     },
@@ -891,18 +899,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Minister: {
     AD: {
-      weight: 0,
+      weight: -100,
       refs: null,
     },
     AK: {
@@ -925,6 +925,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: null,
     },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
     JR: {
       weight: -100,
       refs: null,
@@ -940,6 +944,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: -100,
       refs: null,
+    },
+    NR: {
+      weight: 100,
+      refs: "Multiple ministerial positions [https://en.wikipedia.org/wiki/Namal_Rajapaksa]",
     },
     OH: {
       weight: -100,
@@ -981,19 +989,11 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Multiple ministerial positions [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Moderate: {
     AD: {
-      weight: 0,
-      refs: null,
+      weight: -100,
+      refs: "Member of the JHU and the Sinhala Rawaya [https://en.wikipedia.org/wiki/Akmeemana_Dayarathana_Thero]",
     },
     AK: {
       weight: 0,
@@ -1015,6 +1015,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 0,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -1028,6 +1032,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: 100,
+      refs: null,
+    },
+    NR: {
       weight: 100,
       refs: null,
     },
@@ -1071,18 +1079,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   ParaMilitary: {
     AD: {
-      weight: 0,
+      weight: 100,
       refs: null,
     },
     AK: {
@@ -1105,6 +1105,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 100,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -1118,6 +1122,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       refs: null,
     },
     NB: {
+      weight: 100,
+      refs: null,
+    },
+    NR: {
       weight: 100,
       refs: null,
     },
@@ -1160,14 +1168,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: 100,
       refs: null,
-    },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
     },
   },
   Presidency: {
@@ -1195,6 +1195,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: null,
     },
+    DJ: {
+      weight: 0,
+      refs: null,
+    },
     JR: {
       weight: 0,
       refs: null,
@@ -1209,6 +1213,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     },
     NB: {
       weight: 0,
+      refs: null,
+    },
+    NR: {
+      weight: -100,
       refs: null,
     },
     OH: {
@@ -1251,18 +1259,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   RajapaksaCabinet: {
     AD: {
-      weight: 0,
+      weight: 100,
       refs: null,
     },
     AK: {
@@ -1285,6 +1285,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -1300,6 +1304,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 100,
       refs: null,
+    },
+    NR: {
+      weight: -100,
+      refs: "He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Namal_Rajapaksa]",
     },
     OH: {
       weight: 100,
@@ -1341,19 +1349,101 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
-    DJ: {
+  },
+  Seat: {
+    AD: {
+      weight: -100,
+      refs: null,
+    },
+    AK: {
       weight: 0,
-      refs: "",
+      refs: null,
+    },
+    AKD: {
+      weight: 100,
+      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
+    },
+    AL: {
+      weight: -100,
+      refs: null,
+    },
+    AZ: {
+      weight: -100,
+      refs: null,
+    },
+    BS: {
+      weight: -100,
+      refs: null,
+    },
+    DJ: {
+      weight: -100,
+      refs: null,
+    },
+    JR: {
+      weight: -100,
+      refs: null,
+    },
+    KK: {
+      weight: 0,
+      refs: null,
+    },
+    KP: {
+      weight: -100,
+      refs: null,
+    },
+    NB: {
+      weight: -100,
+      refs: null,
     },
     NR: {
+      weight: 100,
+      refs: "Hambantota District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
+    },
+    OH: {
+      weight: -100,
+      refs: null,
+    },
+    PB: {
+      weight: -100,
+      refs: null,
+    },
+    RW: {
+      weight: -100,
+      refs: null,
+    },
+    SA: {
       weight: 0,
-      refs: "",
+      refs: null,
+    },
+    SF: {
+      weight: -100,
+      refs: null,
+    },
+    SJ: {
+      weight: -100,
+      refs: null,
+    },
+    SK: {
+      weight: -100,
+      refs: null,
+    },
+    SM: {
+      weight: 0,
+      refs: null,
+    },
+    SP: {
+      weight: 100,
+      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
+    },
+    WR: {
+      weight: 100,
+      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
   },
   SLPP: {
     AD: {
-      weight: 0,
-      refs: null,
+      weight: -100,
+      refs: "Affiliated [https://en.wikipedia.org/wiki/Akmeemana_Dayarathana_Thero]",
     },
     AK: {
       weight: 0,
@@ -1375,6 +1465,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 100,
+      refs: "Important supporter of Gotabaya Rajapakse's 2019 Election Campaign [https://en.wikipedia.org/wiki/Dilith_Jayaweera]",
+    },
     JR: {
       weight: 100,
       refs: null,
@@ -1390,6 +1484,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 100,
       refs: null,
+    },
+    NR: {
+      weight: -100,
+      refs: "He was elected to parliament in 2020 as a member of the SLPP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
     OH: {
       weight: 100,
@@ -1431,109 +1529,11 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "He was elected to parliament in 2020 as a member of the SLPP, but has since moved to the SLFP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
-  },
-  Seat: {
-    AD: {
-      weight: 0,
-      refs: null,
-    },
-    AK: {
-      weight: 0,
-      refs: null,
-    },
-    AKD: {
-      weight: 100,
-      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
-    },
-    AL: {
-      weight: -100,
-      refs: null,
-    },
-    AZ: {
-      weight: -100,
-      refs: null,
-    },
-    BS: {
-      weight: -100,
-      refs: null,
-    },
-    JR: {
-      weight: -100,
-      refs: null,
-    },
-    KK: {
-      weight: 0,
-      refs: null,
-    },
-    KP: {
-      weight: -100,
-      refs: null,
-    },
-    NB: {
-      weight: -100,
-      refs: null,
-    },
-    OH: {
-      weight: -100,
-      refs: null,
-    },
-    PB: {
-      weight: -100,
-      refs: null,
-    },
-    RW: {
-      weight: -100,
-      refs: null,
-    },
-    SA: {
-      weight: 0,
-      refs: null,
-    },
-    SF: {
-      weight: -100,
-      refs: null,
-    },
-    SJ: {
-      weight: -100,
-      refs: null,
-    },
-    SK: {
-      weight: -100,
-      refs: null,
-    },
-    SM: {
-      weight: 0,
-      refs: null,
-    },
-    SP: {
-      weight: 100,
-      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
-    },
-    WR: {
-      weight: 100,
-      refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
-    },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
-    },
   },
   Under65: {
     AD: {
-      weight: 0,
-      refs: null,
+      weight: 100,
+      refs: "Born in 1970 [https://en.wikipedia.org/wiki/Akmeemana_Dayarathana_Thero]",
     },
     AK: {
       weight: 0,
@@ -1555,6 +1555,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 0,
       refs: null,
     },
+    DJ: {
+      weight: 100,
+      refs: "Born in 1967 [https://en.wikipedia.org/wiki/Dilith_Jayaweera]",
+    },
     JR: {
       weight: 100,
       refs: "Born 1964 [https://en.wikipedia.org/wiki/Janaka_Ratnayake]",
@@ -1570,6 +1574,10 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     NB: {
       weight: 100,
       refs: "No data on birth date. Assuming under 65 based on appearance [https://www.dailymirror.lk/breaking-news/Nuwan-Bopage-named-Presidential-candidate-of-Aragalaya-activists/108-288277]",
+    },
+    NR: {
+      weight: -100,
+      refs: "Born 1986 [https://en.wikipedia.org/wiki/Namal_Rajapaksa]",
     },
     OH: {
       weight: 0,
@@ -1610,14 +1618,6 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: "Born 1959 [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
-    },
-    DJ: {
-      weight: 0,
-      refs: "",
-    },
-    NR: {
-      weight: 0,
-      refs: "",
     },
   },
 };
