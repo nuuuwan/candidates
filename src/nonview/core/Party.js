@@ -27,8 +27,14 @@ const PARTY_D_LIST = [
   { id: "SLFP", color: "blue" },
   { id: "ITAK", color: "yellow" },
   { id: "NPP", color: "red" },
-
+  { id: "JVP", color: "red" },
+  { id: "UCPF", color: "#f40" },
+  { id: "MEP", color: "red" },
+  { id: "EPDP", color: "red" },
+  { id: "TPA", color: "#f80" },
   { id: "Independent", color: "gray" },
+  { id: "SLMC", color: "#041" },
+  { id: "FSP", color: "red" },
 ];
 
 const PARTY_LIST = PARTY_D_LIST.map((d) => Party.fromDict(d));

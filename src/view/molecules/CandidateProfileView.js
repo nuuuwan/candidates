@@ -15,6 +15,7 @@ import PartyView from "./PartyView";
 
 import AppColors from "../_constants/AppColors";
 import { GroundTruth } from "../../nonview/core";
+import SupportView from "./SupportView";
 
 const AVATAR_SIZE = 48;
 
@@ -26,14 +27,12 @@ function ProfileTextView({ candidate }) {
       </Typography>
       <Typography sx={{ fontSize: "120%" }}>{t(candidate.lastName)}</Typography>
       <Stack direction="row" gap={1} sx={{ alignItems: "center" }}>
-        <PartyView id={candidate.party} />
+        <PartyView partyCode={candidate.party} />
         <Typography variant="caption" color={AppColors.MoreLight}>
           {candidate.depositInfo}
         </Typography>
       </Stack>{" "}
-      <Typography variant="caption" color={AppColors.MoreLight}>
-        {candidate.support ? "Also supported by " + candidate.support : null}
-      </Typography>
+      <SupportView support={candidate.support} />
       <Stack direction="row" gap={0} sx={{ alignItems: "center" }}>
         <ButtonParliamentLK parliamentNum={candidate.parliamentNum} />
         <ButtonManthriLK manthriLKID={candidate.manthriLKID} />
