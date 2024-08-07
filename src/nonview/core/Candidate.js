@@ -51,7 +51,7 @@ export default class Candidate {
     this.manthriLKID = manthriLKID;
   }
   get fullName() {
-    return this.firstName + " " + this.lastName;
+    return this.firstNameShort + " " + this.lastName;
   }
 
   static fromDict(d) {
