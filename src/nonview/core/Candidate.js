@@ -80,6 +80,13 @@ export default class Candidate {
   get imgSrc() {
     return process.env.PUBLIC_URL + "/images/candidates/" + this.imgFile;
   }
+
+  get depositInfo() {
+    if (!this.regDate || this.regDate === "null") {
+      return "No Deposit (as of 2024-08-06)";
+    }
+    return `Deposit accepted ${this.regDate}`;
+  }
 }
 
 export const CANDIDATE_LIST = CANDIDATE_D_LIST.map((d) =>
