@@ -13,7 +13,10 @@ export default function PartyView({ id }) {
   const color = party.color;
   return (
     <AlignCenter>
-      <Typography variant="caption" sx={{ color }}>
+      <Typography
+        variant="caption"
+        sx={{ color: "white", backgroundColor: color, p: 0.3, fontSize: "50%" }}
+      >
         {t(id)}
       </Typography>
     </AlignCenter>

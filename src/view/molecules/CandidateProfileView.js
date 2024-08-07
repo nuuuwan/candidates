@@ -25,10 +25,12 @@ function ProfileTextView({ candidate }) {
         {t(candidate.firstNameShort)}
       </Typography>
       <Typography sx={{ fontSize: "120%" }}>{t(candidate.lastName)}</Typography>
-      <PartyView id={candidate.party} />
-      <Typography variant="caption" color={AppColors.MoreLight}>
-        {candidate.depositInfo}
-      </Typography>
+      <Stack direction="row" gap={1} sx={{ alignItems: "center" }}>
+        <PartyView id={candidate.party} />
+        <Typography variant="caption" color={AppColors.MoreLight}>
+          {candidate.depositInfo}
+        </Typography>
+      </Stack>
       <Stack direction="row" gap={0} sx={{ alignItems: "center" }}>
         <ButtonParliamentLK parliamentNum={candidate.parliamentNum} />
         <ButtonManthriLK manthriLKID={candidate.manthriLKID} />
