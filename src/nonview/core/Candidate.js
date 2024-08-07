@@ -1,23 +1,6 @@
 import IDX from "../../nonview/base/IDX";
 import { CANDIDATE_D_LIST } from "../../nonview/data/CANDIDATE_D_LIST";
 
-// {
-//   regNum: 10,
-//   regDate: "2024-08-01",
-//   id: "AZ",
-//   firstNameShort: "Ajantha",
-//   firstNames: "Ajantha",
-//   lastName: "de Zoysa",
-//   gender: "male",
-//   party: "RJP",
-//   imgFile: "284.jpg",
-//   xHandle: "null",
-//   wikipediaPage: "null",
-//   parliamentNum: 284,
-//   linkedInID: "ajantha-zoysa-42a2b2101",
-//   manthriLKID: "null",
-// },
-
 export default class Candidate {
   constructor(
     regNum,
@@ -28,6 +11,7 @@ export default class Candidate {
     lastName,
     gender,
     party,
+    support,
     imgFile,
     xHandle,
     wikipediaPage,
@@ -43,6 +27,7 @@ export default class Candidate {
     this.lastName = lastName;
     this.gender = gender;
     this.party = party;
+    this.support = support;
     this.imgFile = imgFile;
     this.xHandle = xHandle;
     this.wikipediaPage = wikipediaPage;
@@ -64,6 +49,7 @@ export default class Candidate {
       d.lastName,
       d.gender,
       d.party,
+      d.support,
       d.imgFile,
       d.xHandle,
       d.wikipediaPage,

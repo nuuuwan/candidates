@@ -81,6 +81,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "Voted in Favour [https://www.newswire.lk/2020/10/22/2nd-reading-of-20th-amendmet-passe/]",
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Assets: {
     AD: {
@@ -162,6 +170,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: null,
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   Attendance: {
@@ -245,6 +261,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "198/383 [https://www.parliament.lk/component/members/viewMember/1521]",
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Corruption: {
     AD: {
@@ -326,6 +350,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: "Has faced allegations and controversies, though not necessarily formal corruption charges.  [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   Criminal: {
@@ -409,6 +441,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Economic: {
     AD: {
@@ -490,6 +530,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: null,
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   Education: {
@@ -573,6 +621,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Attorney at Law [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Insurrections: {
     AD: {
@@ -654,6 +710,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: 100,
       refs: null,
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   Leader: {
@@ -737,6 +801,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Military: {
     AD: {
@@ -818,6 +890,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: 100,
       refs: null,
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   Minister: {
@@ -901,6 +981,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Multiple ministerial positions [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Moderate: {
     AD: {
@@ -982,6 +1070,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: 100,
       refs: null,
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   ParaMilitary: {
@@ -1065,6 +1161,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: null,
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Presidency: {
     AD: {
@@ -1146,6 +1250,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: 100,
       refs: null,
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   RajapaksaCabinet: {
@@ -1229,6 +1341,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: -100,
       refs: "He has held multiple ministerial positions under both presidents Mahinda and Gotabaya Rajapaksa [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   SLPP: {
     AD: {
@@ -1310,6 +1430,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: "He was elected to parliament in 2020 as a member of the SLPP, but has since moved to the SLFP [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
   Seat: {
@@ -1393,6 +1521,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
       weight: 100,
       refs: "Colombo District [https://en.wikipedia.org/wiki/16th_Parliament_of_Sri_Lanka]",
     },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
+    },
   },
   Under65: {
     AD: {
@@ -1474,6 +1610,14 @@ export const CRITERION_TO_CANDIDATE_TO_WEIGHT = {
     WR: {
       weight: -100,
       refs: "Born 1959 [https://en.wikipedia.org/wiki/Wijeyadasa_Rajapakshe]",
+    },
+    DJ: {
+      weight: 0,
+      refs: "",
+    },
+    NR: {
+      weight: 0,
+      refs: "",
     },
   },
 };
