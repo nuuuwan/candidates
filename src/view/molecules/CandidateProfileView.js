@@ -30,7 +30,10 @@ function ProfileTextView({ candidate }) {
         <Typography variant="caption" color={AppColors.MoreLight}>
           {candidate.depositInfo}
         </Typography>
-      </Stack>
+      </Stack>{" "}
+      <Typography variant="caption" color={AppColors.MoreLight}>
+        {candidate.support ? "Also supported by " + candidate.support : null}
+      </Typography>
       <Stack direction="row" gap={0} sx={{ alignItems: "center" }}>
         <ButtonParliamentLK parliamentNum={candidate.parliamentNum} />
         <ButtonManthriLK manthriLKID={candidate.manthriLKID} />
