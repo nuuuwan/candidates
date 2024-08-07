@@ -20,6 +20,9 @@ function WeightIcon({ weight }) {
 }
 
 function CriterionGroundTruthView({ criterionID, weight, refs }) {
+  if (Math.abs(weight) < 1) {
+    return null;
+  }
   const color = Weight.getColor(weight);
   const criterion = Criterion.fromID(criterionID);
   return (
@@ -42,6 +45,12 @@ function CandidateGroundTruthView({
   version,
 }) {
   const criterionIDs = Object.keys(CRITERION_IDX);
+  const nonZeroCriterionIDs = criterionIDs.filter(function (criterionID) {
+    const { weight } = criterionToWeightInfo[criterionID];
+    return Math.abs(weight) > 1;
+  });
+  const n = criterionIDs.length;
+  const nNonZero = nonZeroCriterionIDs.length;
   return (
     <Stack
       direction="column"
@@ -60,6 +69,9 @@ function CandidateGroundTruthView({
           />
         );
       })}
+      <Typography variant="caption" color={AppColors.MoreLight}>
+        {`${nNonZero}/${n} criteria analyzed.`}
+      </Typography>
     </Stack>
   );
 }
